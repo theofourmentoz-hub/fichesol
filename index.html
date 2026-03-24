@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fiches BTS OL — Révisez avec un vrai opticien</title>
+<meta name="description" content="Fiches de révision PDF pour le BTS Opticien-Lunetier. 12 matières disponibles à l'unité ou en pack. Créées par un opticien diplômé, responsable de magasin depuis 5 ans.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink:     #0D1117;
+  --paper:   #F6F3EC;
+  --cream:   #EDE9DF;
+  --accent:  #1A56DB;
+  --accent2: #E8410A;
+  --gold:    #C9971C;
+  --green:   #16A34A;
+  --muted:   #6B7280;
+  --border:  rgba(13,17,23,.09);
+  --shadow:  0 2px 20px rgba(13,17,23,.07),0 1px 4px rgba(13,17,23,.04);
+  --shadow-lg:0 8px 48px rgba(13,17,23,.11),0 2px 8px rgba(13,17,23,.05);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'DM Sans',sans-serif;background:var(--paper);color:var(--ink);font-size:16px;line-height:1.65;overflow-x:hidden;}
+h1,h2,h3,.syne{font-family:'Barlow Condensed',sans-serif;}
+a{color:inherit;}
+
+/* ── Nav ── */
+nav{
+  position:sticky;top:0;z-index:100;
+  background:rgba(246,243,236,.93);backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--border);
+  padding:0 5vw;height:62px;
+  display:flex;align-items:center;justify-content:space-between;
+}
+.nav-logo{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:1.1rem;letter-spacing:0em;text-decoration:none;color:var(--ink);}
+.nav-logo span{color:var(--accent);}
+.nav-links{display:flex;align-items:center;gap:2rem;}
+.nav-links a{font-size:.88rem;font-weight:500;text-decoration:none;color:var(--muted);transition:color .2s;}
+.nav-links a:hover{color:var(--ink);}
+.nav-cta{background:var(--ink);color:#fff;padding:.5rem 1.3rem;border-radius:6px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.85rem;text-decoration:none;transition:all .2s;}
+.nav-cta:hover{background:#1a2233;transform:translateY(-1px);}
+
+/* ── Hero ── */
+.hero{
+  max-width:1160px;margin:0 auto;padding:3.5rem 5vw 2.5rem;
+  display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;
+}
+.hero-eyebrow{
+  display:inline-flex;align-items:center;gap:.55rem;
+  background:var(--cream);border:1px solid var(--border);border-radius:100px;
+  padding:.3rem 1rem;font-size:.78rem;font-weight:500;color:var(--muted);
+  margin-bottom:1rem;
+  animation:fadeUp .5s ease both;
+}
+.dot-live{width:7px;height:7px;border-radius:50%;background:#22c55e;flex-shrink:0;animation:pulse 2s infinite;}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 3px rgba(34,197,94,.2)}50%{box-shadow:0 0 0 6px rgba(34,197,94,.06)}}
+.hero h1{
+  font-size:clamp(2.6rem,4.2vw,3.8rem);font-weight:800;line-height:1.07;
+  letter-spacing:-.01em;
+  animation:fadeUp .5s .08s ease both;
+}
+.hero h1 .accent{color:var(--accent);}
+.hero h1 .strike{position:relative;color:var(--muted);}
+.hero h1 .strike::after{content:'';position:absolute;left:0;top:50%;width:100%;height:2px;background:var(--accent2);transform:rotate(-2deg);}
+.hero-sub{
+  margin-top:.9rem;font-size:1rem;color:var(--muted);max-width:460px;
+  animation:fadeUp .5s .16s ease both;
+}
+.hero-actions{
+  margin-top:1.4rem;display:flex;gap:1rem;flex-wrap:wrap;
+  animation:fadeUp .5s .22s ease both;
+}
+.btn-primary{
+  background:var(--accent);color:#fff;
+  padding:.9rem 2.2rem;border-radius:8px;
+  font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.97rem;
+  text-decoration:none;transition:all .2s;
+  box-shadow:0 4px 20px rgba(26,86,219,.28);
+  display:inline-flex;align-items:center;gap:.5rem;
+}
+.btn-primary:hover{background:#1344b8;transform:translateY(-2px);box-shadow:0 6px 28px rgba(26,86,219,.36);}
+.btn-ghost{
+  background:transparent;color:var(--ink);
+  padding:.9rem 1.6rem;border-radius:8px;
+  font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:.97rem;
+  text-decoration:none;border:1.5px solid var(--border);
+  transition:all .2s;display:inline-flex;align-items:center;gap:.5rem;
+}
+.btn-ghost:hover{border-color:var(--ink);background:var(--cream);}
+.hero-proof{
+  margin-top:1.2rem;display:flex;align-items:center;gap:.75rem;
+  font-size:.82rem;color:var(--muted);
+  animation:fadeUp .5s .28s ease both;
+}
+.stars{color:var(--gold);letter-spacing:.08em;}
+
+/* Hero visual */
+.hero-visual{animation:fadeUp .6s .1s ease both;}
+.cards-stack{position:relative;height:300px;}
+.hcard{
+  position:absolute;background:white;border-radius:14px;
+  box-shadow:var(--shadow-lg);overflow:hidden;
+  transition:transform .3s;
+}
+.hcard:hover{transform:scale(1.02) !important;}
+.hcard:nth-child(1){width:88%;left:6%;top:0;z-index:3;}
+.hcard:nth-child(2){width:80%;left:12%;top:-12px;z-index:2;transform:rotate(2.5deg);opacity:.82;}
+.hcard:nth-child(3){width:74%;left:16%;top:-22px;z-index:1;transform:rotate(-2deg);opacity:.6;}
+.hcard-head{padding:.7rem 1rem;display:flex;align-items:center;gap:.5rem;}
+.hcard-tag{background:rgba(255,255,255,.25);color:#fff;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.62rem;letter-spacing:.06em;padding:.18rem .5rem;border-radius:4px;}
+.hcard-ttl{color:#fff;font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:.78rem;margin-left:auto;}
+.hcard-body{padding:.9rem 1rem;}
+.hline{height:7px;background:var(--cream);border-radius:4px;margin-bottom:.45rem;}
+.hline.w80{width:80%;}.hline.w60{width:60%;}.hline.w45{width:45%;}
+.hschema{display:grid;grid-template-columns:1fr 1fr;gap:.45rem;margin:.6rem 0;}
+.hbox{border-radius:6px;height:44px;}
+.hbox.b{background:#DBEAFE;}.hbox.g{background:#D1FAE5;}
+.hbox.o{background:#FEF3C7;}.hbox.r{background:#FEE2E2;}
+.fbadge{
+  position:absolute;z-index:10;background:white;border-radius:10px;
+  box-shadow:var(--shadow-lg);padding:.55rem .9rem;
+  display:flex;align-items:center;gap:.5rem;
+  font-size:.78rem;font-weight:500;white-space:nowrap;
+}
+.fbadge:nth-of-type(1){bottom:8%;right:-4%;animation:float 3s ease-in-out infinite;}
+.fbadge:nth-of-type(2){top:14%;left:-6%;animation:float 3s 1.3s ease-in-out infinite;}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+
+/* ── Section helpers ── */
+.section-label{font-size:.73rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:.7rem;}
+.section-title{font-size:clamp(1.9rem,3vw,2.6rem);font-weight:800;letter-spacing:-.028em;line-height:1.15;}
+
+/* ── Matières ── */
+.matieres-section{padding:6rem 5vw;background:var(--ink);}
+.matieres-wrap{max-width:1160px;margin:0 auto;}
+.matieres-section .section-label{color:#60a5fa;}
+.matieres-section .section-title{color:#fff;}
+.matieres-tabs{
+  display:flex;gap:.5rem;flex-wrap:wrap;margin:2rem 0 1.5rem;
+}
+.tab-btn{
+  background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);
+  color:rgba(255,255,255,.6);border-radius:100px;
+  padding:.4rem 1rem;font-size:.8rem;font-weight:500;
+  cursor:pointer;transition:all .2s;font-family:'DM Sans',sans-serif;
+}
+.tab-btn:hover,.tab-btn.active{background:var(--accent);border-color:var(--accent);color:#fff;}
+.matieres-grid{
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));
+  gap:1rem;
+}
+.matiere-card{
+  background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);
+  border-radius:12px;padding:0;transition:all .22s;
+}
+.matiere-card:hover{background:rgba(255,255,255,.09);border-color:rgba(255,255,255,.15);transform:translateY(-2px);}
+.matiere-cat{
+  font-size:.68rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;
+  padding:.2rem .6rem;border-radius:4px;display:inline-block;margin-bottom:.7rem;
+}
+.cat-vision{background:rgba(34,197,94,.18);color:#86efac;}
+.cat-optique{background:rgba(59,130,246,.18);color:#93c5fd;}
+.cat-technique{background:rgba(249,115,22,.18);color:#fdba74;}
+.cat-gestion{background:rgba(168,85,247,.18);color:#c4b5fd;}
+.cat-sciences{background:rgba(236,72,153,.18);color:#f9a8d4;}
+.matiere-name{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1rem;color:#fff;margin-bottom:.5rem;}
+.matiere-desc{font-size:.82rem;color:rgba(255,255,255,.5);line-height:1.55;margin-bottom:.9rem;}
+.matiere-includes{list-style:none;margin-bottom:1rem;}
+.matiere-includes li{
+  font-size:.78rem;color:rgba(255,255,255,.55);
+  padding:.22rem 0;display:flex;align-items:flex-start;gap:.5rem;
+}
+.matiere-includes li::before{content:'·';color:var(--accent);font-size:1rem;line-height:1;flex-shrink:0;}
+.matiere-footer{
+  display:flex;align-items:center;justify-content:space-between;
+  padding-top:.9rem;border-top:1px solid rgba(255,255,255,.08);
+}
+.matiere-format{font-size:.72rem;color:rgba(255,255,255,.35);font-weight:500;}
+.matiere-price{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:1.05rem;color:#fff;}
+.matiere-buy{
+  background:var(--accent);color:#fff;border-radius:6px;
+  padding:.38rem .9rem;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.78rem;
+  text-decoration:none;transition:all .2s;white-space:nowrap;
+}
+.matiere-buy:hover{background:#1344b8;}
+
+/* ── Packs ── */
+.packs-section{padding:4rem 5vw;background:var(--cream);}
+.packs-wrap{max-width:1160px;margin:0 auto;}
+.packs-grid{margin-top:3rem;display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;}
+.pack-card{
+  background:white;border-radius:14px;padding:1.75rem;
+  border:1.5px solid var(--border);box-shadow:var(--shadow);
+  transition:all .2s;display:flex;flex-direction:column;
+}
+.pack-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-lg);}
+.pack-card.featured{
+  border-color:var(--accent);
+  box-shadow:0 0 0 1px var(--accent),var(--shadow-lg);
+  position:relative;
+}
+.pack-card.featured::before{
+  content:'⭐ Recommandé';
+  position:absolute;top:-13px;left:50%;transform:translateX(-50%);
+  background:var(--accent);color:#fff;
+  font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.7rem;
+  letter-spacing:.06em;padding:.28rem .9rem;border-radius:100px;white-space:nowrap;
+}
+.pack-name{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:1.05rem;margin-bottom:.3rem;}
+.pack-desc{font-size:.83rem;color:var(--muted);margin-bottom:1.2rem;line-height:1.5;}
+.pack-price{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:2.2rem;letter-spacing:-.01em;line-height:1;}
+.pack-price sup{font-size:1rem;vertical-align:super;}
+.pack-economy{
+  display:inline-block;font-size:.72rem;font-weight:600;
+  background:#D1FAE5;color:#16a34a;border-radius:4px;
+  padding:.15rem .5rem;margin:.3rem 0 1.2rem;
+}
+.pack-features{list-style:none;margin-bottom:1rem;flex:1;}
+.pack-features li{
+  display:flex;align-items:flex-start;gap:.55rem;
+  font-size:.85rem;padding:.38rem 0;
+  border-bottom:1px solid var(--border);
+}
+.pack-features li:last-child{border-bottom:none;}
+.ck{color:var(--green);flex-shrink:0;margin-top:.05rem;}
+.btn-pack{
+  display:block;text-align:center;padding:.9rem;border-radius:8px;
+  font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.92rem;
+  text-decoration:none;transition:all .2s;margin-top:auto;
+}
+.btn-pack.primary{background:var(--accent);color:#fff;box-shadow:0 4px 16px rgba(26,86,219,.25);}
+.btn-pack.primary:hover{background:#1344b8;transform:translateY(-1px);}
+.btn-pack.outline{background:transparent;color:var(--ink);border:1.5px solid var(--border);}
+.btn-pack.outline:hover{border-color:var(--ink);background:var(--cream);}
+.pack-guarantee{margin-top:.9rem;text-align:center;font-size:.75rem;color:var(--muted);display:flex;align-items:center;justify-content:center;gap:.35rem;}
+
+/* ── Qui suis-je ── */
+.who-section{padding:6rem 5vw;max-width:900px;margin:0 auto;}
+.who-inner{
+  display:grid;grid-template-columns:auto 1fr;gap:3rem;align-items:start;
+  background:white;border-radius:20px;padding:3rem;
+  box-shadow:var(--shadow-lg);border:1px solid var(--border);
+}
+.who-initial{
+  width:88px;height:88px;border-radius:16px;
+  background:var(--accent);
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:2.8rem;color:#fff;
+  flex-shrink:0;
+  box-shadow:0 8px 32px rgba(26,86,219,.28);
+}
+.who-label{font-size:.72rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:.6rem;}
+.who-name{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:1.5rem;letter-spacing:0em;margin-bottom:.3rem;}
+.who-role{font-size:.88rem;color:var(--muted);margin-bottom:1.4rem;}
+.who-text{font-size:.97rem;color:#374151;line-height:1.8;margin-bottom:1rem;}
+.who-text em{font-style:italic;color:var(--ink);}
+.who-stats{display:flex;gap:2rem;flex-wrap:wrap;}
+.who-stat{}
+.who-stat-n{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:1.8rem;letter-spacing:-.01em;color:var(--accent);}
+.who-stat-l{font-size:.78rem;color:var(--muted);margin-top:.1rem;}
+
+/* ── Pourquoi ── */
+.why-section{padding:5rem 5vw;max-width:1160px;margin:0 auto;}
+.why-grid{margin-top:3rem;display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;}
+.why-card{padding:1.75rem;border-radius:12px;background:white;border:1px solid var(--border);}
+.why-icon{font-size:1.5rem;margin-bottom:.9rem;}
+.why-title{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.97rem;margin-bottom:.5rem;}
+.why-desc{font-size:.85rem;color:var(--muted);line-height:1.65;}
+
+/* ── FAQ ── */
+.faq-section{padding:5rem 5vw;max-width:700px;margin:0 auto;}
+.faq-item{border-bottom:1px solid var(--border);padding:1.2rem 0;}
+.faq-q{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.95rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:1rem;user-select:none;}
+.faq-q::after{content:'+';font-size:1.4rem;color:var(--muted);flex-shrink:0;transition:transform .2s;}
+.faq-item.open .faq-q::after{transform:rotate(45deg);}
+.faq-a{font-size:.88rem;color:var(--muted);line-height:1.75;max-height:0;overflow:hidden;transition:max-height .3s ease,padding .3s;}
+.faq-item.open .faq-a{max-height:300px;padding-top:.75rem;}
+
+/* ── CTA final ── */
+.cta-final{background:var(--ink);padding:6rem 5vw;text-align:center;}
+.cta-final h2{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:clamp(2rem,3.5vw,3rem);color:#fff;letter-spacing:-.01em;margin-bottom:1rem;}
+.cta-final p{color:rgba(255,255,255,.65);font-size:1rem;max-width:480px;margin:0 auto 2rem;}
+.btn-cta-white{display:inline-flex;align-items:center;gap:.5rem;background:#fff;color:var(--ink);padding:1rem 2.5rem;border-radius:8px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1rem;text-decoration:none;box-shadow:0 4px 24px rgba(0,0,0,.2);transition:transform .2s;}
+.btn-cta-white:hover{transform:translateY(-2px);}
+
+/* ── Footer ── */
+footer{background:#060a0f;color:rgba(255,255,255,.4);padding:2rem 5vw;font-size:.8rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;}
+footer a{color:rgba(255,255,255,.4);text-decoration:none;}
+footer a:hover{color:rgba(255,255,255,.7);}
+
+/* ── Animations ── */
+@keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease;}
+.reveal.visible{opacity:1;transform:translateY(0);}
+
+
+/* ── Covers ── */
+.matiere-cover{
+  width:100%;aspect-ratio:400/520;border-radius:10px 10px 0 0;
+  object-fit:cover;display:block;
+  transition:transform .3s ease;
+}
+.matiere-card:hover .matiere-cover{transform:scale(1.03);}
+.matiere-card{overflow:hidden;}
+.matiere-card-body{padding:1.1rem 1.3rem 1.3rem;}
+
+/* ── Responsive ── */
+@media(max-width:1000px){.packs-grid{grid-template-columns:1fr 1fr;}}
+@media(max-width:860px){
+  .hero{grid-template-columns:1fr;padding-top:3.5rem;gap:3rem;}
+  .hero-visual{order:-1;max-width:400px;margin:0 auto;}
+  .why-grid{grid-template-columns:1fr 1fr;}
+  .who-inner{grid-template-columns:1fr;gap:1.5rem;}
+  .who-initial{width:64px;height:64px;font-size:2rem;}
+}
+@media(max-width:640px){
+  .packs-grid{grid-template-columns:1fr;}
+  .why-grid{grid-template-columns:1fr;}
+  .hero-actions{flex-direction:column;}
+  .nav-links{display:none;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">fiches<span>OL</span></a>
+  <div class="nav-links">
+    <a href="#matieres">Les matières</a>
+    <a href="#packs">Les packs</a>
+    <a href="#qui">Qui suis-je</a>
+  </div>
+  <a href="#packs" class="nav-cta">Voir les packs →</a>
+</nav>
+
+<!-- HERO -->
+<section style="background:var(--ink);padding:5rem 5vw 0;overflow:hidden;position:relative;">
+
+  <!-- Cercles déco fond -->
+  <div style="position:absolute;top:-120px;right:-100px;width:500px;height:500px;border-radius:50%;background:var(--accent);opacity:.06;pointer-events:none;"></div>
+  <div style="position:absolute;bottom:0;left:-80px;width:320px;height:320px;border-radius:50%;background:var(--accent);opacity:.04;pointer-events:none;"></div>
+
+  <div style="max-width:1160px;margin:0 auto;">
+
+    <!-- Eyebrow -->
+    <div style="display:inline-flex;align-items:center;gap:.55rem;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:100px;padding:.35rem 1rem;font-size:.78rem;font-weight:500;color:rgba(255,255,255,.65);margin-bottom:2rem;animation:fadeUp .5s ease both;">
+      <span style="width:7px;height:7px;border-radius:50%;background:#22c55e;flex-shrink:0;box-shadow:0 0 0 3px rgba(34,197,94,.25);"></span>
+      Par un opticien diplômé · 5 ans d'expérience · Responsable de magasin
+    </div>
+
+    <!-- Titre principal -->
+    <h1 style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:clamp(2.8rem,5.5vw,4.8rem);line-height:1.05;letter-spacing:-.01em;color:#fff;max-width:820px;margin-bottom:1.5rem;animation:fadeUp .5s .08s ease both;">
+      Des fiches BTS&nbsp;OL<br>
+      <span style="color:var(--accent);">faites par quelqu'un<br>qui fait ça tous les jours.</span>
+    </h1>
+
+    <!-- Sous-titre -->
+    <p style="font-size:1.1rem;color:rgba(255,255,255,.6);max-width:520px;line-height:1.7;margin-bottom:2.5rem;animation:fadeUp .5s .16s ease both;">
+      12 matières disponibles à l'unité ou en pack. Schémas optiques, protocoles pas-à-pas, pièges à éviter. Aligné référentiel 2026.
+    </p>
+
+    <!-- CTA -->
+    <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:3.5rem;animation:fadeUp .5s .22s ease both;">
+      <a href="#packs" style="display:inline-flex;align-items:center;gap:.5rem;background:var(--accent);color:#fff;padding:1rem 2.2rem;border-radius:8px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1rem;text-decoration:none;box-shadow:0 4px 20px rgba(26,86,219,.4);transition:all .2s;" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 8px 32px rgba(26,86,219,.45)'" onmouseout="this.style.transform='';this.style.boxShadow='0 4px 20px rgba(26,86,219,.4)'">
+        Voir les packs →
+      </a>
+      <a href="#matieres" style="display:inline-flex;align-items:center;gap:.5rem;background:rgba(255,255,255,.08);color:rgba(255,255,255,.85);padding:1rem 1.8rem;border-radius:8px;font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:1rem;text-decoration:none;border:1px solid rgba(255,255,255,.15);transition:all .2s;" onmouseover="this.style.background='rgba(255,255,255,.12)'" onmouseout="this.style.background='rgba(255,255,255,.08)'">
+        Voir les matières
+      </a>
+    </div>
+
+    <!-- Stats bar -->
+    <div style="display:flex;flex-wrap:wrap;gap:2.5rem;padding:2rem 0;border-top:1px solid rgba(255,255,255,.08);animation:fadeUp .5s .3s ease both;">
+      <div>
+        <div style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:2rem;color:#fff;letter-spacing:-.01em;">12</div>
+        <div style="font-size:.8rem;color:rgba(255,255,255,.45);margin-top:.1rem;">matières couvertes</div>
+      </div>
+      <div style="width:1px;background:rgba(255,255,255,.1);"></div>
+      <div>
+        <div style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:2rem;color:#fff;letter-spacing:-.01em;">50+</div>
+        <div style="font-size:.8rem;color:rgba(255,255,255,.45);margin-top:.1rem;">fiches PDF</div>
+      </div>
+      <div style="width:1px;background:rgba(255,255,255,.1);"></div>
+      <div>
+        <div style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:2rem;color:#fff;letter-spacing:-.01em;">5 ans</div>
+        <div style="font-size:.8rem;color:rgba(255,255,255,.45);margin-top:.1rem;">d'expérience terrain</div>
+      </div>
+      <div style="width:1px;background:rgba(255,255,255,.1);"></div>
+      <div>
+        <div style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:2rem;color:#fff;letter-spacing:-.01em;">2026</div>
+        <div style="font-size:.8rem;color:rgba(255,255,255,.45);margin-top:.1rem;">référentiel à jour</div>
+      </div>
+    </div>
+
+    <!-- Preview covers (bande scrollable) -->
+    <div style="margin:0 -5vw;padding:2.5rem 5vw 0;overflow:hidden;">
+      <div style="display:flex;gap:1rem;padding-bottom:2.5rem;overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none;" class="covers-scroll">
+        <style>.covers-scroll::-webkit-scrollbar{display:none;}</style>
+        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MDAiIGhlaWdodD0iNTIwIiB2aWV3Qm94PSIwIDAgNDAwIDUyMCI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImciIHgxPSIwIiB5MT0iMCIgeDI9Ii4zIiB5Mj0iMSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiMwQjNENkIiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMTU2NUMwIi8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPGNsaXBQYXRoIGlkPSJjcCI+PHJlY3Qgd2lkdGg9IjQwMCIgaGVpZ2h0PSI1MjAiIHJ4PSIxNiIvPjwvY2xpcFBhdGg+CiAgPC9kZWZzPgogIDxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iNTIwIiBmaWxsPSJ1cmwoI2cpIiByeD0iMTYiLz4KICA8IS0tIENlcmNsZXMgZm9uZCAtLT4KICA8Y2lyY2xlIGN4PSIzNDAiIGN5PSI1MCIgIHI9IjE3MCIgZmlsbD0iIzY0QjVGNiIgb3BhY2l0eT0iLjA1IiBjbGlwLXBhdGg9InVybCgjY3ApIi8+CiAgPGNpcmNsZSBjeD0iNTAiICBjeT0iNDkwIiByPSIxMzAiIGZpbGw9IiM2NEI1RjYiIG9wYWNpdHk9Ii4wNSIgY2xpcC1wYXRoPSJ1cmwoI2NwKSIvPgogIDwhLS0gQm9yZHVyZSBmaW5lIC0tPgogIDxyZWN0IHg9IjEiIHk9IjEiIHdpZHRoPSIzOTgiIGhlaWdodD0iNTE4IiByeD0iMTUiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMSIgb3BhY2l0eT0iLjEiLz4KICA8IS0tIFRhZyAtLT4KICA8cmVjdCB4PSIyMiIgeT0iMjIiIHdpZHRoPSIxNjAiIGhlaWdodD0iMjYiIHJ4PSI2IiBmaWxsPSJ3aGl0ZSIgb3BhY2l0eT0iLjEiLz4KICA8dGV4dCB4PSIzNCIgeT0iMzkiIGZvbnQtZmFtaWx5PSInSGVsdmV0aWNhIE5ldWUnLEFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtd2VpZ2h0PSI3MDAiIGZvbnQtc2l6ZT0iMTAiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIuODIiIGxldHRlci1zcGFjaW5nPSIuMDllbSI+VTUgwrcgQ09FRkYuIDY8L3RleHQ+CiAgPCEtLSBMb2dvIC0tPgogIDx0ZXh0IHg9IjM3OCIgeT0iMzkiIHRleHQtYW5jaG9yPSJlbmQiIGZvbnQtZmFtaWx5PSInSGVsdmV0aWNhIE5ldWUnLEFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtd2VpZ2h0PSI4MDAiIGZvbnQtc2l6ZT0iMTEiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIuMzUiPmZpY2hlc09MPC90ZXh0PgogIDwhLS0gVGl0cmUgLS0+CiAgPHRleHQgeD0iMjgiIHk9Ijk2IiBmb250LWZhbWlseT0iJ0hlbHZldGljYSBOZXVlJyxBcmlhbCxzYW5zLXNlcmlmIiBmb250LXdlaWdodD0iODAwIiBmb250LXNpemU9IjYwIiBmaWxsPSJ3aGl0ZSIgb3BhY2l0eT0iLjk3IiBsZXR0ZXItc3BhY2luZz0iLS4wMzVlbSI+QW5hbHlzZTwvdGV4dD4KICA8dGV4dCB4PSIyOCIgeT0iMTYwIiBmb250LWZhbWlseT0iJ0hlbHZldGljYSBOZXVlJyxBcmlhbCxzYW5zLXNlcmlmIiBmb250LXdlaWdodD0iODAwIiBmb250LXNpemU9IjYwIiBmaWxsPSJ3aGl0ZSIgb3BhY2l0eT0iLjk3IiBsZXR0ZXItc3BhY2luZz0iLS4wMzVlbSI+ZGUgbGEgVmlzaW9uPC90ZXh0PgogIDwhLS0gVHJhaXQgLS0+CiAgPHJlY3QgeD0iMjgiIHk9IjE3NCIgd2lkdGg9IjU2IiBoZWlnaHQ9IjQiIHJ4PSIyIiBmaWxsPSIjNjRCNUY2IiBvcGFjaXR5PSIuODUiLz4KICA8IS0tIFNjaMOpbWEgLS0+CiAgCiAgICAgIDxlbGxpcHNlIGN4PSIyMDAiIGN5PSIyOTAiIHJ4PSI4MCIgcnk9IjQ0IiBmaWxsPSJub25lIiBzdHJva2U9IiM2NEI1RjYiIHN0cm9rZS13aWR0aD0iMi41IiBvcGFjaXR5PSIuNDUiLz4KICAgICAgPGVsbGlwc2UgY3g9IjIwMCIgY3k9IjI5MCIgcng9IjgwIiByeT0iNDQiIGZpbGw9IiM2NEI1RjYiIG9wYWNpdHk9Ii4wNiIvPgogICAgICA8Y2lyY2xlIGN4PSIyMDAiIGN5PSIyOTAiIHI9IjI2IiBmaWxsPSJub25lIiBzdHJva2U9IiM2NEI1RjYiIHN0cm9rZS13aWR0aD0iMi4yIiBvcGFjaXR5PSIuNjUiLz4KICAgICAgPGNpcmNsZSBjeD0iMjAwIiBjeT0iMjkwIiByPSIxNCIgZmlsbD0iIzY0QjVGNiIgb3BhY2l0eT0iLjQyIi8+CiAgICAgIDxjaXJjbGUgY3g9IjIwNyIgY3k9IjI4NCIgcj0iNS41IiBmaWxsPSJ3aGl0ZSIgb3BhY2l0eT0iLjU1Ii8+CiAgICAgIDxsaW5lIHgxPSIxMjAiIHkxPSIyOTAiIHgyPSIxNDUiIHkyPSIyNzIiIHN0cm9rZT0iIzY0QjVGNiIgc3Ryb2tlLXdpZHRoPSIxLjUiIG9wYWNpdHk9Ii4zIi8+CiAgICAgIDxsaW5lIHgxPSIyODAiIHkxPSIyOTAiIHgyPSIyNTUiIHkyPSIyNzIiIHN0cm9rZT0iIzY0QjVGNiIgc3Ryb2tlLXdpZHRoPSIxLjUiIG9wYWNpdHk9Ii4zIi8+CiAgICAKPC9zdmc+"   alt="Analyse de la Vision"   style="height:160px;width:auto;border-radius:10px;flex-shrink:0;box-shadow:0 8px 32px rgba(0,0,0,.4);transition:transform .2s;" onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform=''">
+        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MDAiIGhlaWdodD0iNTIwIiB2aWV3Qm94PSIwIDAgNDAwIDUyMCI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImciIHgxPSIwIiB5MT0iMCIgeDI9Ii4zIiB5Mj0iMSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiMxQjVFMjAiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMkU3RDMyIi8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPGNsaXBQYXRoIGlkPSJjcCI+PHJlY3Qgd2lkdGg9IjQwMCIgaGVpZ2h0PSI1MjAiIHJ4PSIxNiIvPjwvY2xpcFBhdGg+CiAgPC9kZWZzPgogIDxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iNTIwIiBmaWxsPSJ1cmwoI2cpIiByeD0iMTYiLz4KICA8IS0tIENlcmNsZXMgZm9uZCAtLT4KICA8Y2lyY2xlIGN4PSIzNDAiIGN5PSI1MCIgIHI9IjE3MCIgZmlsbD0iIzgxQzc4NCIgb3BhY2l0eT0iLjA1IiBjbGlwLXBhdGg9InVybCgjY3ApIi8+CiAgPGNpcmNsZSBjeD0iNTAiICBjeT0iNDkwIiByPSIxMzAiIGZpbGw9IiM4MUM3ODQiIG9wYWNpdHk9Ii4wNSIgY2xpcC1wYXRoPSJ1cmwoI2NwKSIvPgogIDwhLS0gQm9yZHVyZSBmaW5lIC0tPgogIDxyZWN0IHg9IjEiIHk9IjEiIHdpZHRoPSIzOTgiIGhlaWdodD0iNTE4IiByeD0iMTUiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMSIgb3BhY2l0eT0iLjEiLz4KICA8IS0tIFRhZyAtLT4KICA8cmVjdCB4PSIyMiIgeT0iMjIiIHdpZHRoPSIxNjAiIGhlaWdodD0iMjYiIHJ4PSI2IiBmaWxsPSJ3aGl0ZSIgb3BhY2l0eT0iLjEiLz4KICA8dGV4dCB4PSIzNCIgeT0iMzkiIGZvbnQtZmFtaWx5PSInSGVsdmV0aWNhIE5ldWUnLEFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtd2VpZ2h0PSI3MDAiIGZvbnQtc2l6ZT0iMTAiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIuODIiIGxldHRlci1zcGFjaW5nPSIuMDllbSI+RTUvVTYxIMK3IE9SQUw8L3RleHQ+CiAgPCEtLSBMb2dvIC0tPgogIDx0ZXh0IHg9IjM3OCIgeT0iMzkiIHRleHQtYW5jaG9yPSJlbmQiIGZvbnQtZmFtaWx5PSInSGVsdmV0aWNhIE5ldWUnLEFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtd2VpZ2h0PSI4MDAiIGZvbnQtc2l6ZT0iMTEiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIuMzUiPmZpY2hlc09MPC90ZXh0PgogIDwhLS0gVGl0cmUgLS0+CiAgPHRleHQgeD0iMjgiIHk9Ijk2IiBmb250LWZhbWlseT0iJ0hlbHZldGljYSBOZXVlJyxBcmlhbCxzYW5zLXNlcmlmIiBmb250LXdlaWdodD0iODAwIiBmb250LXNpemU9IjYwIiBmaWxsPSJ3aGl0ZSIgb3BhY2l0eT0iLjk3IiBsZXR0ZXItc3BhY2luZz0iLS4wMzVlbSI+RXhhbWVuPC90ZXh0PgogIDx0ZXh0IHg9IjI4IiB5PSIxNjAiIGZvbnQtZmFtaWx5PSInSGVsdmV0aWNhIE5ldWUnLEFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtd2VpZ2h0PSI4MDAiIGZvbnQtc2l6ZT0iNjAiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIuOTciIGxldHRlci1zcGFjaW5nPSItLjAzNWVtIj5kZSBWdWU8L3RleHQ+CiAgPCEtLSBUcmFpdCAtLT4KICA8cmVjdCB4PSIyOCIgeT0iMTc0IiB3aWR0aD0iNTYiIGhlaWdodD0iNCIgcng9IjIiIGZpbGw9IiM4MUM3ODQiIG9wYWNpdHk9Ii44NSIvPgogIDwhLS0gU2Now6ltYSAtLT4KICAKICAgICAgPGVsbGlwc2UgY3g9IjIwMCIgY3k9IjI5MCIgcng9IjcyIiByeT0iNjIiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzgxQzc4NCIgc3Ryb2tlLXdpZHRoPSIxLjgiIG9wYWNpdHk9Ii4yOCIvPgogICAgICA8Y2lyY2xlIGN4PSIxNzQiIGN5PSIyOTAiIHI9IjI2IiBmaWxsPSJub25lIiBzdHJva2U9IiM4MUM3ODQiIHN0cm9rZS13aWR0aD0iMi4yIiBvcGFjaXR5PSIuNTgiLz4KICAgICAgPGNpcmNsZSBjeD0iMjI2IiBjeT0iMjkwIiByPSIyNiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjODFDNzg0IiBzdHJva2Utd2lkdGg9IjIuMiIgb3BhY2l0eT0iLjU4Ii8+CiAgICAgIDxjaXJjbGUgY3g9IjE3NCIgY3k9IjI5MCIgcj0iMTUiIGZpbGw9IiM4MUM3ODQiIG9wYWNpdHk9Ii4yIi8+CiAgICAgIDxjaXJjbGUgY3g9IjIyNiIgY3k9IjI5MCIgcj0iMTUiIGZpbGw9IiM4MUM3ODQiIG9wYWNpdHk9Ii4yIi8+CiAgICAgIDxyZWN0IHg9IjE4MiIgeT0iMzIyIiB3aWR0aD0iMzYiIGhlaWdodD0iOCIgcng9IjQiIGZpbGw9IiM4MUM3ODQiIG9wYWNpdHk9Ii4zOCIvPgogICAgICA8bGluZSB4MT0iMTQ4IiB5MT0iMjkwIiB4Mj0iMTIyIiB5Mj0iMjkwIiBzdHJva2U9IiM4MUM3ODQiIHN0cm9rZS13aWR0aD0iMiIgb3BhY2l0eT0iLjQ1Ii8+CiAgICAgIDxsaW5lIHgxPSIyNTIiIHkxPSIyOTAiIHgyPSIyNzgiIHkyPSIyOTAiIHN0cm9rZT0iIzgxQzc4NCIgc3Ryb2tlLXdpZHRoPSIyIiBvcGFjaXR5PSIuNDUiLz4KICAgIAo8L3N2Zz4="        alt="Examen de Vue"           style="height:160px;width:auto;border-radius:10px;flex-shrink:0;box-shadow:0 8px 32px rgba(0,0,0,.4);transition:transform .2s;" onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform=''">
+        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MDAiIGhlaWdodD0iNTIwIiB2aWV3Qm94PSIwIDAgNDAwIDUyMCI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImciIHgxPSIwIiB5MT0iMCIgeDI9Ii4zIiB5Mj0iMSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiMxQTIzN0UiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMTU2NUMwIi8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPGNsaXBQYXRoIGlkPSJjcCI+PHJlY3Qgd2lkdGg9IjQwMCIgaGVpZ2h0PSI1MjAiIHJ4PSIxNiIvPjwvY2xpcFBhdGg+CiAgPC9kZWZzPgogIDxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iNTIwIiBmaWxsPSJ1cmwoI2cpIiByeD0iMTYiLz4KICA8IS0tIENlcmNsZXMgZm9uZCAtLT4KICA8Y2lyY2xlIGN4PSIzNDAiIGN5PSI1MCIgIHI9IjE3MCIgZmlsbD0iIzkwQ0FGOSIgb3BhY2l0eT0iLjA1IiBjbGlwLXBhdGg9InVybCgjY3ApIi8+CiAgPGNpcmNsZSBjeD0iNTAiICBjeT0iNDkwIiByPSIxMzAiIGZpbGw9IiM5MENBRjkiIG9wYWNpdHk9Ii4wNSIgY2xpcC1wYXRoPSJ1cmwoI2NwKSIvPgogIDwhLS0gQm9yZHVyZSBmaW5lIC0tPgogIDxyZWN0IHg9IjEiIHk9IjEiIHdpZHRoPSIzOTgiIGhlaWdodD0iNTE4IiByeD0iMTUiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMSIgb3BhY2l0eT0iLjEiLz4KICA8IS0tIFRhZyAtLT4KICA8cmVjdCB4PSIyMiIgeT0iMjIiIHdpZHRoPSIxNjAiIGhlaWdodD0iMjYiIHJ4PSI2IiBmaWxsPSJ3aGl0ZSIgb3BhY2l0eT0iLjEiLz4KICA8dGV4dCB4PSIzNCIgeT0iMzkiIGZvbnQtZmFtaWx5PSInSGVsdmV0aWNhIE5ldWUnLEFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtd2VpZ2h0PSI3MDAiIGZvbnQtc2l6ZT0iMTAiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIuODIiIGxldHRlci1zcGFjaW5nPSIuMDllbSI+VTQyIMK3IENPRUZGLiAzPC90ZXh0PgogIDwhLS0gTG9nbyAtLT4KICA8dGV4dCB4PSIzNzgiIHk9IjM5IiB0ZXh0LWFuY2hvcj0iZW5kIiBmb250LWZhbWlseT0iJ0hlbHZldGljYSBOZXVlJyxBcmlhbCxzYW5zLXNlcmlmIiBmb250LXdlaWdodD0iODAwIiBmb250LXNpemU9IjExIiBmaWxsPSJ3aGl0ZSIgb3BhY2l0eT0iLjM1Ij5maWNoZXNPTDwvdGV4dD4KICA8IS0tIFRpdHJlIC0tPgogIDx0ZXh0IHg9IjI4IiB5PSI5NiIgZm9udC1mYW1pbHk9IidIZWx2ZXRpY2EgTmV1ZScsQXJpYWwsc2Fucy1zZXJpZiIgZm9udC13ZWlnaHQ9IjgwMCIgZm9udC1zaXplPSI2MCIgZmlsbD0id2hpdGUiIG9wYWNpdHk9Ii45NyIgbGV0dGVyLXNwYWNpbmc9Ii0uMDM1ZW0iPk9wdGlxdWU8L3RleHQ+CiAgPHRleHQgeD0iMjgiIHk9IjE2MCIgZm9udC1mYW1pbHk9IidIZWx2ZXRpY2EgTmV1ZScsQXJpYWwsc2Fucy1zZXJpZiIgZm9udC13ZWlnaHQ9IjgwMCIgZm9udC1zaXplPSI2MCIgZmlsbD0id2hpdGUiIG9wYWNpdHk9Ii45NyIgbGV0dGVyLXNwYWNpbmc9Ii0uMDM1ZW0iPkfDqW9tw6l0cmlxdWU8L3RleHQ+CiAgPCEtLSBUcmFpdCAtLT4KICA8cmVjdCB4PSIyOCIgeT0iMTc0IiB3aWR0aD0iNTYiIGhlaWdodD0iNCIgcng9IjIiIGZpbGw9IiM5MENBRjkiIG9wYWNpdHk9Ii44NSIvPgogIDwhLS0gU2Now6ltYSAtLT4KICAKICAgICAgPGxpbmUgeDE9Ijg1IiB5MT0iMjkwIiB4Mj0iMzIwIiB5Mj0iMjkwIiBzdHJva2U9IiM5MENBRjkiIHN0cm9rZS13aWR0aD0iMS41IiBvcGFjaXR5PSIuMzgiLz4KICAgICAgPGVsbGlwc2UgY3g9IjIwMCIgY3k9IjI5MCIgcng9IjgiIHJ5PSI1MiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjOTBDQUY5IiBzdHJva2Utd2lkdGg9IjMiIG9wYWNpdHk9Ii44MiIvPgogICAgICA8bGluZSB4MT0iOTAiIHkxPSIyNTgiIHgyPSIyMDAiIHkyPSIyNTgiIHN0cm9rZT0iIzkwQ0FGOSIgc3Ryb2tlLXdpZHRoPSIyIiBvcGFjaXR5PSIuNjgiLz4KICAgICAgPGxpbmUgeDE9IjIwMCIgeTE9IjI1OCIgeDI9IjI5MCIgeTI9IjI5MCIgc3Ryb2tlPSIjOTBDQUY5IiBzdHJva2Utd2lkdGg9IjIiIG9wYWNpdHk9Ii42OCIvPgogICAgICA8bGluZSB4MT0iOTAiIHkxPSIzMjIiIHgyPSIyMDAiIHkyPSIzMjIiIHN0cm9rZT0iIzkwQ0FGOSIgc3Ryb2tlLXdpZHRoPSIyIiBvcGFjaXR5PSIuNjgiLz4KICAgICAgPGxpbmUgeDE9IjIwMCIgeTE9IjMyMiIgeDI9IjI5MCIgeTI9IjI5MCIgc3Ryb2tlPSIjOTBDQUY5IiBzdHJva2Utd2lkdGg9IjIiIG9wYWNpdHk9Ii42OCIvPgogICAgICA8Y2lyY2xlIGN4PSIyOTAiIGN5PSIyOTAiIHI9IjYiIGZpbGw9IiM5MENBRjkiIG9wYWNpdHk9Ii45Ii8+CiAgICAgIDx0ZXh0IHg9IjMwMCIgeT0iMjg1IiBmb250LXNpemU9IjE1IiBmaWxsPSIjOTBDQUY5IiBvcGFjaXR5PSIuNzgiIGZvbnQtZmFtaWx5PSJzZXJpZiIgZm9udC1zdHlsZT0iaXRhbGljIj5GJzwvdGV4dD4KICAgIAo8L3N2Zz4="       alt="Optique Géométrique"     style="height:160px;width:auto;border-radius:10px;flex-shrink:0;box-shadow:0 8px 32px rgba(0,0,0,.4);transition:transform .2s;" onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform=''">
+        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MDAiIGhlaWdodD0iNTIwIiB2aWV3Qm94PSIwIDAgNDAwIDUyMCI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImciIHgxPSIwIiB5MT0iMCIgeDI9Ii4zIiB5Mj0iMSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiM0QTE0OEMiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjNkExQjlBIi8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPGNsaXBQYXRoIGlkPSJjcCI+PHJlY3Qgd2lkdGg9IjQwMCIgaGVpZ2h0PSI1MjAiIHJ4PSIxNiIvPjwvY2xpcFBhdGg+CiAgPC9kZWZzPgogIDxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iNTIwIiBmaWxsPSJ1cmwoI2cpIiByeD0iMTYiLz4KICA8IS0tIENlcmNsZXMgZm9uZCAtLT4KICA8Y2lyY2xlIGN4PSIzNDAiIGN5PSI1MCIgIHI9IjE3MCIgZmlsbD0iI0NFOTNEOCIgb3BhY2l0eT0iLjA1IiBjbGlwLXBhdGg9InVybCgjY3ApIi8+CiAgPGNpcmNsZSBjeD0iNTAiICBjeT0iNDkwIiByPSIxMzAiIGZpbGw9IiNDRTkzRDgiIG9wYWNpdHk9Ii4wNSIgY2xpcC1wYXRoPSJ1cmwoI2NwKSIvPgogIDwhLS0gQm9yZHVyZSBmaW5lIC0tPgogIDxyZWN0IHg9IjEiIHk9IjEiIHdpZHRoPSIzOTgiIGhlaWdodD0iNTE4IiByeD0iMTUiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMSIgb3BhY2l0eT0iLjEiLz4KICA8IS0tIFRhZyAtLT4KICA8cmVjdCB4PSIyMiIgeT0iMjIiIHdpZHRoPSIxNjAiIGhlaWdodD0iMjYiIHJ4PSI2IiBmaWxsPSJ3aGl0ZSIgb3BhY2l0eT0iLjEiLz4KICA8dGV4dCB4PSIzNCIgeT0iMzkiIGZvbnQtZmFtaWx5PSInSGVsdmV0aWNhIE5ldWUnLEFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtd2VpZ2h0PSI3MDAiIGZvbnQtc2l6ZT0iMTAiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIuODIiIGxldHRlci1zcGFjaW5nPSIuMDllbSI+VTQyIMK3IENPRUZGLiAzPC90ZXh0PgogIDwhLS0gTG9nbyAtLT4KICA8dGV4dCB4PSIzNzgiIHk9IjM5IiB0ZXh0LWFuY2hvcj0iZW5kIiBmb250LWZhbWlseT0iJ0hlbHZldGljYSBOZXVlJyxBcmlhbCxzYW5zLXNlcmlmIiBmb250LXdlaWdodD0iODAwIiBmb250LXNpemU9IjExIiBmaWxsPSJ3aGl0ZSIgb3BhY2l0eT0iLjM1Ij5maWNoZXNPTDwvdGV4dD4KICA8IS0tIFRpdHJlIC0tPgogIDx0ZXh0IHg9IjI4IiB5PSI5NiIgZm9udC1mYW1pbHk9IidIZWx2ZXRpY2EgTmV1ZScsQXJpYWwsc2Fucy1zZXJpZiIgZm9udC13ZWlnaHQ9IjgwMCIgZm9udC1zaXplPSI2MCIgZmlsbD0id2hpdGUiIG9wYWNpdHk9Ii45NyIgbGV0dGVyLXNwYWNpbmc9Ii0uMDM1ZW0iPk9wdGlxdWU8L3RleHQ+CiAgPHRleHQgeD0iMjgiIHk9IjE2MCIgZm9udC1mYW1pbHk9IidIZWx2ZXRpY2EgTmV1ZScsQXJpYWwsc2Fucy1zZXJpZiIgZm9udC13ZWlnaHQ9IjgwMCIgZm9udC1zaXplPSI2MCIgZmlsbD0id2hpdGUiIG9wYWNpdHk9Ii45NyIgbGV0dGVyLXNwYWNpbmc9Ii0uMDM1ZW0iPlBoeXNpcXVlPC90ZXh0PgogIDwhLS0gVHJhaXQgLS0+CiAgPHJlY3QgeD0iMjgiIHk9IjE3NCIgd2lkdGg9IjU2IiBoZWlnaHQ9IjQiIHJ4PSIyIiBmaWxsPSIjQ0U5M0Q4IiBvcGFjaXR5PSIuODUiLz4KICA8IS0tIFNjaMOpbWEgLS0+CiAgCiAgICAgIDxwYXRoIGQ9Ik0gODAgMjkwIFEgMTEwIDI0NiwxNDAgMjkwIFEgMTcwIDMzNCwyMDAgMjkwIFEgMjMwIDI0NiwyNjAgMjkwIFEgMjkwIDMzNCwzMjAgMjkwIgogICAgICAgIGZpbGw9Im5vbmUiIHN0cm9rZT0iI0NFOTNEOCIgc3Ryb2tlLXdpZHRoPSIzIiBvcGFjaXR5PSIuNzIiLz4KICAgICAgPHBhdGggZD0iTSA4MCAyNzAgUSAxMTAgMjI4LDE0MCAyNzAgUSAxNzAgMzEyLDIwMCAyNzAgUSAyMzAgMjI4LDI2MCAyNzAgUSAyOTAgMzEyLDMyMCAyNzAiCiAgICAgICAgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjQ0U5M0Q4IiBzdHJva2Utd2lkdGg9IjEuNCIgb3BhY2l0eT0iLjMyIi8+CiAgICAgIDxsaW5lIHgxPSIxNDAiIHkxPSIzNDUiIHgyPSIyNjAiIHkyPSIzNDUiIHN0cm9rZT0iI0NFOTNEOCIgc3Ryb2tlLXdpZHRoPSIxLjIiIG9wYWNpdHk9Ii41Ii8+CiAgICAgIDxsaW5lIHgxPSIxNDAiIHkxPSIzMzgiIHgyPSIxNDAiIHkyPSIzNTIiIHN0cm9rZT0iI0NFOTNEOCIgc3Ryb2tlLXdpZHRoPSIxLjIiIG9wYWNpdHk9Ii41Ii8+CiAgICAgIDxsaW5lIHgxPSIyNjAiIHkxPSIzMzgiIHgyPSIyNjAiIHkyPSIzNTIiIHN0cm9rZT0iI0NFOTNEOCIgc3Ryb2tlLXdpZHRoPSIxLjIiIG9wYWNpdHk9Ii41Ii8+CiAgICAgIDx0ZXh0IHg9IjIwMCIgeT0iMzY4IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LXNpemU9IjE1IiBmaWxsPSIjQ0U5M0Q4IiBvcGFjaXR5PSIuNiIgZm9udC1mYW1pbHk9InNlcmlmIiBmb250LXN0eWxlPSJpdGFsaWMiPs67PC90ZXh0PgogICAgCjwvc3ZnPg=="  alt="Optique Physique"        style="height:160px;width:auto;border-radius:10px;flex-shrink:0;box-shadow:0 8px 32px rgba(0,0,0,.4);transition:transform .2s;" onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform=''">
+        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MDAiIGhlaWdodD0iNTIwIiB2aWV3Qm94PSIwIDAgNDAwIDUyMCI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImciIHgxPSIwIiB5MT0iMCIgeDI9Ii4zIiB5Mj0iMSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiNCNzFDMUMiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjQzYyODI4Ii8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPGNsaXBQYXRoIGlkPSJjcCI+PHJlY3Qgd2lkdGg9IjQwMCIgaGVpZ2h0PSI1MjAiIHJ4PSIxNiIvPjwvY2xpcFBhdGg+CiAgPC9kZWZzPgogIDxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iNTIwIiBmaWxsPSJ1cmwoI2cpIiByeD0iMTYiLz4KICA8Y2lyY2xlIGN4PSIzNDAiIGN5PSI1MCIgIHI9IjE3MCIgZmlsbD0iI0VGOUE5QSIgb3BhY2l0eT0iLjA1IiBjbGlwLXBhdGg9InVybCgjY3ApIi8+CiAgPGNpcmNsZSBjeD0iNTAiICBjeT0iNDkwIiByPSIxMzAiIGZpbGw9IiNFRjlBOUEiIG9wYWNpdHk9Ii4wNSIgY2xpcC1wYXRoPSJ1cmwoI2NwKSIvPgogIDxyZWN0IHg9IjEiIHk9IjEiIHdpZHRoPSIzOTgiIGhlaWdodD0iNTE4IiByeD0iMTUiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMSIgb3BhY2l0eT0iLjEiLz4KICA8IS0tIFRhZyAtLT4KICA8cmVjdCB4PSIyMiIgeT0iMjIiIHdpZHRoPSIxNjAiIGhlaWdodD0iMjYiIHJ4PSI2IiBmaWxsPSJ3aGl0ZSIgb3BhY2l0eT0iLjEiLz4KICA8dGV4dCB4PSIzNCIgeT0iMzkiIGZvbnQtZmFtaWx5PSInSGVsdmV0aWNhIE5ldWUnLEFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtd2VpZ2h0PSI3MDAiIGZvbnQtc2l6ZT0iMTAiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIuODIiIGxldHRlci1zcGFjaW5nPSIuMDllbSI+VTQzIMK3IENPRUZGLiAzPC90ZXh0PgogIDwhLS0gTG9nbyAtLT4KICA8dGV4dCB4PSIzNzgiIHk9IjM5IiB0ZXh0LWFuY2hvcj0iZW5kIiBmb250LWZhbWlseT0iJ0hlbHZldGljYSBOZXVlJyxBcmlhbCxzYW5zLXNlcmlmIiBmb250LXdlaWdodD0iODAwIiBmb250LXNpemU9IjExIiBmaWxsPSJ3aGl0ZSIgb3BhY2l0eT0iLjM1Ij5maWNoZXNPTDwvdGV4dD4KICA8IS0tIFRpdHJlIC0tPgogIDx0ZXh0IHg9IjI4IiB5PSIxMjAiIGZvbnQtZmFtaWx5PSInSGVsdmV0aWNhIE5ldWUnLEFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtd2VpZ2h0PSI4MDAiIGZvbnQtc2l6ZT0iNjAiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIuOTciIGxldHRlci1zcGFjaW5nPSItLjAzNWVtIj5FVFNPPC90ZXh0PgogIDwhLS0gVHJhaXQgLS0+CiAgPHJlY3QgeD0iMjgiIHk9IjEzNCIgd2lkdGg9IjU2IiBoZWlnaHQ9IjQiIHJ4PSIyIiBmaWxsPSIjRUY5QTlBIiBvcGFjaXR5PSIuODUiLz4KCiAgPCEtLSDilZDilZDilZAgU2Now6ltYSBkaW9wdHJlIHNwaMOpcmlxdWUg4pWQ4pWQ4pWQIC0tPgogIDwhLS0gQXhlIG9wdGlxdWUgLS0+CiAgPGxpbmUgeDE9IjQwIiB5MT0iMzAwIiB4Mj0iMzYwIiB5Mj0iMzAwIiBzdHJva2U9IiNFRjlBOUEiIHN0cm9rZS13aWR0aD0iMS41IiBvcGFjaXR5PSIuNDAiLz4KCiAgPCEtLSBTdXJmYWNlIHNwaMOpcmlxdWUgKGRlbWktY2VyY2xlKSA9IGRpb3B0cmUgLS0+CiAgPCEtLSBDZW50cmUgZGUgY291cmJ1cmUgQyDDoCB4PTI3MCwgcmF5b249OTAgLS0+CiAgPHBhdGggZD0iTSAyMjUgMjEwIEEgOTAgOTAgMCAwIDEgMjI1IDM5MCIKICAgIGZpbGw9Im5vbmUiIHN0cm9rZT0iI0VGOUE5QSIgc3Ryb2tlLXdpZHRoPSIzIiBvcGFjaXR5PSIuODUiLz4KCiAgPCEtLSBNaWxpZXUgb3B0aXF1ZSBuIChnYXVjaGUpIC0tPgogIDx0ZXh0IHg9IjkwIiB5PSIyNjAiIGZvbnQtZmFtaWx5PSJzZXJpZiIgZm9udC1zaXplPSIyMiIgZmlsbD0iI0VGOUE5QSIgZm9udC1zdHlsZT0iaXRhbGljIiBvcGFjaXR5PSIuNiI+bjwvdGV4dD4KICA8IS0tIE1pbGlldSBvcHRpcXVlIG4nIChkcm9pdGUpIC0tPgogIDx0ZXh0IHg9IjI5MCIgeT0iMjYwIiBmb250LWZhbWlseT0ic2VyaWYiIGZvbnQtc2l6ZT0iMjIiIGZpbGw9IiNFRjlBOUEiIGZvbnQtc3R5bGU9Iml0YWxpYyIgb3BhY2l0eT0iLjYiPm4nPC90ZXh0PgoKICA8IS0tIFNvbW1ldCBTIHN1ciBsJ2F4ZSAtLT4KICA8Y2lyY2xlIGN4PSIyMjUiIGN5PSIzMDAiIHI9IjQiIGZpbGw9IiNFRjlBOUEiIG9wYWNpdHk9Ii45Ii8+CiAgPHRleHQgeD0iMjI4IiB5PSIzMTgiIGZvbnQtZmFtaWx5PSJzZXJpZiIgZm9udC1zaXplPSIxNCIgZmlsbD0iI0VGOUE5QSIgb3BhY2l0eT0iLjciPlM8L3RleHQ+CgogIDwhLS0gQ2VudHJlIGRlIGNvdXJidXJlIEMgLS0+CiAgPGNpcmNsZSBjeD0iMzE1IiBjeT0iMzAwIiByPSIzLjUiIGZpbGw9IiNFRjlBOUEiIG9wYWNpdHk9Ii43Ii8+CiAgPHRleHQgeD0iMzE4IiB5PSIzMTgiIGZvbnQtZmFtaWx5PSJzZXJpZiIgZm9udC1zaXplPSIxNCIgZmlsbD0iI0VGOUE5QSIgb3BhY2l0eT0iLjYiPkM8L3RleHQ+CiAgPCEtLSBSYXlvbiBkZSBjb3VyYnVyZSBSIC0tPgogIDxsaW5lIHgxPSIyMjUiIHkxPSIzMDAiIHgyPSIzMTUiIHkyPSIzMDAiIHN0cm9rZT0iI0VGOUE5QSIgc3Ryb2tlLXdpZHRoPSIxIiBzdHJva2UtZGFzaGFycmF5PSI0LDMiIG9wYWNpdHk9Ii4zNSIvPgogIDx0ZXh0IHg9IjI2MiIgeT0iMjkyIiBmb250LWZhbWlseT0ic2VyaWYiIGZvbnQtc2l6ZT0iMTEiIGZpbGw9IiNFRjlBOUEiIGZvbnQtc3R5bGU9Iml0YWxpYyIgb3BhY2l0eT0iLjUiPlI8L3RleHQ+CgogIDwhLS0gUmF5b24gaW5jaWRlbnQgKHZpZW50IGRlIGxhIGdhdWNoZSwgaW5jbGluw6kpIC0tPgogIDwhLS0gUG9pbnQgZCdpbXBhY3Qgc3VyIGxlIGRpb3B0cmUgOiBhcHByb3hpbWF0aW9uIMOgIHg9MjE4LCB5PTI1NSAtLT4KICA8bGluZSB4MT0iNTUiIHkxPSIyNTUiIHgyPSIyMTgiIHkyPSIyNTUiIHN0cm9rZT0iI0VGOUE5QSIgc3Ryb2tlLXdpZHRoPSIyLjIiIG9wYWNpdHk9Ii44Ii8+CiAgPCEtLSBGbMOoY2hlIHN1ciBsZSByYXlvbiBpbmNpZGVudCAtLT4KICA8cG9seWdvbiBwb2ludHM9IjIxOCwyNTUgMjA2LDI1MCAyMDYsMjYwIiBmaWxsPSIjRUY5QTlBIiBvcGFjaXR5PSIuOCIvPgoKICA8IS0tIE5vcm1hbGUgYXUgcG9pbnQgZCdpbXBhY3QgKGxpZ25lIHZlcnMgQykgLS0+CiAgPGxpbmUgeDE9IjIxOCIgeTE9IjI1NSIgeDI9IjMxNSIgeTI9IjMwMCIgc3Ryb2tlPSIjRUY5QTlBIiBzdHJva2Utd2lkdGg9IjEiIHN0cm9rZS1kYXNoYXJyYXk9IjMsNCIgb3BhY2l0eT0iLjM1Ii8+CgogIDwhLS0gUmF5b24gcsOpZnJhY3TDqSAoY29udGludWUgdmVycyBsYSBkcm9pdGUsIG1vaW5zIGluY2xpbsOpKSAtLT4KICA8bGluZSB4MT0iMjE4IiB5MT0iMjU1IiB4Mj0iMzYwIiB5Mj0iMjg4IiBzdHJva2U9IiNFRjlBOUEiIHN0cm9rZS13aWR0aD0iMi4yIiBvcGFjaXR5PSIuOCIvPgogIDwhLS0gRmzDqGNoZSBzdXIgbGUgcmF5b24gcsOpZnJhY3TDqSAtLT4KICA8cG9seWdvbiBwb2ludHM9IjM2MCwyODggMzQ2LDI4MiAzNDcsMjkzIiBmaWxsPSIjRUY5QTlBIiBvcGFjaXR5PSIuOCIvPgoKICA8IS0tIEFuZ2xlIGkgKGluY2lkZW50KSAtLT4KICA8cGF0aCBkPSJNIDIxOCAyNTUgUSAyMDUgMjU4IDIwMiAyNjQiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI0VGOUE5QSIgc3Ryb2tlLXdpZHRoPSIxLjIiIG9wYWNpdHk9Ii41NSIvPgogIDx0ZXh0IHg9IjE5MCIgeT0iMjcwIiBmb250LWZhbWlseT0ic2VyaWYiIGZvbnQtc2l6ZT0iMTMiIGZpbGw9IiNFRjlBOUEiIGZvbnQtc3R5bGU9Iml0YWxpYyIgb3BhY2l0eT0iLjY1Ij5pPC90ZXh0PgoKICA8IS0tIEFuZ2xlIGknIChyw6lmcmFjdMOpKSAtLT4KICA8cGF0aCBkPSJNIDIxOCAyNTUgUSAyMjggMjU4IDIzMiAyNjQiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI0VGOUE5QSIgc3Ryb2tlLXdpZHRoPSIxLjIiIG9wYWNpdHk9Ii41NSIvPgogIDx0ZXh0IHg9IjIzMiIgeT0iMjcwIiBmb250LWZhbWlseT0ic2VyaWYiIGZvbnQtc2l6ZT0iMTMiIGZpbGw9IiNFRjlBOUEiIGZvbnQtc3R5bGU9Iml0YWxpYyIgb3BhY2l0eT0iLjY1Ij5pJzwvdGV4dD4KCiAgPCEtLSBGb3llciBpbWFnZSBGJyAtLT4KICA8Y2lyY2xlIGN4PSIzNTUiIGN5PSIzMDAiIHI9IjQiIGZpbGw9IiNFRjlBOUEiIG9wYWNpdHk9Ii43NSIvPgogIDx0ZXh0IHg9IjM0MCIgeT0iMzE4IiBmb250LWZhbWlseT0ic2VyaWYiIGZvbnQtc2l6ZT0iMTMiIGZpbGw9IiNFRjlBOUEiIG9wYWNpdHk9Ii42NSI+Ric8L3RleHQ+Cjwvc3ZnPg=="              alt="ETSO"                    style="height:160px;width:auto;border-radius:10px;flex-shrink:0;box-shadow:0 8px 32px rgba(0,0,0,.4);transition:transform .2s;" onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform=''">
+        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MDAiIGhlaWdodD0iNTIwIiB2aWV3Qm94PSIwIDAgNDAwIDUyMCI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImciIHgxPSIwIiB5MT0iMCIgeDI9Ii4zIiB5Mj0iMSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiMyMTIxMjEiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMzc0NzRGIi8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPGNsaXBQYXRoIGlkPSJjcCI+PHJlY3Qgd2lkdGg9IjQwMCIgaGVpZ2h0PSI1MjAiIHJ4PSIxNiIvPjwvY2xpcFBhdGg+CiAgPC9kZWZzPgogIDxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iNTIwIiBmaWxsPSJ1cmwoI2cpIiByeD0iMTYiLz4KICA8IS0tIENlcmNsZXMgZm9uZCAtLT4KICA8Y2lyY2xlIGN4PSIzNDAiIGN5PSI1MCIgIHI9IjE3MCIgZmlsbD0iI0IwQkVDNSIgb3BhY2l0eT0iLjA1IiBjbGlwLXBhdGg9InVybCgjY3ApIi8+CiAgPGNpcmNsZSBjeD0iNTAiICBjeT0iNDkwIiByPSIxMzAiIGZpbGw9IiNCMEJFQzUiIG9wYWNpdHk9Ii4wNSIgY2xpcC1wYXRoPSJ1cmwoI2NwKSIvPgogIDwhLS0gQm9yZHVyZSBmaW5lIC0tPgogIDxyZWN0IHg9IjEiIHk9IjEiIHdpZHRoPSIzOTgiIGhlaWdodD0iNTE4IiByeD0iMTUiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMSIgb3BhY2l0eT0iLjEiLz4KICA8IS0tIFRhZyAtLT4KICA8cmVjdCB4PSIyMiIgeT0iMjIiIHdpZHRoPSIxNjAiIGhlaWdodD0iMjYiIHJ4PSI2IiBmaWxsPSJ3aGl0ZSIgb3BhY2l0eT0iLjEiLz4KICA8dGV4dCB4PSIzNCIgeT0iMzkiIGZvbnQtZmFtaWx5PSInSGVsdmV0aWNhIE5ldWUnLEFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtd2VpZ2h0PSI3MDAiIGZvbnQtc2l6ZT0iMTAiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIuODIiIGxldHRlci1zcGFjaW5nPSIuMDllbSI+VTQzIMK3IFRFQ0hOSVFVRTwvdGV4dD4KICA8IS0tIExvZ28gLS0+CiAgPHRleHQgeD0iMzc4IiB5PSIzOSIgdGV4dC1hbmNob3I9ImVuZCIgZm9udC1mYW1pbHk9IidIZWx2ZXRpY2EgTmV1ZScsQXJpYWwsc2Fucy1zZXJpZiIgZm9udC13ZWlnaHQ9IjgwMCIgZm9udC1zaXplPSIxMSIgZmlsbD0id2hpdGUiIG9wYWNpdHk9Ii4zNSI+ZmljaGVzT0w8L3RleHQ+CiAgPCEtLSBUaXRyZSAtLT4KICA8dGV4dCB4PSIyOCIgeT0iMTIwIiBmb250LWZhbWlseT0iJ0hlbHZldGljYSBOZXVlJyxBcmlhbCxzYW5zLXNlcmlmIiBmb250LXdlaWdodD0iODAwIiBmb250LXNpemU9IjYwIiBmaWxsPSJ3aGl0ZSIgb3BhY2l0eT0iLjk3IiBsZXR0ZXItc3BhY2luZz0iLS4wMzVlbSI+TcOpY2FuaXF1ZTwvdGV4dD4KICAKICA8IS0tIFRyYWl0IC0tPgogIDxyZWN0IHg9IjI4IiB5PSIxMzQiIHdpZHRoPSI1NiIgaGVpZ2h0PSI0IiByeD0iMiIgZmlsbD0iI0IwQkVDNSIgb3BhY2l0eT0iLjg1Ii8+CiAgPCEtLSBTY2jDqW1hIC0tPgogIAogICAgICA8Y2lyY2xlIGN4PSIxNzAiIGN5PSIyOTAiIHI9IjQ0IiBmaWxsPSJub25lIiBzdHJva2U9IiNCMEJFQzUiIHN0cm9rZS13aWR0aD0iMi4yIiBvcGFjaXR5PSIuNDUiLz4KICAgICAgPGNpcmNsZSBjeD0iMTcwIiBjeT0iMjkwIiByPSIyNiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjQjBCRUM1IiBzdHJva2Utd2lkdGg9IjEuNSIgb3BhY2l0eT0iLjI4Ii8+CiAgICAgIDxjaXJjbGUgY3g9IjE3MCIgY3k9IjI5MCIgcj0iOCIgZmlsbD0iI0IwQkVDNSIgb3BhY2l0eT0iLjU1Ii8+CiAgICAgIDxjaXJjbGUgY3g9IjI0NCIgY3k9IjI3NiIgcj0iMzAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI0IwQkVDNSIgc3Ryb2tlLXdpZHRoPSIxLjgiIG9wYWNpdHk9Ii4zOCIvPgogICAgICA8Y2lyY2xlIGN4PSIyNDQiIGN5PSIyNzYiIHI9IjYiIGZpbGw9IiNCMEJFQzUiIG9wYWNpdHk9Ii40MiIvPgogICAgICA8bGluZSB4MT0iMTcwIiB5MT0iMjkwIiB4Mj0iMjQ0IiB5Mj0iMjc2IiBzdHJva2U9IiNCMEJFQzUiIHN0cm9rZS13aWR0aD0iMSIgc3Ryb2tlLWRhc2hhcnJheT0iNCwzIiBvcGFjaXR5PSIuMjgiLz4KICAgIAo8L3N2Zz4="         alt="Mécanique"               style="height:160px;width:auto;border-radius:10px;flex-shrink:0;box-shadow:0 8px 32px rgba(0,0,0,.4);transition:transform .2s;" onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform=''">
+        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MDAiIGhlaWdodD0iNTIwIiB2aWV3Qm94PSIwIDAgNDAwIDUyMCI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImciIHgxPSIwIiB5MT0iMCIgeDI9Ii4zIiB5Mj0iMSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiMwMDRENDAiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMDA2OTVDIi8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPGNsaXBQYXRoIGlkPSJjcCI+PHJlY3Qgd2lkdGg9IjQwMCIgaGVpZ2h0PSI1MjAiIHJ4PSIxNiIvPjwvY2xpcFBhdGg+CiAgPC9kZWZzPgogIDxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iNTIwIiBmaWxsPSJ1cmwoI2cpIiByeD0iMTYiLz4KICA8IS0tIENlcmNsZXMgZm9uZCAtLT4KICA8Y2lyY2xlIGN4PSIzNDAiIGN5PSI1MCIgIHI9IjE3MCIgZmlsbD0iIzgwQ0JDNCIgb3BhY2l0eT0iLjA1IiBjbGlwLXBhdGg9InVybCgjY3ApIi8+CiAgPGNpcmNsZSBjeD0iNTAiICBjeT0iNDkwIiByPSIxMzAiIGZpbGw9IiM4MENCQzQiIG9wYWNpdHk9Ii4wNSIgY2xpcC1wYXRoPSJ1cmwoI2NwKSIvPgogIDwhLS0gQm9yZHVyZSBmaW5lIC0tPgogIDxyZWN0IHg9IjEiIHk9IjEiIHdpZHRoPSIzOTgiIGhlaWdodD0iNTE4IiByeD0iMTUiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMSIgb3BhY2l0eT0iLjEiLz4KICA8IS0tIFRhZyAtLT4KICA8cmVjdCB4PSIyMiIgeT0iMjIiIHdpZHRoPSIxNjAiIGhlaWdodD0iMjYiIHJ4PSI2IiBmaWxsPSJ3aGl0ZSIgb3BhY2l0eT0iLjEiLz4KICA8dGV4dCB4PSIzNCIgeT0iMzkiIGZvbnQtZmFtaWx5PSInSGVsdmV0aWNhIE5ldWUnLEFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtd2VpZ2h0PSI3MDAiIGZvbnQtc2l6ZT0iMTAiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIuODIiIGxldHRlci1zcGFjaW5nPSIuMDllbSI+VTYxIMK3IE9SQUwgUFJBVElRVUU8L3RleHQ+CiAgPCEtLSBMb2dvIC0tPgogIDx0ZXh0IHg9IjM3OCIgeT0iMzkiIHRleHQtYW5jaG9yPSJlbmQiIGZvbnQtZmFtaWx5PSInSGVsdmV0aWNhIE5ldWUnLEFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtd2VpZ2h0PSI4MDAiIGZvbnQtc2l6ZT0iMTEiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIuMzUiPmZpY2hlc09MPC90ZXh0PgogIDwhLS0gVGl0cmUgLS0+CiAgPHRleHQgeD0iMjgiIHk9Ijk2IiBmb250LWZhbWlseT0iJ0hlbHZldGljYSBOZXVlJyxBcmlhbCxzYW5zLXNlcmlmIiBmb250LXdlaWdodD0iODAwIiBmb250LXNpemU9IjYwIiBmaWxsPSJ3aGl0ZSIgb3BhY2l0eT0iLjk3IiBsZXR0ZXItc3BhY2luZz0iLS4wMzVlbSI+UHJpc2UgZGU8L3RleHQ+CiAgPHRleHQgeD0iMjgiIHk9IjE2MCIgZm9udC1mYW1pbHk9IidIZWx2ZXRpY2EgTmV1ZScsQXJpYWwsc2Fucy1zZXJpZiIgZm9udC13ZWlnaHQ9IjgwMCIgZm9udC1zaXplPSI2MCIgZmlsbD0id2hpdGUiIG9wYWNpdHk9Ii45NyIgbGV0dGVyLXNwYWNpbmc9Ii0uMDM1ZW0iPk1lc3VyZXM8L3RleHQ+CiAgPCEtLSBUcmFpdCAtLT4KICA8cmVjdCB4PSIyOCIgeT0iMTc0IiB3aWR0aD0iNTYiIGhlaWdodD0iNCIgcng9IjIiIGZpbGw9IiM4MENCQzQiIG9wYWNpdHk9Ii44NSIvPgogIDwhLS0gU2Now6ltYSAtLT4KICAKICAgICAgPGVsbGlwc2UgY3g9IjIwMCIgY3k9IjI5MCIgcng9IjY0IiByeT0iODAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzgwQ0JDNCIgc3Ryb2tlLXdpZHRoPSIyIiBvcGFjaXR5PSIuMzgiLz4KICAgICAgPGNpcmNsZSBjeD0iMTc4IiBjeT0iMjc4IiByPSIxNSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjODBDQkM0IiBzdHJva2Utd2lkdGg9IjIiIG9wYWNpdHk9Ii42MiIvPgogICAgICA8Y2lyY2xlIGN4PSIyMjIiIGN5PSIyNzgiIHI9IjE1IiBmaWxsPSJub25lIiBzdHJva2U9IiM4MENCQzQiIHN0cm9rZS13aWR0aD0iMiIgb3BhY2l0eT0iLjYyIi8+CiAgICAgIDxsaW5lIHgxPSIxNzgiIHkxPSIyNTgiIHgyPSIyMjIiIHkyPSIyNTgiIHN0cm9rZT0iIzgwQ0JDNCIgc3Ryb2tlLXdpZHRoPSIyIiBvcGFjaXR5PSIuNzIiLz4KICAgICAgPGxpbmUgeDE9IjE3OCIgeTE9IjI1MiIgeDI9IjE3OCIgeTI9IjI2NCIgc3Ryb2tlPSIjODBDQkM0IiBzdHJva2Utd2lkdGg9IjIiIG9wYWNpdHk9Ii43MiIvPgogICAgICA8bGluZSB4MT0iMjIyIiB5MT0iMjUyIiB4Mj0iMjIyIiB5Mj0iMjY0IiBzdHJva2U9IiM4MENCQzQiIHN0cm9rZS13aWR0aD0iMiIgb3BhY2l0eT0iLjcyIi8+CiAgICAgIDx0ZXh0IHg9IjIwMCIgeT0iMjQ0IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LXNpemU9IjExIiBmaWxsPSIjODBDQkM0IiBvcGFjaXR5PSIuNzIiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXdlaWdodD0iNzAwIj5ELlAuPC90ZXh0PgogICAgCjwvc3ZnPg=="     alt="Prise de Mesures"        style="height:160px;width:auto;border-radius:10px;flex-shrink:0;box-shadow:0 8px 32px rgba(0,0,0,.4);transition:transform .2s;" onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform=''">
+        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MDAiIGhlaWdodD0iNTIwIiB2aWV3Qm94PSIwIDAgNDAwIDUyMCI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImciIHgxPSIwIiB5MT0iMCIgeDI9Ii4zIiB5Mj0iMSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiMwMTU3OUIiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMDI3N0JEIi8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPGNsaXBQYXRoIGlkPSJjcCI+PHJlY3Qgd2lkdGg9IjQwMCIgaGVpZ2h0PSI1MjAiIHJ4PSIxNiIvPjwvY2xpcFBhdGg+CiAgPC9kZWZzPgogIDxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iNTIwIiBmaWxsPSJ1cmwoI2cpIiByeD0iMTYiLz4KICA8IS0tIENlcmNsZXMgZm9uZCAtLT4KICA8Y2lyY2xlIGN4PSIzNDAiIGN5PSI1MCIgIHI9IjE3MCIgZmlsbD0iIzgxRDRGQSIgb3BhY2l0eT0iLjA1IiBjbGlwLXBhdGg9InVybCgjY3ApIi8+CiAgPGNpcmNsZSBjeD0iNTAiICBjeT0iNDkwIiByPSIxMzAiIGZpbGw9IiM4MUQ0RkEiIG9wYWNpdHk9Ii4wNSIgY2xpcC1wYXRoPSJ1cmwoI2NwKSIvPgogIDwhLS0gQm9yZHVyZSBmaW5lIC0tPgogIDxyZWN0IHg9IjEiIHk9IjEiIHdpZHRoPSIzOTgiIGhlaWdodD0iNTE4IiByeD0iMTUiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMSIgb3BhY2l0eT0iLjEiLz4KICA8IS0tIFRhZyAtLT4KICA8cmVjdCB4PSIyMiIgeT0iMjIiIHdpZHRoPSIxNjAiIGhlaWdodD0iMjYiIHJ4PSI2IiBmaWxsPSJ3aGl0ZSIgb3BhY2l0eT0iLjEiLz4KICA8dGV4dCB4PSIzNCIgeT0iMzkiIGZvbnQtZmFtaWx5PSInSGVsdmV0aWNhIE5ldWUnLEFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtd2VpZ2h0PSI3MDAiIGZvbnQtc2l6ZT0iMTAiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIuODIiIGxldHRlci1zcGFjaW5nPSIuMDllbSI+VTQxIMK3IENPRUZGLiAyPC90ZXh0PgogIDwhLS0gTG9nbyAtLT4KICA8dGV4dCB4PSIzNzgiIHk9IjM5IiB0ZXh0LWFuY2hvcj0iZW5kIiBmb250LWZhbWlseT0iJ0hlbHZldGljYSBOZXVlJyxBcmlhbCxzYW5zLXNlcmlmIiBmb250LXdlaWdodD0iODAwIiBmb250LXNpemU9IjExIiBmaWxsPSJ3aGl0ZSIgb3BhY2l0eT0iLjM1Ij5maWNoZXNPTDwvdGV4dD4KICA8IS0tIFRpdHJlIC0tPgogIDx0ZXh0IHg9IjI4IiB5PSI5NiIgZm9udC1mYW1pbHk9IidIZWx2ZXRpY2EgTmV1ZScsQXJpYWwsc2Fucy1zZXJpZiIgZm9udC13ZWlnaHQ9IjgwMCIgZm9udC1zaXplPSI2MCIgZmlsbD0id2hpdGUiIG9wYWNpdHk9Ii45NyIgbGV0dGVyLXNwYWNpbmc9Ii0uMDM1ZW0iPk1hdGjDqS08L3RleHQ+CiAgPHRleHQgeD0iMjgiIHk9IjE2MCIgZm9udC1mYW1pbHk9IidIZWx2ZXRpY2EgTmV1ZScsQXJpYWwsc2Fucy1zZXJpZiIgZm9udC13ZWlnaHQ9IjgwMCIgZm9udC1zaXplPSI2MCIgZmlsbD0id2hpdGUiIG9wYWNpdHk9Ii45NyIgbGV0dGVyLXNwYWNpbmc9Ii0uMDM1ZW0iPm1hdGlxdWVzPC90ZXh0PgogIDwhLS0gVHJhaXQgLS0+CiAgPHJlY3QgeD0iMjgiIHk9IjE3NCIgd2lkdGg9IjU2IiBoZWlnaHQ9IjQiIHJ4PSIyIiBmaWxsPSIjODFENEZBIiBvcGFjaXR5PSIuODUiLz4KICA8IS0tIFNjaMOpbWEgLS0+CiAgCiAgICAgIDx0ZXh0IHg9IjEyMCIgeT0iMzAyIiBmb250LXNpemU9IjUyIiBmaWxsPSIjODFENEZBIiBvcGFjaXR5PSIuNDIiIGZvbnQtZmFtaWx5PSJzZXJpZiIgZm9udC1zdHlsZT0iaXRhbGljIj7iiKs8L3RleHQ+CiAgICAgIDx0ZXh0IHg9IjE4OCIgeT0iMjk1IiBmb250LXNpemU9IjI2IiBmaWxsPSIjODFENEZBIiBvcGFjaXR5PSIuNDUiIGZvbnQtZmFtaWx5PSJzZXJpZiI+c2luIM64PC90ZXh0PgogICAgICA8dGV4dCB4PSIyNjQiIHk9IjI5OCIgZm9udC1zaXplPSIzOCIgZmlsbD0iIzgxRDRGQSIgb3BhY2l0eT0iLjM4IiBmb250LWZhbWlseT0ic2VyaWYiIGZvbnQtc3R5bGU9Iml0YWxpYyI+zqM8L3RleHQ+CiAgICAgIDx0ZXh0IHg9IjIwMCIgeT0iMzQwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LXNpemU9IjE0IiBmaWxsPSIjODFENEZBIiBvcGFjaXR5PSIuMzUiIGZvbnQtZmFtaWx5PSJzZXJpZiI+YcKyICsgYsKyID0gY8KyPC90ZXh0PgogICAgCjwvc3ZnPg=="     alt="Mathématiques"           style="height:160px;width:auto;border-radius:10px;flex-shrink:0;box-shadow:0 8px 32px rgba(0,0,0,.4);transition:transform .2s;" onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform=''">
+        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MDAiIGhlaWdodD0iNTIwIiB2aWV3Qm94PSIwIDAgNDAwIDUyMCI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImciIHgxPSIwIiB5MT0iMCIgeDI9Ii4zIiB5Mj0iMSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiMxQzFDMkUiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMkQyRDQ0Ii8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPGNsaXBQYXRoIGlkPSJjcCI+PHJlY3Qgd2lkdGg9IjQwMCIgaGVpZ2h0PSI1MjAiIHJ4PSIxNiIvPjwvY2xpcFBhdGg+CiAgPC9kZWZzPgogIDxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iNTIwIiBmaWxsPSJ1cmwoI2cpIiByeD0iMTYiLz4KICA8IS0tIENlcmNsZXMgZm9uZCAtLT4KICA8Y2lyY2xlIGN4PSIzNDAiIGN5PSI1MCIgIHI9IjE3MCIgZmlsbD0iI0M1Q0FFOSIgb3BhY2l0eT0iLjA1IiBjbGlwLXBhdGg9InVybCgjY3ApIi8+CiAgPGNpcmNsZSBjeD0iNTAiICBjeT0iNDkwIiByPSIxMzAiIGZpbGw9IiNDNUNBRTkiIG9wYWNpdHk9Ii4wNSIgY2xpcC1wYXRoPSJ1cmwoI2NwKSIvPgogIDwhLS0gQm9yZHVyZSBmaW5lIC0tPgogIDxyZWN0IHg9IjEiIHk9IjEiIHdpZHRoPSIzOTgiIGhlaWdodD0iNTE4IiByeD0iMTUiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMSIgb3BhY2l0eT0iLjEiLz4KICA8IS0tIFRhZyAtLT4KICA8cmVjdCB4PSIyMiIgeT0iMjIiIHdpZHRoPSIxNjAiIGhlaWdodD0iMjYiIHJ4PSI2IiBmaWxsPSJ3aGl0ZSIgb3BhY2l0eT0iLjEiLz4KICA8dGV4dCB4PSIzNCIgeT0iMzkiIGZvbnQtZmFtaWx5PSInSGVsdmV0aWNhIE5ldWUnLEFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtd2VpZ2h0PSI3MDAiIGZvbnQtc2l6ZT0iMTAiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIuODIiIGxldHRlci1zcGFjaW5nPSIuMDllbSI+VTMgwrcgR0VTVElPTjwvdGV4dD4KICA8IS0tIExvZ28gLS0+CiAgPHRleHQgeD0iMzc4IiB5PSIzOSIgdGV4dC1hbmNob3I9ImVuZCIgZm9udC1mYW1pbHk9IidIZWx2ZXRpY2EgTmV1ZScsQXJpYWwsc2Fucy1zZXJpZiIgZm9udC13ZWlnaHQ9IjgwMCIgZm9udC1zaXplPSIxMSIgZmlsbD0id2hpdGUiIG9wYWNpdHk9Ii4zNSI+ZmljaGVzT0w8L3RleHQ+CiAgPCEtLSBUaXRyZSAtLT4KICA8dGV4dCB4PSIyOCIgeT0iMTIwIiBmb250LWZhbWlseT0iJ0hlbHZldGljYSBOZXVlJyxBcmlhbCxzYW5zLXNlcmlmIiBmb250LXdlaWdodD0iODAwIiBmb250LXNpemU9IjYwIiBmaWxsPSJ3aGl0ZSIgb3BhY2l0eT0iLjk3IiBsZXR0ZXItc3BhY2luZz0iLS4wMzVlbSI+RHJvaXQ8L3RleHQ+CiAgCiAgPCEtLSBUcmFpdCAtLT4KICA8cmVjdCB4PSIyOCIgeT0iMTM0IiB3aWR0aD0iNTYiIGhlaWdodD0iNCIgcng9IjIiIGZpbGw9IiNDNUNBRTkiIG9wYWNpdHk9Ii44NSIvPgogIDwhLS0gU2Now6ltYSAtLT4KICAKICAgICAgPGxpbmUgeDE9IjIwMCIgeTE9IjI0MCIgeDI9IjIwMCIgeTI9IjMyOCIgc3Ryb2tlPSIjQzVDQUU5IiBzdHJva2Utd2lkdGg9IjIuMiIgb3BhY2l0eT0iLjUiLz4KICAgICAgPGxpbmUgeDE9IjEzMiIgeTE9IjI2NCIgeDI9IjI2OCIgeTI9IjI2NCIgc3Ryb2tlPSIjQzVDQUU5IiBzdHJva2Utd2lkdGg9IjIuMiIgb3BhY2l0eT0iLjUiLz4KICAgICAgPGNpcmNsZSBjeD0iMTQ0IiBjeT0iMjk4IiByPSIyNiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjQzVDQUU5IiBzdHJva2Utd2lkdGg9IjIiIG9wYWNpdHk9Ii41OCIvPgogICAgICA8Y2lyY2xlIGN4PSIyNTYiIGN5PSIyOTgiIHI9IjI2IiBmaWxsPSJub25lIiBzdHJva2U9IiNDNUNBRTkiIHN0cm9rZS13aWR0aD0iMiIgb3BhY2l0eT0iLjU4Ii8+CiAgICAgIDxsaW5lIHgxPSIxMzIiIHkxPSIyNjQiIHgyPSIxNDQiIHkyPSIyNzIiIHN0cm9rZT0iI0M1Q0FFOSIgc3Ryb2tlLXdpZHRoPSIyIiBvcGFjaXR5PSIuNSIvPgogICAgICA8bGluZSB4MT0iMjY4IiB5MT0iMjY0IiB4Mj0iMjU2IiB5Mj0iMjcyIiBzdHJva2U9IiNDNUNBRTkiIHN0cm9rZS13aWR0aD0iMiIgb3BhY2l0eT0iLjUiLz4KICAgICAgPGNpcmNsZSBjeD0iMjAwIiBjeT0iMjQwIiByPSI3IiBmaWxsPSIjQzVDQUU5IiBvcGFjaXR5PSIuNjUiLz4KICAgIAo8L3N2Zz4="             alt="Droit"                   style="height:160px;width:auto;border-radius:10px;flex-shrink:0;box-shadow:0 8px 32px rgba(0,0,0,.4);transition:transform .2s;" onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform=''">
+        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MDAiIGhlaWdodD0iNTIwIiB2aWV3Qm94PSIwIDAgNDAwIDUyMCI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImciIHgxPSIwIiB5MT0iMCIgeDI9Ii4zIiB5Mj0iMSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiNFNjUxMDAiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjRUY2QzAwIi8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPGNsaXBQYXRoIGlkPSJjcCI+PHJlY3Qgd2lkdGg9IjQwMCIgaGVpZ2h0PSI1MjAiIHJ4PSIxNiIvPjwvY2xpcFBhdGg+CiAgPC9kZWZzPgogIDxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iNTIwIiBmaWxsPSJ1cmwoI2cpIiByeD0iMTYiLz4KICA8Y2lyY2xlIGN4PSIzNDAiIGN5PSI1MCIgIHI9IjE3MCIgZmlsbD0iI0ZGQ0M4MCIgb3BhY2l0eT0iLjA1IiBjbGlwLXBhdGg9InVybCgjY3ApIi8+CiAgPGNpcmNsZSBjeD0iNTAiICBjeT0iNDkwIiByPSIxMzAiIGZpbGw9IiNGRkNDODAiIG9wYWNpdHk9Ii4wNSIgY2xpcC1wYXRoPSJ1cmwoI2NwKSIvPgogIDxyZWN0IHg9IjEiIHk9IjEiIHdpZHRoPSIzOTgiIGhlaWdodD0iNTE4IiByeD0iMTUiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMSIgb3BhY2l0eT0iLjEiLz4KICA8IS0tIFRhZyAtLT4KICA8cmVjdCB4PSIyMiIgeT0iMjIiIHdpZHRoPSIxNjAiIGhlaWdodD0iMjYiIHJ4PSI2IiBmaWxsPSJ3aGl0ZSIgb3BhY2l0eT0iLjEiLz4KICA8dGV4dCB4PSIzNCIgeT0iMzkiIGZvbnQtZmFtaWx5PSInSGVsdmV0aWNhIE5ldWUnLEFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtd2VpZ2h0PSI3MDAiIGZvbnQtc2l6ZT0iMTAiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIuODIiIGxldHRlci1zcGFjaW5nPSIuMDllbSI+VTMgwrcgR0VTVElPTjwvdGV4dD4KICA8IS0tIExvZ28gLS0+CiAgPHRleHQgeD0iMzc4IiB5PSIzOSIgdGV4dC1hbmNob3I9ImVuZCIgZm9udC1mYW1pbHk9IidIZWx2ZXRpY2EgTmV1ZScsQXJpYWwsc2Fucy1zZXJpZiIgZm9udC13ZWlnaHQ9IjgwMCIgZm9udC1zaXplPSIxMSIgZmlsbD0id2hpdGUiIG9wYWNpdHk9Ii4zNSI+ZmljaGVzT0w8L3RleHQ+CiAgPCEtLSBUaXRyZSAtLT4KICA8dGV4dCB4PSIyOCIgeT0iMTIwIiBmb250LWZhbWlseT0iJ0hlbHZldGljYSBOZXVlJyxBcmlhbCxzYW5zLXNlcmlmIiBmb250LXdlaWdodD0iODAwIiBmb250LXNpemU9IjYwIiBmaWxsPSJ3aGl0ZSIgb3BhY2l0eT0iLjk3IiBsZXR0ZXItc3BhY2luZz0iLS4wMzVlbSI+R2VzdGlvbjwvdGV4dD4KICA8IS0tIFRyYWl0IC0tPgogIDxyZWN0IHg9IjI4IiB5PSIxMzQiIHdpZHRoPSI1NiIgaGVpZ2h0PSI0IiByeD0iMiIgZmlsbD0iI0ZGQ0M4MCIgb3BhY2l0eT0iLjg1Ii8+CiAgPCEtLSBTY2jDqW1hIGdyYXBoZSAtLT4KICA8bGluZSB4MT0iODAiIHkxPSI0MTAiIHgyPSIzNDAiIHkyPSI0MTAiIHN0cm9rZT0iI0ZGQ0M4MCIgc3Ryb2tlLXdpZHRoPSIxLjUiIG9wYWNpdHk9Ii40MiIvPgogIDxsaW5lIHgxPSI4MCIgeTE9IjIzMCIgeDI9IjgwIiAgeTI9IjQxMCIgc3Ryb2tlPSIjRkZDQzgwIiBzdHJva2Utd2lkdGg9IjEuNSIgb3BhY2l0eT0iLjQyIi8+CiAgPHJlY3QgeD0iOTUiICB5PSIzNDIiIHdpZHRoPSIzNiIgaGVpZ2h0PSI2OCIgcng9IjQiIGZpbGw9IiNGRkNDODAiIG9wYWNpdHk9Ii4zMCIvPgogIDxyZWN0IHg9IjE0NyIgeT0iMzAyIiB3aWR0aD0iMzYiIGhlaWdodD0iMTA4IiByeD0iNCIgZmlsbD0iI0ZGQ0M4MCIgb3BhY2l0eT0iLjQ2Ii8+CiAgPHJlY3QgeD0iMTk5IiB5PSIzMTgiIHdpZHRoPSIzNiIgaGVpZ2h0PSI5MiIgcng9IjQiIGZpbGw9IiNGRkNDODAiIG9wYWNpdHk9Ii4zOCIvPgogIDxyZWN0IHg9IjI1MSIgeT0iMjcwIiB3aWR0aD0iMzYiIGhlaWdodD0iMTQwIiByeD0iNCIgZmlsbD0iI0ZGQ0M4MCIgb3BhY2l0eT0iLjYyIi8+CiAgPHJlY3QgeD0iMzAzIiB5PSIyOTAiIHdpZHRoPSIzNiIgaGVpZ2h0PSIxMjAiIHJ4PSI0IiBmaWxsPSIjRkZDQzgwIiBvcGFjaXR5PSIuNTIiLz4KICA8IS0tIENvdXJiZSBkZSB0ZW5kYW5jZSAtLT4KICA8cG9seWxpbmUgcG9pbnRzPSIxMTMsMzQyIDE2NSwzMDIgMjE3LDMxOCAyNjksMjcwIDMyMSwyOTAiCiAgICBmaWxsPSJub25lIiBzdHJva2U9IiNGRkNDODAiIHN0cm9rZS13aWR0aD0iMi41IiBzdHJva2UtZGFzaGFycmF5PSI2LDQiIG9wYWNpdHk9Ii43Ii8+CiAgPCEtLSBQb2ludHMgc3VyIGNvdXJiZSAtLT4KICA8Y2lyY2xlIGN4PSIxMTMiIGN5PSIzNDIiIHI9IjUiIGZpbGw9IiNGRkNDODAiIG9wYWNpdHk9Ii45Ii8+CiAgPGNpcmNsZSBjeD0iMTY1IiBjeT0iMzAyIiByPSI1IiBmaWxsPSIjRkZDQzgwIiBvcGFjaXR5PSIuOSIvPgogIDxjaXJjbGUgY3g9IjIxNyIgY3k9IjMxOCIgcj0iNSIgZmlsbD0iI0ZGQ0M4MCIgb3BhY2l0eT0iLjkiLz4KICA8Y2lyY2xlIGN4PSIyNjkiIGN5PSIyNzAiIHI9IjUiIGZpbGw9IiNGRkNDODAiIG9wYWNpdHk9Ii45Ii8+CiAgPGNpcmNsZSBjeD0iMzIxIiBjeT0iMjkwIiByPSI1IiBmaWxsPSIjRkZDQzgwIiBvcGFjaXR5PSIuOSIvPgo8L3N2Zz4="           alt="Gestion"                 style="height:160px;width:auto;border-radius:10px;flex-shrink:0;box-shadow:0 8px 32px rgba(0,0,0,.4);transition:transform .2s;" onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform=''">
+        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MDAiIGhlaWdodD0iNTIwIiB2aWV3Qm94PSIwIDAgNDAwIDUyMCI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImciIHgxPSIwIiB5MT0iMCIgeDI9Ii4zIiB5Mj0iMSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiM4ODBFNEYiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjQUQxNDU3Ii8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPGNsaXBQYXRoIGlkPSJjcCI+PHJlY3Qgd2lkdGg9IjQwMCIgaGVpZ2h0PSI1MjAiIHJ4PSIxNiIvPjwvY2xpcFBhdGg+CiAgPC9kZWZzPgogIDxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iNTIwIiBmaWxsPSJ1cmwoI2cpIiByeD0iMTYiLz4KICA8IS0tIENlcmNsZXMgZm9uZCAtLT4KICA8Y2lyY2xlIGN4PSIzNDAiIGN5PSI1MCIgIHI9IjE3MCIgZmlsbD0iI0Y0OEZCMSIgb3BhY2l0eT0iLjA1IiBjbGlwLXBhdGg9InVybCgjY3ApIi8+CiAgPGNpcmNsZSBjeD0iNTAiICBjeT0iNDkwIiByPSIxMzAiIGZpbGw9IiNGNDhGQjEiIG9wYWNpdHk9Ii4wNSIgY2xpcC1wYXRoPSJ1cmwoI2NwKSIvPgogIDwhLS0gQm9yZHVyZSBmaW5lIC0tPgogIDxyZWN0IHg9IjEiIHk9IjEiIHdpZHRoPSIzOTgiIGhlaWdodD0iNTE4IiByeD0iMTUiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMSIgb3BhY2l0eT0iLjEiLz4KICA8IS0tIFRhZyAtLT4KICA8cmVjdCB4PSIyMiIgeT0iMjIiIHdpZHRoPSIxNjAiIGhlaWdodD0iMjYiIHJ4PSI2IiBmaWxsPSJ3aGl0ZSIgb3BhY2l0eT0iLjEiLz4KICA8dGV4dCB4PSIzNCIgeT0iMzkiIGZvbnQtZmFtaWx5PSInSGVsdmV0aWNhIE5ldWUnLEFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtd2VpZ2h0PSI3MDAiIGZvbnQtc2l6ZT0iMTAiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIuODIiIGxldHRlci1zcGFjaW5nPSIuMDllbSI+VTMgwrcgR0VTVElPTjwvdGV4dD4KICA8IS0tIExvZ28gLS0+CiAgPHRleHQgeD0iMzc4IiB5PSIzOSIgdGV4dC1hbmNob3I9ImVuZCIgZm9udC1mYW1pbHk9IidIZWx2ZXRpY2EgTmV1ZScsQXJpYWwsc2Fucy1zZXJpZiIgZm9udC13ZWlnaHQ9IjgwMCIgZm9udC1zaXplPSIxMSIgZmlsbD0id2hpdGUiIG9wYWNpdHk9Ii4zNSI+ZmljaGVzT0w8L3RleHQ+CiAgPCEtLSBUaXRyZSAtLT4KICA8dGV4dCB4PSIyOCIgeT0iMTIwIiBmb250LWZhbWlseT0iJ0hlbHZldGljYSBOZXVlJyxBcmlhbCxzYW5zLXNlcmlmIiBmb250LXdlaWdodD0iODAwIiBmb250LXNpemU9IjYwIiBmaWxsPSJ3aGl0ZSIgb3BhY2l0eT0iLjk3IiBsZXR0ZXItc3BhY2luZz0iLS4wMzVlbSI+TWFya2V0aW5nPC90ZXh0PgogIAogIDwhLS0gVHJhaXQgLS0+CiAgPHJlY3QgeD0iMjgiIHk9IjEzNCIgd2lkdGg9IjU2IiBoZWlnaHQ9IjQiIHJ4PSIyIiBmaWxsPSIjRjQ4RkIxIiBvcGFjaXR5PSIuODUiLz4KICA8IS0tIFNjaMOpbWEgLS0+CiAgCiAgICAgIDxjaXJjbGUgY3g9IjIwMCIgY3k9IjI5MCIgcj0iNzAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI0Y0OEZCMSIgc3Ryb2tlLXdpZHRoPSIxLjUiIG9wYWNpdHk9Ii4yIi8+CiAgICAgIDxjaXJjbGUgY3g9IjIwMCIgY3k9IjI5MCIgcj0iNDgiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI0Y0OEZCMSIgc3Ryb2tlLXdpZHRoPSIxLjUiIG9wYWNpdHk9Ii4zIi8+CiAgICAgIDxjaXJjbGUgY3g9IjIwMCIgY3k9IjI5MCIgcj0iMjgiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI0Y0OEZCMSIgc3Ryb2tlLXdpZHRoPSIyLjIiIG9wYWNpdHk9Ii40OCIvPgogICAgICA8Y2lyY2xlIGN4PSIyMDAiIGN5PSIyOTAiIHI9IjEwIiBmaWxsPSIjRjQ4RkIxIiBvcGFjaXR5PSIuNzUiLz4KICAgICAgPGxpbmUgeDE9IjI2MiIgeTE9IjIyOCIgeDI9IjIxMiIgeTI9IjI3OCIgc3Ryb2tlPSIjRjQ4RkIxIiBzdHJva2Utd2lkdGg9IjIuNSIgb3BhY2l0eT0iLjY4Ii8+CiAgICAgIDxwb2x5Z29uIHBvaW50cz0iMjEyLDI3OCAyMjYsMjY0IDIyNCwyODAiIGZpbGw9IiNGNDhGQjEiIG9wYWNpdHk9Ii43MiIvPgogICAgCjwvc3ZnPg=="         alt="Marketing"               style="height:160px;width:auto;border-radius:10px;flex-shrink:0;box-shadow:0 8px 32px rgba(0,0,0,.4);transition:transform .2s;" onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform=''">
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- PACKS -->
+<section class="packs-section" id="packs">
+  <div class="packs-wrap">
+    <p class="section-label reveal" style="text-align:center;">Packs thématiques</p>
+    <h2 class="section-title reveal" style="text-align:center;">Ou économisez<br>avec un pack.</h2>
+    <div class="packs-grid reveal">
+
+      <div class="pack-card">
+        <p class="pack-name">Pack Vision</p>
+        <p class="pack-desc">Analyse de la Vision + Examen de Vue</p>
+        <div class="pack-price"><sup>€</sup>13<span style="font-size:1.2rem">,90</span></div>
+        <span class="pack-economy">−2€ vs à l'unité</span>
+        <ul class="pack-features">
+          <li><span class="ck">✓</span>Analyse de la Vision (cours + QCM)</li>
+          <li><span class="ck">✓</span>Examen de Vue E5-A, B, C</li>
+          <li><span class="ck">✓</span>Protocoles SACS + addition</li>
+          <li><span class="ck">✓</span>Tête de réfracteur annotée</li>
+        </ul>
+        <a href="https://fichesol.lemonsqueezy.com/checkout/buy/4dee7d0a-8ee6-4218-8e33-645ef7bdfe75" class="btn-pack outline">Obtenir ce pack →</a>
+      </div>
+
+      <div class="pack-card">
+        <p class="pack-name">Pack Optique</p>
+        <p class="pack-desc">Optique Géométrique + Optique Physique</p>
+        <div class="pack-price"><sup>€</sup>13<span style="font-size:1.2rem">,90</span></div>
+        <span class="pack-economy">−2€ vs à l'unité</span>
+        <ul class="pack-features">
+          <li><span class="ck">✓</span>20 fiches OG + Physique</li>
+          <li><span class="ck">✓</span>2 fiches récap formules</li>
+          <li><span class="ck">✓</span>Schémas vectoriels inclus</li>
+          <li><span class="ck">✓</span>4 QCM × 50 questions</li>
+        </ul>
+        <a href="https://fichesol.lemonsqueezy.com/checkout/buy/d901dc5f-6575-424d-9d52-cdb7d35e64da" class="btn-pack outline">Obtenir ce pack →</a>
+      </div>
+
+      <div class="pack-card">
+        <p class="pack-name">Pack ETSO / Méca</p>
+        <p class="pack-desc">ETSO + Mécanique</p>
+        <div class="pack-price"><sup>€</sup>13<span style="font-size:1.2rem">,90</span></div>
+        <span class="pack-economy">−2€ vs à l'unité</span>
+        <ul class="pack-features">
+          <li><span class="ck">✓</span>7 fiches ETSO complètes</li>
+          <li><span class="ck">✓</span>Fiches Mécanique</li>
+          <li><span class="ck">✓</span>Vergence, épaisseurs, taillage</li>
+          <li><span class="ck">✓</span>Normes et tolérances</li>
+        </ul>
+        <a href="https://fichesol.lemonsqueezy.com/checkout/buy/61373f9b-18f7-4bf2-914a-6d3cd761106b" class="btn-pack outline">Obtenir ce pack →</a>
+      </div>
+
+      <div class="pack-card">
+        <p class="pack-name">Pack Oral Technique</p>
+        <p class="pack-desc">Prise de Mesures + Examen de Vue</p>
+        <div class="pack-price"><sup>€</sup>11<span style="font-size:1.2rem">,90</span></div>
+        <span class="pack-economy">−4€ vs à l'unité</span>
+        <ul class="pack-features">
+          <li><span class="ck">✓</span>Prise de mesures U61</li>
+          <li><span class="ck">✓</span>Examen de Vue E5-A, B, C</li>
+          <li><span class="ck">✓</span>Tout pour l'oral pratique</li>
+          <li><span class="ck">✓</span>Pièges jury détaillés</li>
+        </ul>
+        <a href="https://fichesol.lemonsqueezy.com/checkout/buy/bfc01e06-a77e-49ca-80d1-a78557602b95" class="btn-pack outline">Obtenir ce pack →</a>
+      </div>
+
+      <div class="pack-card">
+        <p class="pack-name">Pack Gestion du Magasin</p>
+        <p class="pack-desc">Droit + Gestion + Marketing</p>
+        <div class="pack-price"><sup>€</sup>14<span style="font-size:1.2rem">,90</span></div>
+        <span class="pack-economy">−9€ vs à l'unité</span>
+        <ul class="pack-features">
+          <li><span class="ck">✓</span>Droit (cours + QCM)</li>
+          <li><span class="ck">✓</span>Gestion (cours + QCM)</li>
+          <li><span class="ck">✓</span>Marketing (cours + QCM)</li>
+          <li><span class="ck">✓</span>150 questions QCM corrigés</li>
+        </ul>
+        <a href="https://fichesol.lemonsqueezy.com/checkout/buy/39c47da4-d42a-43e1-874f-7a668ddc3def" class="btn-pack outline">Obtenir ce pack →</a>
+      </div>
+
+      <div class="pack-card featured">
+        <p class="pack-name">Pack Sciences</p>
+        <p class="pack-desc">OG + Physique + Mathématiques</p>
+        <div class="pack-price"><sup>€</sup>19<span style="font-size:1.2rem">,90</span></div>
+        <span class="pack-economy">−4€ vs à l'unité</span>
+        <ul class="pack-features">
+          <li><span class="ck">✓</span>Optique Géométrique complète</li>
+          <li><span class="ck">✓</span>Optique Physique complète</li>
+          <li><span class="ck">✓</span>Mathématiques + QCM</li>
+          <li><span class="ck">✓</span>Tout le bloc scientifique</li>
+        </ul>
+        <a href="https://fichesol.lemonsqueezy.com/checkout/buy/d10b13e8-7084-4481-8006-8823dca4932c" class="btn-pack outline">Obtenir ce pack →</a>
+      </div>
+
+    </div>
+
+    <!-- Pack Majeurs + Complet -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-top:1.25rem;" class="reveal">
+
+      <div class="pack-card">
+        <p class="pack-name">Pack Matières Majeures</p>
+        <p class="pack-desc">Vision · OG · Physique · ETSO · Méca · Maths</p>
+        <div class="pack-price"><sup>€</sup>39<span style="font-size:1.2rem">,90</span></div>
+        <span class="pack-economy">−7€ vs à l'unité</span>
+        <ul class="pack-features">
+          <li><span class="ck">✓</span>Tout le bloc scientifique et technique</li>
+          <li><span class="ck">✓</span>Analyse de la Vision + Examen de Vue</li>
+          <li><span class="ck">✓</span>ETSO + Mécanique</li>
+          <li><span class="ck">✓</span>QCM inclus sur toutes les matières</li>
+        </ul>
+        <a href="https://fichesol.lemonsqueezy.com/checkout/buy/374fe3d9-0a23-49cb-8ce9-893b780f8985" class="btn-pack outline">Obtenir ce pack →</a>
+      </div>
+
+      <div class="pack-card featured">
+        <p class="pack-name">Pack Complet BTS OL</p>
+        <p class="pack-desc">Les 12 matières. Tout. Sans exception.</p>
+        <div class="pack-price"><sup>€</sup>54<span style="font-size:1.2rem">,90</span></div>
+        <span class="pack-economy">−32€ vs tout à l'unité</span>
+        <ul class="pack-features">
+          <li><span class="ck">✓</span><strong>12 matières complètes</strong></li>
+          <li><span class="ck">✓</span>Cours + QCM sur toutes les matières concernées</li>
+          <li><span class="ck">✓</span>Fiches Examen de Vue E5-A, B, C</li>
+          <li><span class="ck">✓</span>Mises à jour à vie incluses</li>
+          <li><span class="ck">✓</span>PDF envoyés immédiatement</li>
+        </ul>
+        <a href="https://fichesol.lemonsqueezy.com/checkout/buy/b1ed66d2-81c3-4fe0-b085-557da71df664" class="btn-pack primary">Obtenir le pack complet →</a>
+        <p class="pack-guarantee">🔒 Paiement sécurisé · Téléchargement immédiat</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Pont vers matières -->
+  <div style="text-align:center;margin-top:3rem;padding-top:2rem;border-top:1px solid rgba(13,17,23,.08);">
+    <p style="font-size:.9rem;color:var(--muted);margin-bottom:.75rem;">Vous avez déjà certains cours ? Achetez uniquement ce qu'il vous manque.</p>
+    <a href="#matieres" style="display:inline-flex;align-items:center;gap:.4rem;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.9rem;color:var(--accent);text-decoration:none;border:1.5px solid var(--accent);padding:.55rem 1.3rem;border-radius:8px;transition:all .2s;" onmouseover="this.style.background='rgba(26,86,219,.06)'" onmouseout="this.style.background=''">
+      Voir les matières à l'unité (7,90€ chacune) ↓
+    </a>
+  </div>
+
+</section><!-- MATIÈRES -->
+<section class="matieres-section" id="matieres">
+  <div class="matieres-wrap">
+    <p class="section-label reveal">12 matières disponibles</p>
+    <h2 class="section-title reveal" style="color:#fff;">Choisissez exactement<br>ce dont vous avez besoin.</h2>
+    <div class="matieres-tabs reveal">
+      <button class="tab-btn active" onclick="filterMatieres('all',this)">Toutes</button>
+      <button class="tab-btn" onclick="filterMatieres('vision',this)">Analyse de la vision</button>
+      <button class="tab-btn" onclick="filterMatieres('optique',this)">Optique</button>
+      <button class="tab-btn" onclick="filterMatieres('technique',this)">Technique</button>
+      <button class="tab-btn" onclick="filterMatieres('gestion',this)">Gestion</button>
+      <button class="tab-btn" onclick="filterMatieres('sciences',this)">Sciences</button>
+    </div>
+    <div class="matieres-grid" id="matieres-grid">
+
+      <!-- Analyse de la Vision -->
+      <div class="matiere-card" data-cat="vision">
+      <img class="matiere-cover" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MDAiIGhlaWdodD0iNTIwIiB2aWV3Qm94PSIwIDAgNDAwIDUyMCI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImciIHgxPSIwIiB5MT0iMCIgeDI9Ii4zIiB5Mj0iMSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiMwQjNENkIiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMTU2NUMwIi8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPGNsaXBQYXRoIGlkPSJjcCI+PHJlY3Qgd2lkdGg9IjQwMCIgaGVpZ2h0PSI1MjAiIHJ4PSIxNiIvPjwvY2xpcFBhdGg+CiAgPC9kZWZzPgogIDxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iNTIwIiBmaWxsPSJ1cmwoI2cpIiByeD0iMTYiLz4KICA8IS0tIENlcmNsZXMgZm9uZCAtLT4KICA8Y2lyY2xlIGN4PSIzNDAiIGN5PSI1MCIgIHI9IjE3MCIgZmlsbD0iIzY0QjVGNiIgb3BhY2l0eT0iLjA1IiBjbGlwLXBhdGg9InVybCgjY3ApIi8+CiAgPGNpcmNsZSBjeD0iNTAiICBjeT0iNDkwIiByPSIxMzAiIGZpbGw9IiM2NEI1RjYiIG9wYWNpdHk9Ii4wNSIgY2xpcC1wYXRoPSJ1cmwoI2NwKSIvPgogIDwhLS0gQm9yZHVyZSBmaW5lIC0tPgogIDxyZWN0IHg9IjEiIHk9IjEiIHdpZHRoPSIzOTgiIGhlaWdodD0iNTE4IiByeD0iMTUiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMSIgb3BhY2l0eT0iLjEiLz4KICA8IS0tIFRhZyAtLT4KICA8cmVjdCB4PSIyMiIgeT0iMjIiIHdpZHRoPSIxNjAiIGhlaWdodD0iMjYiIHJ4PSI2IiBmaWxsPSJ3aGl0ZSIgb3BhY2l0eT0iLjEiLz4KICA8dGV4dCB4PSIzNCIgeT0iMzkiIGZvbnQtZmFtaWx5PSInSGVsdmV0aWNhIE5ldWUnLEFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtd2VpZ2h0PSI3MDAiIGZvbnQtc2l6ZT0iMTAiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIuODIiIGxldHRlci1zcGFjaW5nPSIuMDllbSI+VTUgwrcgQ09FRkYuIDY8L3RleHQ+CiAgPCEtLSBMb2dvIC0tPgogIDx0ZXh0IHg9IjM3OCIgeT0iMzkiIHRleHQtYW5jaG9yPSJlbmQiIGZvbnQtZmFtaWx5PSInSGVsdmV0aWNhIE5ldWUnLEFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtd2VpZ2h0PSI4MDAiIGZvbnQtc2l6ZT0iMTEiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIuMzUiPmZpY2hlc09MPC90ZXh0PgogIDwhLS0gVGl0cmUgLS0+CiAgPHRleHQgeD0iMjgiIHk9Ijk2IiBmb250LWZhbWlseT0iJ0hlbHZldGljYSBOZXVlJyxBcmlhbCxzYW5zLXNlcmlmIiBmb250LXdlaWdodD0iODAwIiBmb250LXNpemU9IjYwIiBmaWxsPSJ3aGl0ZSIgb3BhY2l0eT0iLjk3IiBsZXR0ZXItc3BhY2luZz0iLS4wMzVlbSI+QW5hbHlzZTwvdGV4dD4KICA8dGV4dCB4PSIyOCIgeT0iMTYwIiBmb250LWZhbWlseT0iJ0hlbHZldGljYSBOZXVlJyxBcmlhbCxzYW5zLXNlcmlmIiBmb250LXdlaWdodD0iODAwIiBmb250LXNpemU9IjYwIiBmaWxsPSJ3aGl0ZSIgb3BhY2l0eT0iLjk3IiBsZXR0ZXItc3BhY2luZz0iLS4wMzVlbSI+ZGUgbGEgVmlzaW9uPC90ZXh0PgogIDwhLS0gVHJhaXQgLS0+CiAgPHJlY3QgeD0iMjgiIHk9IjE3NCIgd2lkdGg9IjU2IiBoZWlnaHQ9IjQiIHJ4PSIyIiBmaWxsPSIjNjRCNUY2IiBvcGFjaXR5PSIuODUiLz4KICA8IS0tIFNjaMOpbWEgLS0+CiAgCiAgICAgIDxlbGxpcHNlIGN4PSIyMDAiIGN5PSIyOTAiIHJ4PSI4MCIgcnk9IjQ0IiBmaWxsPSJub25lIiBzdHJva2U9IiM2NEI1RjYiIHN0cm9rZS13aWR0aD0iMi41IiBvcGFjaXR5PSIuNDUiLz4KICAgICAgPGVsbGlwc2UgY3g9IjIwMCIgY3k9IjI5MCIgcng9IjgwIiByeT0iNDQiIGZpbGw9IiM2NEI1RjYiIG9wYWNpdHk9Ii4wNiIvPgogICAgICA8Y2lyY2xlIGN4PSIyMDAiIGN5PSIyOTAiIHI9IjI2IiBmaWxsPSJub25lIiBzdHJva2U9IiM2NEI1RjYiIHN0cm9rZS13aWR0aD0iMi4yIiBvcGFjaXR5PSIuNjUiLz4KICAgICAgPGNpcmNsZSBjeD0iMjAwIiBjeT0iMjkwIiByPSIxNCIgZmlsbD0iIzY0QjVGNiIgb3BhY2l0eT0iLjQyIi8+CiAgICAgIDxjaXJjbGUgY3g9IjIwNyIgY3k9IjI4NCIgcj0iNS41IiBmaWxsPSJ3aGl0ZSIgb3BhY2l0eT0iLjU1Ii8+CiAgICAgIDxsaW5lIHgxPSIxMjAiIHkxPSIyOTAiIHgyPSIxNDUiIHkyPSIyNzIiIHN0cm9rZT0iIzY0QjVGNiIgc3Ryb2tlLXdpZHRoPSIxLjUiIG9wYWNpdHk9Ii4zIi8+CiAgICAgIDxsaW5lIHgxPSIyODAiIHkxPSIyOTAiIHgyPSIyNTUiIHkyPSIyNzIiIHN0cm9rZT0iIzY0QjVGNiIgc3Ryb2tlLXdpZHRoPSIxLjUiIG9wYWNpdHk9Ii4zIi8+CiAgICAKPC9zdmc+" alt="analyse_vision" loading="lazy"/>
+      <div class="matiere-card-body">
+        <span class="matiere-cat cat-vision">Analyse de la Vision</span>
+        <h3 class="matiere-name">Analyse de la Vision</h3>
+        <p class="matiere-desc">Le cœur du BTS OL. Anatomie oculaire, amétropies, accommodation, vision binoculaire.</p>
+        <ul class="matiere-includes">
+          <li>Anatomie et physiologie de l'œil</li>
+          <li>Myopie, hypermétropie, astigmatisme, presbytie</li>
+          <li>Accommodation et vision binoculaire</li>
+          <li>Pathologies oculaires à connaître</li>
+          <li>QCM 50 questions corrigés</li>
+        </ul>
+        <div class="matiere-footer">
+          <span class="matiere-format">Cours + QCM</span>
+          <span class="matiere-price">7,90€</span>
+          <a href="https://fichesol.lemonsqueezy.com/checkout/buy/d8249b1e-be71-4c4c-a15c-19cc2d33dbf7" class="matiere-buy">Acheter →</a>
+        </div>
+      </div></div>
+
+      <!-- Examen de Vue -->
+      <div class="matiere-card" data-cat="vision">
+        <img class="matiere-cover" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MDAiIGhlaWdodD0iNTIwIiB2aWV3Qm94PSIwIDAgNDAwIDUyMCI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImciIHgxPSIwIiB5MT0iMCIgeDI9Ii4zIiB5Mj0iMSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiMxQjVFMjAiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMkU3RDMyIi8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPGNsaXBQYXRoIGlkPSJjcCI+PHJlY3Qgd2lkdGg9IjQwMCIgaGVpZ2h0PSI1MjAiIHJ4PSIxNiIvPjwvY2xpcFBhdGg+CiAgPC9kZWZzPgogIDxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iNTIwIiBmaWxsPSJ1cmwoI2cpIiByeD0iMTYiLz4KICA8IS0tIENlcmNsZXMgZm9uZCAtLT4KICA8Y2lyY2xlIGN4PSIzNDAiIGN5PSI1MCIgIHI9IjE3MCIgZmlsbD0iIzgxQzc4NCIgb3BhY2l0eT0iLjA1IiBjbGlwLXBhdGg9InVybCgjY3ApIi8+CiAgPGNpcmNsZSBjeD0iNTAiICBjeT0iNDkwIiByPSIxMzAiIGZpbGw9IiM4MUM3ODQiIG9wYWNpdHk9Ii4wNSIgY2xpcC1wYXRoPSJ1cmwoI2NwKSIvPgogIDwhLS0gQm9yZHVyZSBmaW5lIC0tPgogIDxyZWN0IHg9IjEiIHk9IjEiIHdpZHRoPSIzOTgiIGhlaWdodD0iNTE4IiByeD0iMTUiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMSIgb3BhY2l0eT0iLjEiLz4KICA8IS0tIFRhZyAtLT4KICA8cmVjdCB4PSIyMiIgeT0iMjIiIHdpZHRoPSIxNjAiIGhlaWdodD0iMjYiIHJ4PSI2IiBmaWxsPSJ3aGl0ZSIgb3BhY2l0eT0iLjEiLz4KICA8dGV4dCB4PSIzNCIgeT0iMzkiIGZvbnQtZmFtaWx5PSInSGVsdmV0aWNhIE5ldWUnLEFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtd2VpZ2h0PSI3MDAiIGZvbnQtc2l6ZT0iMTAiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIuODIiIGxldHRlci1zcGFjaW5nPSIuMDllbSI+RTUvVTYxIMK3IE9SQUw8L3RleHQ+CiAgPCEtLSBMb2dvIC0tPgogIDx0ZXh0IHg9IjM3OCIgeT0iMzkiIHRleHQtYW5jaG9yPSJlbmQiIGZvbnQtZmFtaWx5PSInSGVsdmV0aWNhIE5ldWUnLEFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtd2VpZ2h0PSI4MDAiIGZvbnQtc2l6ZT0iMTEiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIuMzUiPmZpY2hlc09MPC90ZXh0PgogIDwhLS0gVGl0cmUgLS0+CiAgPHRleHQgeD0iMjgiIHk9Ijk2IiBmb250LWZhbWlseT0iJ0hlbHZldGljYSBOZXVlJyxBcmlhbCxzYW5zLXNlcmlmIiBmb250LXdlaWdodD0iODAwIiBmb250LXNpemU9IjYwIiBmaWxsPSJ3aGl0ZSIgb3BhY2l0eT0iLjk3IiBsZXR0ZXItc3BhY2luZz0iLS4wMzVlbSI+RXhhbWVuPC90ZXh0PgogIDx0ZXh0IHg9IjI4IiB5PSIxNjAiIGZvbnQtZmFtaWx5PSInSGVsdmV0aWNhIE5ldWUnLEFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtd2VpZ2h0PSI4MDAiIGZvbnQtc2l6ZT0iNjAiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIuOTciIGxldHRlci1zcGFjaW5nPSItLjAzNWVtIj5kZSBWdWU8L3RleHQ+CiAgPCEtLSBUcmFpdCAtLT4KICA8cmVjdCB4PSIyOCIgeT0iMTc0IiB3aWR0aD0iNTYiIGhlaWdodD0iNCIgcng9IjIiIGZpbGw9IiM4MUM3ODQiIG9wYWNpdHk9Ii44NSIvPgogIDwhLS0gU2Now6ltYSAtLT4KICAKICAgICAgPGVsbGlwc2UgY3g9IjIwMCIgY3k9IjI5MCIgcng9IjcyIiByeT0iNjIiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzgxQzc4NCIgc3Ryb2tlLXdpZHRoPSIxLjgiIG9wYWNpdHk9Ii4yOCIvPgogICAgICA8Y2lyY2xlIGN4PSIxNzQiIGN5PSIyOTAiIHI9IjI2IiBmaWxsPSJub25lIiBzdHJva2U9IiM4MUM3ODQiIHN0cm9rZS13aWR0aD0iMi4yIiBvcGFjaXR5PSIuNTgiLz4KICAgICAgPGNpcmNsZSBjeD0iMjI2IiBjeT0iMjkwIiByPSIyNiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjODFDNzg0IiBzdHJva2Utd2lkdGg9IjIuMiIgb3BhY2l0eT0iLjU4Ii8+CiAgICAgIDxjaXJjbGUgY3g9IjE3NCIgY3k9IjI5MCIgcj0iMTUiIGZpbGw9IiM4MUM3ODQiIG9wYWNpdHk9Ii4yIi8+CiAgICAgIDxjaXJjbGUgY3g9IjIyNiIgY3k9IjI5MCIgcj0iMTUiIGZpbGw9IiM4MUM3ODQiIG9wYWNpdHk9Ii4yIi8+CiAgICAgIDxyZWN0IHg9IjE4MiIgeT0iMzIyIiB3aWR0aD0iMzYiIGhlaWdodD0iOCIgcng9IjQiIGZpbGw9IiM4MUM3ODQiIG9wYWNpdHk9Ii4zOCIvPgogICAgICA8bGluZSB4MT0iMTQ4IiB5MT0iMjkwIiB4Mj0iMTIyIiB5Mj0iMjkwIiBzdHJva2U9IiM4MUM3ODQiIHN0cm9rZS13aWR0aD0iMiIgb3BhY2l0eT0iLjQ1Ii8+CiAgICAgIDxsaW5lIHgxPSIyNTIiIHkxPSIyOTAiIHgyPSIyNzgiIHkyPSIyOTAiIHN0cm9rZT0iIzgxQzc4NCIgc3Ryb2tlLXdpZHRoPSIyIiBvcGFjaXR5PSIuNDUiLz4KICAgIAo8L3N2Zz4=" alt="" loading="lazy"/>
+        <div class="matiere-card-body">
+        <span class="matiere-cat cat-vision">Analyse de la Vision</span>
+        <h3 class="matiere-name">Examen de Vue</h3>
+        <p class="matiere-desc">Le protocole complet de l'épreuve orale E5/U61 — patient jeune, presbyte et choix d'équipement.</p>
+        <ul class="matiere-includes">
+          <li>Protocole 7 étapes patient jeune (SACS)</li>
+          <li>Protocole 8 étapes patient presbyte + addition</li>
+          <li>Tête de réfracteur annotée</li>
+          <li>Brouillard, CCR, équilibre R/V, Maddox</li>
+          <li>Choix d'équipement : indice, traitements, monture</li>
+        </ul>
+        <div class="matiere-footer">
+          <span class="matiere-format">Cours</span>
+          <span class="matiere-price">7,90€</span>
+          <a href="https://fichesol.lemonsqueezy.com/checkout/buy/2744722b-203c-4ffc-8d32-a69c3bcb6d59" class="matiere-buy">Acheter →</a>
+        </div>
+            </div></div>
+
+      <!-- Optique Géométrique -->
+      <div class="matiere-card" data-cat="optique">
+      <img class="matiere-cover" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MDAiIGhlaWdodD0iNTIwIiB2aWV3Qm94PSIwIDAgNDAwIDUyMCI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImciIHgxPSIwIiB5MT0iMCIgeDI9Ii4zIiB5Mj0iMSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiMxQTIzN0UiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMTU2NUMwIi8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPGNsaXBQYXRoIGlkPSJjcCI+PHJlY3Qgd2lkdGg9IjQwMCIgaGVpZ2h0PSI1MjAiIHJ4PSIxNiIvPjwvY2xpcFBhdGg+CiAgPC9kZWZzPgogIDxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iNTIwIiBmaWxsPSJ1cmwoI2cpIiByeD0iMTYiLz4KICA8IS0tIENlcmNsZXMgZm9uZCAtLT4KICA8Y2lyY2xlIGN4PSIzNDAiIGN5PSI1MCIgIHI9IjE3MCIgZmlsbD0iIzkwQ0FGOSIgb3BhY2l0eT0iLjA1IiBjbGlwLXBhdGg9InVybCgjY3ApIi8+CiAgPGNpcmNsZSBjeD0iNTAiICBjeT0iNDkwIiByPSIxMzAiIGZpbGw9IiM5MENBRjkiIG9wYWNpdHk9Ii4wNSIgY2xpcC1wYXRoPSJ1cmwoI2NwKSIvPgogIDwhLS0gQm9yZHVyZSBmaW5lIC0tPgogIDxyZWN0IHg9IjEiIHk9IjEiIHdpZHRoPSIzOTgiIGhlaWdodD0iNTE4IiByeD0iMTUiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMSIgb3BhY2l0eT0iLjEiLz4KICA8IS0tIFRhZyAtLT4KICA8cmVjdCB4PSIyMiIgeT0iMjIiIHdpZHRoPSIxNjAiIGhlaWdodD0iMjYiIHJ4PSI2IiBmaWxsPSJ3aGl0ZSIgb3BhY2l0eT0iLjEiLz4KICA8dGV4dCB4PSIzNCIgeT0iMzkiIGZvbnQtZmFtaWx5PSInSGVsdmV0aWNhIE5ldWUnLEFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtd2VpZ2h0PSI3MDAiIGZvbnQtc2l6ZT0iMTAiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIuODIiIGxldHRlci1zcGFjaW5nPSIuMDllbSI+VTQyIMK3IENPRUZGLiAzPC90ZXh0PgogIDwhLS0gTG9nbyAtLT4KICA8dGV4dCB4PSIzNzgiIHk9IjM5IiB0ZXh0LWFuY2hvcj0iZW5kIiBmb250LWZhbWlseT0iJ0hlbHZldGljYSBOZXVlJyxBcmlhbCxzYW5zLXNlcmlmIiBmb250LXdlaWdodD0iODAwIiBmb250LXNpemU9IjExIiBmaWxsPSJ3aGl0ZSIgb3BhY2l0eT0iLjM1Ij5maWNoZXNPTDwvdGV4dD4KICA8IS0tIFRpdHJlIC0tPgogIDx0ZXh0IHg9IjI4IiB5PSI5NiIgZm9udC1mYW1pbHk9IidIZWx2ZXRpY2EgTmV1ZScsQXJpYWwsc2Fucy1zZXJpZiIgZm9udC13ZWlnaHQ9IjgwMCIgZm9udC1zaXplPSI2MCIgZmlsbD0id2hpdGUiIG9wYWNpdHk9Ii45NyIgbGV0dGVyLXNwYWNpbmc9Ii0uMDM1ZW0iPk9wdGlxdWU8L3RleHQ+CiAgPHRleHQgeD0iMjgiIHk9IjE2MCIgZm9udC1mYW1pbHk9IidIZWx2ZXRpY2EgTmV1ZScsQXJpYWwsc2Fucy1zZXJpZiIgZm9udC13ZWlnaHQ9IjgwMCIgZm9udC1zaXplPSI2MCIgZmlsbD0id2hpdGUiIG9wYWNpdHk9Ii45NyIgbGV0dGVyLXNwYWNpbmc9Ii0uMDM1ZW0iPkfDqW9tw6l0cmlxdWU8L3RleHQ+CiAgPCEtLSBUcmFpdCAtLT4KICA8cmVjdCB4PSIyOCIgeT0iMTc0IiB3aWR0aD0iNTYiIGhlaWdodD0iNCIgcng9IjIiIGZpbGw9IiM5MENBRjkiIG9wYWNpdHk9Ii44NSIvPgogIDwhLS0gU2Now6ltYSAtLT4KICAKICAgICAgPGxpbmUgeDE9Ijg1IiB5MT0iMjkwIiB4Mj0iMzIwIiB5Mj0iMjkwIiBzdHJva2U9IiM5MENBRjkiIHN0cm9rZS13aWR0aD0iMS41IiBvcGFjaXR5PSIuMzgiLz4KICAgICAgPGVsbGlwc2UgY3g9IjIwMCIgY3k9IjI5MCIgcng9IjgiIHJ5PSI1MiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjOTBDQUY5IiBzdHJva2Utd2lkdGg9IjMiIG9wYWNpdHk9Ii44MiIvPgogICAgICA8bGluZSB4MT0iOTAiIHkxPSIyNTgiIHgyPSIyMDAiIHkyPSIyNTgiIHN0cm9rZT0iIzkwQ0FGOSIgc3Ryb2tlLXdpZHRoPSIyIiBvcGFjaXR5PSIuNjgiLz4KICAgICAgPGxpbmUgeDE9IjIwMCIgeTE9IjI1OCIgeDI9IjI5MCIgeTI9IjI5MCIgc3Ryb2tlPSIjOTBDQUY5IiBzdHJva2Utd2lkdGg9IjIiIG9wYWNpdHk9Ii42OCIvPgogICAgICA8bGluZSB4MT0iOTAiIHkxPSIzMjIiIHgyPSIyMDAiIHkyPSIzMjIiIHN0cm9rZT0iIzkwQ0FGOSIgc3Ryb2tlLXdpZHRoPSIyIiBvcGFjaXR5PSIuNjgiLz4KICAgICAgPGxpbmUgeDE9IjIwMCIgeTE9IjMyMiIgeDI9IjI5MCIgeTI9IjI5MCIgc3Ryb2tlPSIjOTBDQUY5IiBzdHJva2Utd2lkdGg9IjIiIG9wYWNpdHk9Ii42OCIvPgogICAgICA8Y2lyY2xlIGN4PSIyOTAiIGN5PSIyOTAiIHI9IjYiIGZpbGw9IiM5MENBRjkiIG9wYWNpdHk9Ii45Ii8+CiAgICAgIDx0ZXh0IHg9IjMwMCIgeT0iMjg1IiBmb250LXNpemU9IjE1IiBmaWxsPSIjOTBDQUY5IiBvcGFjaXR5PSIuNzgiIGZvbnQtZmFtaWx5PSJzZXJpZiIgZm9udC1zdHlsZT0iaXRhbGljIj5GJzwvdGV4dD4KICAgIAo8L3N2Zz4=" alt="optique_geo" loading="lazy"/>
+      <div class="matiere-card-body">
+        <span class="matiere-cat cat-optique">Optique Géométrique</span>
+        <h3 class="matiere-name">Optique Géométrique</h3>
+        <p class="matiere-desc">Des bases aux aberrations, tous les concepts illustrés avec schémas vectoriels.</p>
+        <ul class="matiere-includes">
+          <li>10 fiches : lentilles, miroirs, prismes, dioptres</li>
+          <li>Instruments optiques : loupe, microscope, lunette</li>
+          <li>Diaphragmes, champs, aberrations</li>
+          <li>Fiche récap toutes les formules</li>
+          <li>QCM 2 × 50 questions corrigés</li>
+        </ul>
+        <div class="matiere-footer">
+          <span class="matiere-format">Cours + QCM</span>
+          <span class="matiere-price">7,90€</span>
+          <a href="https://fichesol.lemonsqueezy.com/checkout/buy/c5684d14-20ca-4203-930b-94deb6ef07de" class="matiere-buy">Acheter →</a>
+        </div>
+      </div></div>
+
+      <!-- Optique Physique -->
+      <div class="matiere-card" data-cat="optique">
+      <img class="matiere-cover" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MDAiIGhlaWdodD0iNTIwIiB2aWV3Qm94PSIwIDAgNDAwIDUyMCI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImciIHgxPSIwIiB5MT0iMCIgeDI9Ii4zIiB5Mj0iMSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiM0QTE0OEMiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjNkExQjlBIi8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPGNsaXBQYXRoIGlkPSJjcCI+PHJlY3Qgd2lkdGg9IjQwMCIgaGVpZ2h0PSI1MjAiIHJ4PSIxNiIvPjwvY2xpcFBhdGg+CiAgPC9kZWZzPgogIDxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iNTIwIiBmaWxsPSJ1cmwoI2cpIiByeD0iMTYiLz4KICA8IS0tIENlcmNsZXMgZm9uZCAtLT4KICA8Y2lyY2xlIGN4PSIzNDAiIGN5PSI1MCIgIHI9IjE3MCIgZmlsbD0iI0NFOTNEOCIgb3BhY2l0eT0iLjA1IiBjbGlwLXBhdGg9InVybCgjY3ApIi8+CiAgPGNpcmNsZSBjeD0iNTAiICBjeT0iNDkwIiByPSIxMzAiIGZpbGw9IiNDRTkzRDgiIG9wYWNpdHk9Ii4wNSIgY2xpcC1wYXRoPSJ1cmwoI2NwKSIvPgogIDwhLS0gQm9yZHVyZSBmaW5lIC0tPgogIDxyZWN0IHg9IjEiIHk9IjEiIHdpZHRoPSIzOTgiIGhlaWdodD0iNTE4IiByeD0iMTUiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMSIgb3BhY2l0eT0iLjEiLz4KICA8IS0tIFRhZyAtLT4KICA8cmVjdCB4PSIyMiIgeT0iMjIiIHdpZHRoPSIxNjAiIGhlaWdodD0iMjYiIHJ4PSI2IiBmaWxsPSJ3aGl0ZSIgb3BhY2l0eT0iLjEiLz4KICA8dGV4dCB4PSIzNCIgeT0iMzkiIGZvbnQtZmFtaWx5PSInSGVsdmV0aWNhIE5ldWUnLEFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtd2VpZ2h0PSI3MDAiIGZvbnQtc2l6ZT0iMTAiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIuODIiIGxldHRlci1zcGFjaW5nPSIuMDllbSI+VTQyIMK3IENPRUZGLiAzPC90ZXh0PgogIDwhLS0gTG9nbyAtLT4KICA8dGV4dCB4PSIzNzgiIHk9IjM5IiB0ZXh0LWFuY2hvcj0iZW5kIiBmb250LWZhbWlseT0iJ0hlbHZldGljYSBOZXVlJyxBcmlhbCxzYW5zLXNlcmlmIiBmb250LXdlaWdodD0iODAwIiBmb250LXNpemU9IjExIiBmaWxsPSJ3aGl0ZSIgb3BhY2l0eT0iLjM1Ij5maWNoZXNPTDwvdGV4dD4KICA8IS0tIFRpdHJlIC0tPgogIDx0ZXh0IHg9IjI4IiB5PSI5NiIgZm9udC1mYW1pbHk9IidIZWx2ZXRpY2EgTmV1ZScsQXJpYWwsc2Fucy1zZXJpZiIgZm9udC13ZWlnaHQ9IjgwMCIgZm9udC1zaXplPSI2MCIgZmlsbD0id2hpdGUiIG9wYWNpdHk9Ii45NyIgbGV0dGVyLXNwYWNpbmc9Ii0uMDM1ZW0iPk9wdGlxdWU8L3RleHQ+CiAgPHRleHQgeD0iMjgiIHk9IjE2MCIgZm9udC1mYW1pbHk9IidIZWx2ZXRpY2EgTmV1ZScsQXJpYWwsc2Fucy1zZXJpZiIgZm9udC13ZWlnaHQ9IjgwMCIgZm9udC1zaXplPSI2MCIgZmlsbD0id2hpdGUiIG9wYWNpdHk9Ii45NyIgbGV0dGVyLXNwYWNpbmc9Ii0uMDM1ZW0iPlBoeXNpcXVlPC90ZXh0PgogIDwhLS0gVHJhaXQgLS0+CiAgPHJlY3QgeD0iMjgiIHk9IjE3NCIgd2lkdGg9IjU2IiBoZWlnaHQ9IjQiIHJ4PSIyIiBmaWxsPSIjQ0U5M0Q4IiBvcGFjaXR5PSIuODUiLz4KICA8IS0tIFNjaMOpbWEgLS0+CiAgCiAgICAgIDxwYXRoIGQ9Ik0gODAgMjkwIFEgMTEwIDI0NiwxNDAgMjkwIFEgMTcwIDMzNCwyMDAgMjkwIFEgMjMwIDI0NiwyNjAgMjkwIFEgMjkwIDMzNCwzMjAgMjkwIgogICAgICAgIGZpbGw9Im5vbmUiIHN0cm9rZT0iI0NFOTNEOCIgc3Ryb2tlLXdpZHRoPSIzIiBvcGFjaXR5PSIuNzIiLz4KICAgICAgPHBhdGggZD0iTSA4MCAyNzAgUSAxMTAgMjI4LDE0MCAyNzAgUSAxNzAgMzEyLDIwMCAyNzAgUSAyMzAgMjI4LDI2MCAyNzAgUSAyOTAgMzEyLDMyMCAyNzAiCiAgICAgICAgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjQ0U5M0Q4IiBzdHJva2Utd2lkdGg9IjEuNCIgb3BhY2l0eT0iLjMyIi8+CiAgICAgIDxsaW5lIHgxPSIxNDAiIHkxPSIzNDUiIHgyPSIyNjAiIHkyPSIzNDUiIHN0cm9rZT0iI0NFOTNEOCIgc3Ryb2tlLXdpZHRoPSIxLjIiIG9wYWNpdHk9Ii41Ii8+CiAgICAgIDxsaW5lIHgxPSIxNDAiIHkxPSIzMzgiIHgyPSIxNDAiIHkyPSIzNTIiIHN0cm9rZT0iI0NFOTNEOCIgc3Ryb2tlLXdpZHRoPSIxLjIiIG9wYWNpdHk9Ii41Ii8+CiAgICAgIDxsaW5lIHgxPSIyNjAiIHkxPSIzMzgiIHgyPSIyNjAiIHkyPSIzNTIiIHN0cm9rZT0iI0NFOTNEOCIgc3Ryb2tlLXdpZHRoPSIxLjIiIG9wYWNpdHk9Ii41Ii8+CiAgICAgIDx0ZXh0IHg9IjIwMCIgeT0iMzY4IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LXNpemU9IjE1IiBmaWxsPSIjQ0U5M0Q4IiBvcGFjaXR5PSIuNiIgZm9udC1mYW1pbHk9InNlcmlmIiBmb250LXN0eWxlPSJpdGFsaWMiPs67PC90ZXh0PgogICAgCjwvc3ZnPg==" alt="optique_physique" loading="lazy"/>
+      <div class="matiere-card-body">
+        <span class="matiere-cat cat-optique">Optique Physique</span>
+        <h3 class="matiere-name">Optique Physique</h3>
+        <p class="matiere-desc">Nature de la lumière, interférences, diffraction, polarisation et imagerie numérique.</p>
+        <ul class="matiere-includes">
+          <li>10 fiches : lumière à imagerie numérique</li>
+          <li>Young, réseau, Malus, MTF, Zernike</li>
+          <li>Colorimétrie, photométrie, lasers</li>
+          <li>Fiche récap toutes les formules</li>
+          <li>QCM 2 × 50 questions corrigés</li>
+        </ul>
+        <div class="matiere-footer">
+          <span class="matiere-format">Cours + QCM</span>
+          <span class="matiere-price">7,90€</span>
+          <a href="https://fichesol.lemonsqueezy.com/checkout/buy/6ccbefd9-9071-4ad3-85c2-cc8c2646224d" class="matiere-buy">Acheter →</a>
+        </div>
+      </div></div>
+
+      <!-- ETSO -->
+      <div class="matiere-card" data-cat="technique">
+      <img class="matiere-cover" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MDAiIGhlaWdodD0iNTIwIiB2aWV3Qm94PSIwIDAgNDAwIDUyMCI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImciIHgxPSIwIiB5MT0iMCIgeDI9Ii4zIiB5Mj0iMSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiNCNzFDMUMiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjQzYyODI4Ii8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPGNsaXBQYXRoIGlkPSJjcCI+PHJlY3Qgd2lkdGg9IjQwMCIgaGVpZ2h0PSI1MjAiIHJ4PSIxNiIvPjwvY2xpcFBhdGg+CiAgPC9kZWZzPgogIDxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iNTIwIiBmaWxsPSJ1cmwoI2cpIiByeD0iMTYiLz4KICA8Y2lyY2xlIGN4PSIzNDAiIGN5PSI1MCIgIHI9IjE3MCIgZmlsbD0iI0VGOUE5QSIgb3BhY2l0eT0iLjA1IiBjbGlwLXBhdGg9InVybCgjY3ApIi8+CiAgPGNpcmNsZSBjeD0iNTAiICBjeT0iNDkwIiByPSIxMzAiIGZpbGw9IiNFRjlBOUEiIG9wYWNpdHk9Ii4wNSIgY2xpcC1wYXRoPSJ1cmwoI2NwKSIvPgogIDxyZWN0IHg9IjEiIHk9IjEiIHdpZHRoPSIzOTgiIGhlaWdodD0iNTE4IiByeD0iMTUiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMSIgb3BhY2l0eT0iLjEiLz4KICA8IS0tIFRhZyAtLT4KICA8cmVjdCB4PSIyMiIgeT0iMjIiIHdpZHRoPSIxNjAiIGhlaWdodD0iMjYiIHJ4PSI2IiBmaWxsPSJ3aGl0ZSIgb3BhY2l0eT0iLjEiLz4KICA8dGV4dCB4PSIzNCIgeT0iMzkiIGZvbnQtZmFtaWx5PSInSGVsdmV0aWNhIE5ldWUnLEFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtd2VpZ2h0PSI3MDAiIGZvbnQtc2l6ZT0iMTAiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIuODIiIGxldHRlci1zcGFjaW5nPSIuMDllbSI+VTQzIMK3IENPRUZGLiAzPC90ZXh0PgogIDwhLS0gTG9nbyAtLT4KICA8dGV4dCB4PSIzNzgiIHk9IjM5IiB0ZXh0LWFuY2hvcj0iZW5kIiBmb250LWZhbWlseT0iJ0hlbHZldGljYSBOZXVlJyxBcmlhbCxzYW5zLXNlcmlmIiBmb250LXdlaWdodD0iODAwIiBmb250LXNpemU9IjExIiBmaWxsPSJ3aGl0ZSIgb3BhY2l0eT0iLjM1Ij5maWNoZXNPTDwvdGV4dD4KICA8IS0tIFRpdHJlIC0tPgogIDx0ZXh0IHg9IjI4IiB5PSIxMjAiIGZvbnQtZmFtaWx5PSInSGVsdmV0aWNhIE5ldWUnLEFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtd2VpZ2h0PSI4MDAiIGZvbnQtc2l6ZT0iNjAiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIuOTciIGxldHRlci1zcGFjaW5nPSItLjAzNWVtIj5FVFNPPC90ZXh0PgogIDwhLS0gVHJhaXQgLS0+CiAgPHJlY3QgeD0iMjgiIHk9IjEzNCIgd2lkdGg9IjU2IiBoZWlnaHQ9IjQiIHJ4PSIyIiBmaWxsPSIjRUY5QTlBIiBvcGFjaXR5PSIuODUiLz4KCiAgPCEtLSDilZDilZDilZAgU2Now6ltYSBkaW9wdHJlIHNwaMOpcmlxdWUg4pWQ4pWQ4pWQIC0tPgogIDwhLS0gQXhlIG9wdGlxdWUgLS0+CiAgPGxpbmUgeDE9IjQwIiB5MT0iMzAwIiB4Mj0iMzYwIiB5Mj0iMzAwIiBzdHJva2U9IiNFRjlBOUEiIHN0cm9rZS13aWR0aD0iMS41IiBvcGFjaXR5PSIuNDAiLz4KCiAgPCEtLSBTdXJmYWNlIHNwaMOpcmlxdWUgKGRlbWktY2VyY2xlKSA9IGRpb3B0cmUgLS0+CiAgPCEtLSBDZW50cmUgZGUgY291cmJ1cmUgQyDDoCB4PTI3MCwgcmF5b249OTAgLS0+CiAgPHBhdGggZD0iTSAyMjUgMjEwIEEgOTAgOTAgMCAwIDEgMjI1IDM5MCIKICAgIGZpbGw9Im5vbmUiIHN0cm9rZT0iI0VGOUE5QSIgc3Ryb2tlLXdpZHRoPSIzIiBvcGFjaXR5PSIuODUiLz4KCiAgPCEtLSBNaWxpZXUgb3B0aXF1ZSBuIChnYXVjaGUpIC0tPgogIDx0ZXh0IHg9IjkwIiB5PSIyNjAiIGZvbnQtZmFtaWx5PSJzZXJpZiIgZm9udC1zaXplPSIyMiIgZmlsbD0iI0VGOUE5QSIgZm9udC1zdHlsZT0iaXRhbGljIiBvcGFjaXR5PSIuNiI+bjwvdGV4dD4KICA8IS0tIE1pbGlldSBvcHRpcXVlIG4nIChkcm9pdGUpIC0tPgogIDx0ZXh0IHg9IjI5MCIgeT0iMjYwIiBmb250LWZhbWlseT0ic2VyaWYiIGZvbnQtc2l6ZT0iMjIiIGZpbGw9IiNFRjlBOUEiIGZvbnQtc3R5bGU9Iml0YWxpYyIgb3BhY2l0eT0iLjYiPm4nPC90ZXh0PgoKICA8IS0tIFNvbW1ldCBTIHN1ciBsJ2F4ZSAtLT4KICA8Y2lyY2xlIGN4PSIyMjUiIGN5PSIzMDAiIHI9IjQiIGZpbGw9IiNFRjlBOUEiIG9wYWNpdHk9Ii45Ii8+CiAgPHRleHQgeD0iMjI4IiB5PSIzMTgiIGZvbnQtZmFtaWx5PSJzZXJpZiIgZm9udC1zaXplPSIxNCIgZmlsbD0iI0VGOUE5QSIgb3BhY2l0eT0iLjciPlM8L3RleHQ+CgogIDwhLS0gQ2VudHJlIGRlIGNvdXJidXJlIEMgLS0+CiAgPGNpcmNsZSBjeD0iMzE1IiBjeT0iMzAwIiByPSIzLjUiIGZpbGw9IiNFRjlBOUEiIG9wYWNpdHk9Ii43Ii8+CiAgPHRleHQgeD0iMzE4IiB5PSIzMTgiIGZvbnQtZmFtaWx5PSJzZXJpZiIgZm9udC1zaXplPSIxNCIgZmlsbD0iI0VGOUE5QSIgb3BhY2l0eT0iLjYiPkM8L3RleHQ+CiAgPCEtLSBSYXlvbiBkZSBjb3VyYnVyZSBSIC0tPgogIDxsaW5lIHgxPSIyMjUiIHkxPSIzMDAiIHgyPSIzMTUiIHkyPSIzMDAiIHN0cm9rZT0iI0VGOUE5QSIgc3Ryb2tlLXdpZHRoPSIxIiBzdHJva2UtZGFzaGFycmF5PSI0LDMiIG9wYWNpdHk9Ii4zNSIvPgogIDx0ZXh0IHg9IjI2MiIgeT0iMjkyIiBmb250LWZhbWlseT0ic2VyaWYiIGZvbnQtc2l6ZT0iMTEiIGZpbGw9IiNFRjlBOUEiIGZvbnQtc3R5bGU9Iml0YWxpYyIgb3BhY2l0eT0iLjUiPlI8L3RleHQ+CgogIDwhLS0gUmF5b24gaW5jaWRlbnQgKHZpZW50IGRlIGxhIGdhdWNoZSwgaW5jbGluw6kpIC0tPgogIDwhLS0gUG9pbnQgZCdpbXBhY3Qgc3VyIGxlIGRpb3B0cmUgOiBhcHByb3hpbWF0aW9uIMOgIHg9MjE4LCB5PTI1NSAtLT4KICA8bGluZSB4MT0iNTUiIHkxPSIyNTUiIHgyPSIyMTgiIHkyPSIyNTUiIHN0cm9rZT0iI0VGOUE5QSIgc3Ryb2tlLXdpZHRoPSIyLjIiIG9wYWNpdHk9Ii44Ii8+CiAgPCEtLSBGbMOoY2hlIHN1ciBsZSByYXlvbiBpbmNpZGVudCAtLT4KICA8cG9seWdvbiBwb2ludHM9IjIxOCwyNTUgMjA2LDI1MCAyMDYsMjYwIiBmaWxsPSIjRUY5QTlBIiBvcGFjaXR5PSIuOCIvPgoKICA8IS0tIE5vcm1hbGUgYXUgcG9pbnQgZCdpbXBhY3QgKGxpZ25lIHZlcnMgQykgLS0+CiAgPGxpbmUgeDE9IjIxOCIgeTE9IjI1NSIgeDI9IjMxNSIgeTI9IjMwMCIgc3Ryb2tlPSIjRUY5QTlBIiBzdHJva2Utd2lkdGg9IjEiIHN0cm9rZS1kYXNoYXJyYXk9IjMsNCIgb3BhY2l0eT0iLjM1Ii8+CgogIDwhLS0gUmF5b24gcsOpZnJhY3TDqSAoY29udGludWUgdmVycyBsYSBkcm9pdGUsIG1vaW5zIGluY2xpbsOpKSAtLT4KICA8bGluZSB4MT0iMjE4IiB5MT0iMjU1IiB4Mj0iMzYwIiB5Mj0iMjg4IiBzdHJva2U9IiNFRjlBOUEiIHN0cm9rZS13aWR0aD0iMi4yIiBvcGFjaXR5PSIuOCIvPgogIDwhLS0gRmzDqGNoZSBzdXIgbGUgcmF5b24gcsOpZnJhY3TDqSAtLT4KICA8cG9seWdvbiBwb2ludHM9IjM2MCwyODggMzQ2LDI4MiAzNDcsMjkzIiBmaWxsPSIjRUY5QTlBIiBvcGFjaXR5PSIuOCIvPgoKICA8IS0tIEFuZ2xlIGkgKGluY2lkZW50KSAtLT4KICA8cGF0aCBkPSJNIDIxOCAyNTUgUSAyMDUgMjU4IDIwMiAyNjQiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI0VGOUE5QSIgc3Ryb2tlLXdpZHRoPSIxLjIiIG9wYWNpdHk9Ii41NSIvPgogIDx0ZXh0IHg9IjE5MCIgeT0iMjcwIiBmb250LWZhbWlseT0ic2VyaWYiIGZvbnQtc2l6ZT0iMTMiIGZpbGw9IiNFRjlBOUEiIGZvbnQtc3R5bGU9Iml0YWxpYyIgb3BhY2l0eT0iLjY1Ij5pPC90ZXh0PgoKICA8IS0tIEFuZ2xlIGknIChyw6lmcmFjdMOpKSAtLT4KICA8cGF0aCBkPSJNIDIxOCAyNTUgUSAyMjggMjU4IDIzMiAyNjQiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI0VGOUE5QSIgc3Ryb2tlLXdpZHRoPSIxLjIiIG9wYWNpdHk9Ii41NSIvPgogIDx0ZXh0IHg9IjIzMiIgeT0iMjcwIiBmb250LWZhbWlseT0ic2VyaWYiIGZvbnQtc2l6ZT0iMTMiIGZpbGw9IiNFRjlBOUEiIGZvbnQtc3R5bGU9Iml0YWxpYyIgb3BhY2l0eT0iLjY1Ij5pJzwvdGV4dD4KCiAgPCEtLSBGb3llciBpbWFnZSBGJyAtLT4KICA8Y2lyY2xlIGN4PSIzNTUiIGN5PSIzMDAiIHI9IjQiIGZpbGw9IiNFRjlBOUEiIG9wYWNpdHk9Ii43NSIvPgogIDx0ZXh0IHg9IjM0MCIgeT0iMzE4IiBmb250LWZhbWlseT0ic2VyaWYiIGZvbnQtc2l6ZT0iMTMiIGZpbGw9IiNFRjlBOUEiIG9wYWNpdHk9Ii42NSI+Ric8L3RleHQ+Cjwvc3ZnPg==" alt="etso" loading="lazy"/>
+      <div class="matiere-card-body">
+        <span class="matiere-cat cat-technique">Technique</span>
+        <h3 class="matiere-name">ETSO</h3>
+        <p class="matiere-desc">Étude Technique des Systèmes Optiques — les 7 fiches indispensables pour l'épreuve écrite.</p>
+        <ul class="matiere-includes">
+          <li>7 fiches thématiques complètes</li>
+          <li>Vergence, épaisseurs, décentrement</li>
+          <li>Prismes ophtalmiques, verres toriques</li>
+          <li>Tolérance et contrôle d'équipement</li>
+        </ul>
+        <div class="matiere-footer">
+          <span class="matiere-format">Cours</span>
+          <span class="matiere-price">7,90€</span>
+          <a href="https://fichesol.lemonsqueezy.com/checkout/buy/a33063eb-dbab-4444-aa89-f58c5bdc13a0" class="matiere-buy">Acheter →</a>
+        </div>
+      </div></div>
+
+      <!-- Mécanique -->
+      <div class="matiere-card" data-cat="technique">
+      <img class="matiere-cover" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MDAiIGhlaWdodD0iNTIwIiB2aWV3Qm94PSIwIDAgNDAwIDUyMCI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImciIHgxPSIwIiB5MT0iMCIgeDI9Ii4zIiB5Mj0iMSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiMyMTIxMjEiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMzc0NzRGIi8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPGNsaXBQYXRoIGlkPSJjcCI+PHJlY3Qgd2lkdGg9IjQwMCIgaGVpZ2h0PSI1MjAiIHJ4PSIxNiIvPjwvY2xpcFBhdGg+CiAgPC9kZWZzPgogIDxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iNTIwIiBmaWxsPSJ1cmwoI2cpIiByeD0iMTYiLz4KICA8IS0tIENlcmNsZXMgZm9uZCAtLT4KICA8Y2lyY2xlIGN4PSIzNDAiIGN5PSI1MCIgIHI9IjE3MCIgZmlsbD0iI0IwQkVDNSIgb3BhY2l0eT0iLjA1IiBjbGlwLXBhdGg9InVybCgjY3ApIi8+CiAgPGNpcmNsZSBjeD0iNTAiICBjeT0iNDkwIiByPSIxMzAiIGZpbGw9IiNCMEJFQzUiIG9wYWNpdHk9Ii4wNSIgY2xpcC1wYXRoPSJ1cmwoI2NwKSIvPgogIDwhLS0gQm9yZHVyZSBmaW5lIC0tPgogIDxyZWN0IHg9IjEiIHk9IjEiIHdpZHRoPSIzOTgiIGhlaWdodD0iNTE4IiByeD0iMTUiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMSIgb3BhY2l0eT0iLjEiLz4KICA8IS0tIFRhZyAtLT4KICA8cmVjdCB4PSIyMiIgeT0iMjIiIHdpZHRoPSIxNjAiIGhlaWdodD0iMjYiIHJ4PSI2IiBmaWxsPSJ3aGl0ZSIgb3BhY2l0eT0iLjEiLz4KICA8dGV4dCB4PSIzNCIgeT0iMzkiIGZvbnQtZmFtaWx5PSInSGVsdmV0aWNhIE5ldWUnLEFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtd2VpZ2h0PSI3MDAiIGZvbnQtc2l6ZT0iMTAiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIuODIiIGxldHRlci1zcGFjaW5nPSIuMDllbSI+VTQzIMK3IFRFQ0hOSVFVRTwvdGV4dD4KICA8IS0tIExvZ28gLS0+CiAgPHRleHQgeD0iMzc4IiB5PSIzOSIgdGV4dC1hbmNob3I9ImVuZCIgZm9udC1mYW1pbHk9IidIZWx2ZXRpY2EgTmV1ZScsQXJpYWwsc2Fucy1zZXJpZiIgZm9udC13ZWlnaHQ9IjgwMCIgZm9udC1zaXplPSIxMSIgZmlsbD0id2hpdGUiIG9wYWNpdHk9Ii4zNSI+ZmljaGVzT0w8L3RleHQ+CiAgPCEtLSBUaXRyZSAtLT4KICA8dGV4dCB4PSIyOCIgeT0iMTIwIiBmb250LWZhbWlseT0iJ0hlbHZldGljYSBOZXVlJyxBcmlhbCxzYW5zLXNlcmlmIiBmb250LXdlaWdodD0iODAwIiBmb250LXNpemU9IjYwIiBmaWxsPSJ3aGl0ZSIgb3BhY2l0eT0iLjk3IiBsZXR0ZXItc3BhY2luZz0iLS4wMzVlbSI+TcOpY2FuaXF1ZTwvdGV4dD4KICAKICA8IS0tIFRyYWl0IC0tPgogIDxyZWN0IHg9IjI4IiB5PSIxMzQiIHdpZHRoPSI1NiIgaGVpZ2h0PSI0IiByeD0iMiIgZmlsbD0iI0IwQkVDNSIgb3BhY2l0eT0iLjg1Ii8+CiAgPCEtLSBTY2jDqW1hIC0tPgogIAogICAgICA8Y2lyY2xlIGN4PSIxNzAiIGN5PSIyOTAiIHI9IjQ0IiBmaWxsPSJub25lIiBzdHJva2U9IiNCMEJFQzUiIHN0cm9rZS13aWR0aD0iMi4yIiBvcGFjaXR5PSIuNDUiLz4KICAgICAgPGNpcmNsZSBjeD0iMTcwIiBjeT0iMjkwIiByPSIyNiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjQjBCRUM1IiBzdHJva2Utd2lkdGg9IjEuNSIgb3BhY2l0eT0iLjI4Ii8+CiAgICAgIDxjaXJjbGUgY3g9IjE3MCIgY3k9IjI5MCIgcj0iOCIgZmlsbD0iI0IwQkVDNSIgb3BhY2l0eT0iLjU1Ii8+CiAgICAgIDxjaXJjbGUgY3g9IjI0NCIgY3k9IjI3NiIgcj0iMzAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI0IwQkVDNSIgc3Ryb2tlLXdpZHRoPSIxLjgiIG9wYWNpdHk9Ii4zOCIvPgogICAgICA8Y2lyY2xlIGN4PSIyNDQiIGN5PSIyNzYiIHI9IjYiIGZpbGw9IiNCMEJFQzUiIG9wYWNpdHk9Ii40MiIvPgogICAgICA8bGluZSB4MT0iMTcwIiB5MT0iMjkwIiB4Mj0iMjQ0IiB5Mj0iMjc2IiBzdHJva2U9IiNCMEJFQzUiIHN0cm9rZS13aWR0aD0iMSIgc3Ryb2tlLWRhc2hhcnJheT0iNCwzIiBvcGFjaXR5PSIuMjgiLz4KICAgIAo8L3N2Zz4=" alt="mecanique" loading="lazy"/>
+      <div class="matiere-card-body">
+        <span class="matiere-cat cat-technique">Technique</span>
+        <h3 class="matiere-name">Mécanique</h3>
+        <p class="matiere-desc">Mécanique appliquée à l'optique : matériaux, montages, ajustage et réalisation technique.</p>
+        <ul class="matiere-includes">
+          <li>Matériaux montures et verres</li>
+          <li>Procédés de montage et de taillage</li>
+          <li>Ajustage et contrôle final</li>
+          <li>Normes et tolérances</li>
+        </ul>
+        <div class="matiere-footer">
+          <span class="matiere-format">Cours</span>
+          <span class="matiere-price">7,90€</span>
+          <a href="https://fichesol.lemonsqueezy.com/checkout/buy/7a8151a6-eada-44f6-8490-5421a1e6372e" class="matiere-buy">Acheter →</a>
+        </div>
+      </div></div>
+
+      <!-- Prise de Mesures -->
+      <div class="matiere-card" data-cat="vision">
+      <img class="matiere-cover" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MDAiIGhlaWdodD0iNTIwIiB2aWV3Qm94PSIwIDAgNDAwIDUyMCI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImciIHgxPSIwIiB5MT0iMCIgeDI9Ii4zIiB5Mj0iMSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiMwMDRENDAiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMDA2OTVDIi8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPGNsaXBQYXRoIGlkPSJjcCI+PHJlY3Qgd2lkdGg9IjQwMCIgaGVpZ2h0PSI1MjAiIHJ4PSIxNiIvPjwvY2xpcFBhdGg+CiAgPC9kZWZzPgogIDxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iNTIwIiBmaWxsPSJ1cmwoI2cpIiByeD0iMTYiLz4KICA8IS0tIENlcmNsZXMgZm9uZCAtLT4KICA8Y2lyY2xlIGN4PSIzNDAiIGN5PSI1MCIgIHI9IjE3MCIgZmlsbD0iIzgwQ0JDNCIgb3BhY2l0eT0iLjA1IiBjbGlwLXBhdGg9InVybCgjY3ApIi8+CiAgPGNpcmNsZSBjeD0iNTAiICBjeT0iNDkwIiByPSIxMzAiIGZpbGw9IiM4MENCQzQiIG9wYWNpdHk9Ii4wNSIgY2xpcC1wYXRoPSJ1cmwoI2NwKSIvPgogIDwhLS0gQm9yZHVyZSBmaW5lIC0tPgogIDxyZWN0IHg9IjEiIHk9IjEiIHdpZHRoPSIzOTgiIGhlaWdodD0iNTE4IiByeD0iMTUiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMSIgb3BhY2l0eT0iLjEiLz4KICA8IS0tIFRhZyAtLT4KICA8cmVjdCB4PSIyMiIgeT0iMjIiIHdpZHRoPSIxNjAiIGhlaWdodD0iMjYiIHJ4PSI2IiBmaWxsPSJ3aGl0ZSIgb3BhY2l0eT0iLjEiLz4KICA8dGV4dCB4PSIzNCIgeT0iMzkiIGZvbnQtZmFtaWx5PSInSGVsdmV0aWNhIE5ldWUnLEFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtd2VpZ2h0PSI3MDAiIGZvbnQtc2l6ZT0iMTAiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIuODIiIGxldHRlci1zcGFjaW5nPSIuMDllbSI+VTYxIMK3IE9SQUwgUFJBVElRVUU8L3RleHQ+CiAgPCEtLSBMb2dvIC0tPgogIDx0ZXh0IHg9IjM3OCIgeT0iMzkiIHRleHQtYW5jaG9yPSJlbmQiIGZvbnQtZmFtaWx5PSInSGVsdmV0aWNhIE5ldWUnLEFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtd2VpZ2h0PSI4MDAiIGZvbnQtc2l6ZT0iMTEiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIuMzUiPmZpY2hlc09MPC90ZXh0PgogIDwhLS0gVGl0cmUgLS0+CiAgPHRleHQgeD0iMjgiIHk9Ijk2IiBmb250LWZhbWlseT0iJ0hlbHZldGljYSBOZXVlJyxBcmlhbCxzYW5zLXNlcmlmIiBmb250LXdlaWdodD0iODAwIiBmb250LXNpemU9IjYwIiBmaWxsPSJ3aGl0ZSIgb3BhY2l0eT0iLjk3IiBsZXR0ZXItc3BhY2luZz0iLS4wMzVlbSI+UHJpc2UgZGU8L3RleHQ+CiAgPHRleHQgeD0iMjgiIHk9IjE2MCIgZm9udC1mYW1pbHk9IidIZWx2ZXRpY2EgTmV1ZScsQXJpYWwsc2Fucy1zZXJpZiIgZm9udC13ZWlnaHQ9IjgwMCIgZm9udC1zaXplPSI2MCIgZmlsbD0id2hpdGUiIG9wYWNpdHk9Ii45NyIgbGV0dGVyLXNwYWNpbmc9Ii0uMDM1ZW0iPk1lc3VyZXM8L3RleHQ+CiAgPCEtLSBUcmFpdCAtLT4KICA8cmVjdCB4PSIyOCIgeT0iMTc0IiB3aWR0aD0iNTYiIGhlaWdodD0iNCIgcng9IjIiIGZpbGw9IiM4MENCQzQiIG9wYWNpdHk9Ii44NSIvPgogIDwhLS0gU2Now6ltYSAtLT4KICAKICAgICAgPGVsbGlwc2UgY3g9IjIwMCIgY3k9IjI5MCIgcng9IjY0IiByeT0iODAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzgwQ0JDNCIgc3Ryb2tlLXdpZHRoPSIyIiBvcGFjaXR5PSIuMzgiLz4KICAgICAgPGNpcmNsZSBjeD0iMTc4IiBjeT0iMjc4IiByPSIxNSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjODBDQkM0IiBzdHJva2Utd2lkdGg9IjIiIG9wYWNpdHk9Ii42MiIvPgogICAgICA8Y2lyY2xlIGN4PSIyMjIiIGN5PSIyNzgiIHI9IjE1IiBmaWxsPSJub25lIiBzdHJva2U9IiM4MENCQzQiIHN0cm9rZS13aWR0aD0iMiIgb3BhY2l0eT0iLjYyIi8+CiAgICAgIDxsaW5lIHgxPSIxNzgiIHkxPSIyNTgiIHgyPSIyMjIiIHkyPSIyNTgiIHN0cm9rZT0iIzgwQ0JDNCIgc3Ryb2tlLXdpZHRoPSIyIiBvcGFjaXR5PSIuNzIiLz4KICAgICAgPGxpbmUgeDE9IjE3OCIgeTE9IjI1MiIgeDI9IjE3OCIgeTI9IjI2NCIgc3Ryb2tlPSIjODBDQkM0IiBzdHJva2Utd2lkdGg9IjIiIG9wYWNpdHk9Ii43MiIvPgogICAgICA8bGluZSB4MT0iMjIyIiB5MT0iMjUyIiB4Mj0iMjIyIiB5Mj0iMjY0IiBzdHJva2U9IiM4MENCQzQiIHN0cm9rZS13aWR0aD0iMiIgb3BhY2l0eT0iLjcyIi8+CiAgICAgIDx0ZXh0IHg9IjIwMCIgeT0iMjQ0IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LXNpemU9IjExIiBmaWxsPSIjODBDQkM0IiBvcGFjaXR5PSIuNzIiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXdlaWdodD0iNzAwIj5ELlAuPC90ZXh0PgogICAgCjwvc3ZnPg==" alt="prise_mesures" loading="lazy"/>
+      <div class="matiere-card-body">
+        <span class="matiere-cat cat-vision">Analyse de la Vision</span>
+        <h3 class="matiere-name">Prise de Mesures</h3>
+        <p class="matiere-desc">L'épreuve U61 prise de mesures et adaptation — protocole complet avec schémas.</p>
+        <ul class="matiere-includes">
+          <li>DP monoculaire et hauteur pupille</li>
+          <li>Distance vertex, angle pantoscopique</li>
+          <li>Choix monture selon morphologie</li>
+          <li>Choix indice et traitements</li>
+        </ul>
+        <div class="matiere-footer">
+          <span class="matiere-format">Cours</span>
+          <span class="matiere-price">7,90€</span>
+          <a href="https://fichesol.lemonsqueezy.com/checkout/buy/040a01ea-7d54-4e4f-870d-0d8e1b2ba4ab" class="matiere-buy">Acheter →</a>
+        </div>
+      </div></div>
+
+      <!-- Mathématiques -->
+      <div class="matiere-card" data-cat="sciences">
+      <img class="matiere-cover" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MDAiIGhlaWdodD0iNTIwIiB2aWV3Qm94PSIwIDAgNDAwIDUyMCI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImciIHgxPSIwIiB5MT0iMCIgeDI9Ii4zIiB5Mj0iMSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiMwMTU3OUIiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMDI3N0JEIi8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPGNsaXBQYXRoIGlkPSJjcCI+PHJlY3Qgd2lkdGg9IjQwMCIgaGVpZ2h0PSI1MjAiIHJ4PSIxNiIvPjwvY2xpcFBhdGg+CiAgPC9kZWZzPgogIDxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iNTIwIiBmaWxsPSJ1cmwoI2cpIiByeD0iMTYiLz4KICA8IS0tIENlcmNsZXMgZm9uZCAtLT4KICA8Y2lyY2xlIGN4PSIzNDAiIGN5PSI1MCIgIHI9IjE3MCIgZmlsbD0iIzgxRDRGQSIgb3BhY2l0eT0iLjA1IiBjbGlwLXBhdGg9InVybCgjY3ApIi8+CiAgPGNpcmNsZSBjeD0iNTAiICBjeT0iNDkwIiByPSIxMzAiIGZpbGw9IiM4MUQ0RkEiIG9wYWNpdHk9Ii4wNSIgY2xpcC1wYXRoPSJ1cmwoI2NwKSIvPgogIDwhLS0gQm9yZHVyZSBmaW5lIC0tPgogIDxyZWN0IHg9IjEiIHk9IjEiIHdpZHRoPSIzOTgiIGhlaWdodD0iNTE4IiByeD0iMTUiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMSIgb3BhY2l0eT0iLjEiLz4KICA8IS0tIFRhZyAtLT4KICA8cmVjdCB4PSIyMiIgeT0iMjIiIHdpZHRoPSIxNjAiIGhlaWdodD0iMjYiIHJ4PSI2IiBmaWxsPSJ3aGl0ZSIgb3BhY2l0eT0iLjEiLz4KICA8dGV4dCB4PSIzNCIgeT0iMzkiIGZvbnQtZmFtaWx5PSInSGVsdmV0aWNhIE5ldWUnLEFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtd2VpZ2h0PSI3MDAiIGZvbnQtc2l6ZT0iMTAiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIuODIiIGxldHRlci1zcGFjaW5nPSIuMDllbSI+VTQxIMK3IENPRUZGLiAyPC90ZXh0PgogIDwhLS0gTG9nbyAtLT4KICA8dGV4dCB4PSIzNzgiIHk9IjM5IiB0ZXh0LWFuY2hvcj0iZW5kIiBmb250LWZhbWlseT0iJ0hlbHZldGljYSBOZXVlJyxBcmlhbCxzYW5zLXNlcmlmIiBmb250LXdlaWdodD0iODAwIiBmb250LXNpemU9IjExIiBmaWxsPSJ3aGl0ZSIgb3BhY2l0eT0iLjM1Ij5maWNoZXNPTDwvdGV4dD4KICA8IS0tIFRpdHJlIC0tPgogIDx0ZXh0IHg9IjI4IiB5PSI5NiIgZm9udC1mYW1pbHk9IidIZWx2ZXRpY2EgTmV1ZScsQXJpYWwsc2Fucy1zZXJpZiIgZm9udC13ZWlnaHQ9IjgwMCIgZm9udC1zaXplPSI2MCIgZmlsbD0id2hpdGUiIG9wYWNpdHk9Ii45NyIgbGV0dGVyLXNwYWNpbmc9Ii0uMDM1ZW0iPk1hdGjDqS08L3RleHQ+CiAgPHRleHQgeD0iMjgiIHk9IjE2MCIgZm9udC1mYW1pbHk9IidIZWx2ZXRpY2EgTmV1ZScsQXJpYWwsc2Fucy1zZXJpZiIgZm9udC13ZWlnaHQ9IjgwMCIgZm9udC1zaXplPSI2MCIgZmlsbD0id2hpdGUiIG9wYWNpdHk9Ii45NyIgbGV0dGVyLXNwYWNpbmc9Ii0uMDM1ZW0iPm1hdGlxdWVzPC90ZXh0PgogIDwhLS0gVHJhaXQgLS0+CiAgPHJlY3QgeD0iMjgiIHk9IjE3NCIgd2lkdGg9IjU2IiBoZWlnaHQ9IjQiIHJ4PSIyIiBmaWxsPSIjODFENEZBIiBvcGFjaXR5PSIuODUiLz4KICA8IS0tIFNjaMOpbWEgLS0+CiAgCiAgICAgIDx0ZXh0IHg9IjEyMCIgeT0iMzAyIiBmb250LXNpemU9IjUyIiBmaWxsPSIjODFENEZBIiBvcGFjaXR5PSIuNDIiIGZvbnQtZmFtaWx5PSJzZXJpZiIgZm9udC1zdHlsZT0iaXRhbGljIj7iiKs8L3RleHQ+CiAgICAgIDx0ZXh0IHg9IjE4OCIgeT0iMjk1IiBmb250LXNpemU9IjI2IiBmaWxsPSIjODFENEZBIiBvcGFjaXR5PSIuNDUiIGZvbnQtZmFtaWx5PSJzZXJpZiI+c2luIM64PC90ZXh0PgogICAgICA8dGV4dCB4PSIyNjQiIHk9IjI5OCIgZm9udC1zaXplPSIzOCIgZmlsbD0iIzgxRDRGQSIgb3BhY2l0eT0iLjM4IiBmb250LWZhbWlseT0ic2VyaWYiIGZvbnQtc3R5bGU9Iml0YWxpYyI+zqM8L3RleHQ+CiAgICAgIDx0ZXh0IHg9IjIwMCIgeT0iMzQwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LXNpemU9IjE0IiBmaWxsPSIjODFENEZBIiBvcGFjaXR5PSIuMzUiIGZvbnQtZmFtaWx5PSJzZXJpZiI+YcKyICsgYsKyID0gY8KyPC90ZXh0PgogICAgCjwvc3ZnPg==" alt="mathematiques" loading="lazy"/>
+      <div class="matiere-card-body">
+        <span class="matiere-cat cat-sciences">Sciences</span>
+        <h3 class="matiere-name">Mathématiques</h3>
+        <p class="matiere-desc">Les maths au service de l'optique — tout le programme U41 avec exercices corrigés.</p>
+        <ul class="matiere-includes">
+          <li>Trigonométrie, vecteurs, complexes</li>
+          <li>Calcul matriciel appliqué à l'optique</li>
+          <li>Statistiques et probabilités</li>
+          <li>QCM 50 questions corrigés</li>
+        </ul>
+        <div class="matiere-footer">
+          <span class="matiere-format">Cours + QCM</span>
+          <span class="matiere-price">7,90€</span>
+          <a href="https://fichesol.lemonsqueezy.com/checkout/buy/d63c1043-2f64-4430-9696-8d960e1385c1" class="matiere-buy">Acheter →</a>
+        </div>
+      </div></div>
+
+      <!-- Droit -->
+      <div class="matiere-card" data-cat="gestion">
+      <img class="matiere-cover" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MDAiIGhlaWdodD0iNTIwIiB2aWV3Qm94PSIwIDAgNDAwIDUyMCI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImciIHgxPSIwIiB5MT0iMCIgeDI9Ii4zIiB5Mj0iMSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiMxQzFDMkUiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMkQyRDQ0Ii8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPGNsaXBQYXRoIGlkPSJjcCI+PHJlY3Qgd2lkdGg9IjQwMCIgaGVpZ2h0PSI1MjAiIHJ4PSIxNiIvPjwvY2xpcFBhdGg+CiAgPC9kZWZzPgogIDxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iNTIwIiBmaWxsPSJ1cmwoI2cpIiByeD0iMTYiLz4KICA8IS0tIENlcmNsZXMgZm9uZCAtLT4KICA8Y2lyY2xlIGN4PSIzNDAiIGN5PSI1MCIgIHI9IjE3MCIgZmlsbD0iI0M1Q0FFOSIgb3BhY2l0eT0iLjA1IiBjbGlwLXBhdGg9InVybCgjY3ApIi8+CiAgPGNpcmNsZSBjeD0iNTAiICBjeT0iNDkwIiByPSIxMzAiIGZpbGw9IiNDNUNBRTkiIG9wYWNpdHk9Ii4wNSIgY2xpcC1wYXRoPSJ1cmwoI2NwKSIvPgogIDwhLS0gQm9yZHVyZSBmaW5lIC0tPgogIDxyZWN0IHg9IjEiIHk9IjEiIHdpZHRoPSIzOTgiIGhlaWdodD0iNTE4IiByeD0iMTUiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMSIgb3BhY2l0eT0iLjEiLz4KICA8IS0tIFRhZyAtLT4KICA8cmVjdCB4PSIyMiIgeT0iMjIiIHdpZHRoPSIxNjAiIGhlaWdodD0iMjYiIHJ4PSI2IiBmaWxsPSJ3aGl0ZSIgb3BhY2l0eT0iLjEiLz4KICA8dGV4dCB4PSIzNCIgeT0iMzkiIGZvbnQtZmFtaWx5PSInSGVsdmV0aWNhIE5ldWUnLEFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtd2VpZ2h0PSI3MDAiIGZvbnQtc2l6ZT0iMTAiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIuODIiIGxldHRlci1zcGFjaW5nPSIuMDllbSI+VTMgwrcgR0VTVElPTjwvdGV4dD4KICA8IS0tIExvZ28gLS0+CiAgPHRleHQgeD0iMzc4IiB5PSIzOSIgdGV4dC1hbmNob3I9ImVuZCIgZm9udC1mYW1pbHk9IidIZWx2ZXRpY2EgTmV1ZScsQXJpYWwsc2Fucy1zZXJpZiIgZm9udC13ZWlnaHQ9IjgwMCIgZm9udC1zaXplPSIxMSIgZmlsbD0id2hpdGUiIG9wYWNpdHk9Ii4zNSI+ZmljaGVzT0w8L3RleHQ+CiAgPCEtLSBUaXRyZSAtLT4KICA8dGV4dCB4PSIyOCIgeT0iMTIwIiBmb250LWZhbWlseT0iJ0hlbHZldGljYSBOZXVlJyxBcmlhbCxzYW5zLXNlcmlmIiBmb250LXdlaWdodD0iODAwIiBmb250LXNpemU9IjYwIiBmaWxsPSJ3aGl0ZSIgb3BhY2l0eT0iLjk3IiBsZXR0ZXItc3BhY2luZz0iLS4wMzVlbSI+RHJvaXQ8L3RleHQ+CiAgCiAgPCEtLSBUcmFpdCAtLT4KICA8cmVjdCB4PSIyOCIgeT0iMTM0IiB3aWR0aD0iNTYiIGhlaWdodD0iNCIgcng9IjIiIGZpbGw9IiNDNUNBRTkiIG9wYWNpdHk9Ii44NSIvPgogIDwhLS0gU2Now6ltYSAtLT4KICAKICAgICAgPGxpbmUgeDE9IjIwMCIgeTE9IjI0MCIgeDI9IjIwMCIgeTI9IjMyOCIgc3Ryb2tlPSIjQzVDQUU5IiBzdHJva2Utd2lkdGg9IjIuMiIgb3BhY2l0eT0iLjUiLz4KICAgICAgPGxpbmUgeDE9IjEzMiIgeTE9IjI2NCIgeDI9IjI2OCIgeTI9IjI2NCIgc3Ryb2tlPSIjQzVDQUU5IiBzdHJva2Utd2lkdGg9IjIuMiIgb3BhY2l0eT0iLjUiLz4KICAgICAgPGNpcmNsZSBjeD0iMTQ0IiBjeT0iMjk4IiByPSIyNiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjQzVDQUU5IiBzdHJva2Utd2lkdGg9IjIiIG9wYWNpdHk9Ii41OCIvPgogICAgICA8Y2lyY2xlIGN4PSIyNTYiIGN5PSIyOTgiIHI9IjI2IiBmaWxsPSJub25lIiBzdHJva2U9IiNDNUNBRTkiIHN0cm9rZS13aWR0aD0iMiIgb3BhY2l0eT0iLjU4Ii8+CiAgICAgIDxsaW5lIHgxPSIxMzIiIHkxPSIyNjQiIHgyPSIxNDQiIHkyPSIyNzIiIHN0cm9rZT0iI0M1Q0FFOSIgc3Ryb2tlLXdpZHRoPSIyIiBvcGFjaXR5PSIuNSIvPgogICAgICA8bGluZSB4MT0iMjY4IiB5MT0iMjY0IiB4Mj0iMjU2IiB5Mj0iMjcyIiBzdHJva2U9IiNDNUNBRTkiIHN0cm9rZS13aWR0aD0iMiIgb3BhY2l0eT0iLjUiLz4KICAgICAgPGNpcmNsZSBjeD0iMjAwIiBjeT0iMjQwIiByPSI3IiBmaWxsPSIjQzVDQUU5IiBvcGFjaXR5PSIuNjUiLz4KICAgIAo8L3N2Zz4=" alt="droit" loading="lazy"/>
+      <div class="matiere-card-body">
+        <span class="matiere-cat cat-gestion">Gestion du Magasin</span>
+        <h3 class="matiere-name">Droit</h3>
+        <p class="matiere-desc">Le cadre juridique du métier d'opticien — contrats, responsabilité, réglementation.</p>
+        <ul class="matiere-includes">
+          <li>Droit de la santé et réglementation optique</li>
+          <li>Contrats de travail et droit social</li>
+          <li>Responsabilité professionnelle</li>
+          <li>QCM 50 questions corrigés</li>
+        </ul>
+        <div class="matiere-footer">
+          <span class="matiere-format">Cours + QCM</span>
+          <span class="matiere-price">7,90€</span>
+          <a href="https://fichesol.lemonsqueezy.com/checkout/buy/51c3fb28-5930-4622-94c4-047c4683f7f7" class="matiere-buy">Acheter →</a>
+        </div>
+      </div></div>
+
+      <!-- Gestion -->
+      <div class="matiere-card" data-cat="gestion">
+      <img class="matiere-cover" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MDAiIGhlaWdodD0iNTIwIiB2aWV3Qm94PSIwIDAgNDAwIDUyMCI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImciIHgxPSIwIiB5MT0iMCIgeDI9Ii4zIiB5Mj0iMSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiNFNjUxMDAiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjRUY2QzAwIi8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPGNsaXBQYXRoIGlkPSJjcCI+PHJlY3Qgd2lkdGg9IjQwMCIgaGVpZ2h0PSI1MjAiIHJ4PSIxNiIvPjwvY2xpcFBhdGg+CiAgPC9kZWZzPgogIDxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iNTIwIiBmaWxsPSJ1cmwoI2cpIiByeD0iMTYiLz4KICA8Y2lyY2xlIGN4PSIzNDAiIGN5PSI1MCIgIHI9IjE3MCIgZmlsbD0iI0ZGQ0M4MCIgb3BhY2l0eT0iLjA1IiBjbGlwLXBhdGg9InVybCgjY3ApIi8+CiAgPGNpcmNsZSBjeD0iNTAiICBjeT0iNDkwIiByPSIxMzAiIGZpbGw9IiNGRkNDODAiIG9wYWNpdHk9Ii4wNSIgY2xpcC1wYXRoPSJ1cmwoI2NwKSIvPgogIDxyZWN0IHg9IjEiIHk9IjEiIHdpZHRoPSIzOTgiIGhlaWdodD0iNTE4IiByeD0iMTUiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMSIgb3BhY2l0eT0iLjEiLz4KICA8IS0tIFRhZyAtLT4KICA8cmVjdCB4PSIyMiIgeT0iMjIiIHdpZHRoPSIxNjAiIGhlaWdodD0iMjYiIHJ4PSI2IiBmaWxsPSJ3aGl0ZSIgb3BhY2l0eT0iLjEiLz4KICA8dGV4dCB4PSIzNCIgeT0iMzkiIGZvbnQtZmFtaWx5PSInSGVsdmV0aWNhIE5ldWUnLEFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtd2VpZ2h0PSI3MDAiIGZvbnQtc2l6ZT0iMTAiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIuODIiIGxldHRlci1zcGFjaW5nPSIuMDllbSI+VTMgwrcgR0VTVElPTjwvdGV4dD4KICA8IS0tIExvZ28gLS0+CiAgPHRleHQgeD0iMzc4IiB5PSIzOSIgdGV4dC1hbmNob3I9ImVuZCIgZm9udC1mYW1pbHk9IidIZWx2ZXRpY2EgTmV1ZScsQXJpYWwsc2Fucy1zZXJpZiIgZm9udC13ZWlnaHQ9IjgwMCIgZm9udC1zaXplPSIxMSIgZmlsbD0id2hpdGUiIG9wYWNpdHk9Ii4zNSI+ZmljaGVzT0w8L3RleHQ+CiAgPCEtLSBUaXRyZSAtLT4KICA8dGV4dCB4PSIyOCIgeT0iMTIwIiBmb250LWZhbWlseT0iJ0hlbHZldGljYSBOZXVlJyxBcmlhbCxzYW5zLXNlcmlmIiBmb250LXdlaWdodD0iODAwIiBmb250LXNpemU9IjYwIiBmaWxsPSJ3aGl0ZSIgb3BhY2l0eT0iLjk3IiBsZXR0ZXItc3BhY2luZz0iLS4wMzVlbSI+R2VzdGlvbjwvdGV4dD4KICA8IS0tIFRyYWl0IC0tPgogIDxyZWN0IHg9IjI4IiB5PSIxMzQiIHdpZHRoPSI1NiIgaGVpZ2h0PSI0IiByeD0iMiIgZmlsbD0iI0ZGQ0M4MCIgb3BhY2l0eT0iLjg1Ii8+CiAgPCEtLSBTY2jDqW1hIGdyYXBoZSAtLT4KICA8bGluZSB4MT0iODAiIHkxPSI0MTAiIHgyPSIzNDAiIHkyPSI0MTAiIHN0cm9rZT0iI0ZGQ0M4MCIgc3Ryb2tlLXdpZHRoPSIxLjUiIG9wYWNpdHk9Ii40MiIvPgogIDxsaW5lIHgxPSI4MCIgeTE9IjIzMCIgeDI9IjgwIiAgeTI9IjQxMCIgc3Ryb2tlPSIjRkZDQzgwIiBzdHJva2Utd2lkdGg9IjEuNSIgb3BhY2l0eT0iLjQyIi8+CiAgPHJlY3QgeD0iOTUiICB5PSIzNDIiIHdpZHRoPSIzNiIgaGVpZ2h0PSI2OCIgcng9IjQiIGZpbGw9IiNGRkNDODAiIG9wYWNpdHk9Ii4zMCIvPgogIDxyZWN0IHg9IjE0NyIgeT0iMzAyIiB3aWR0aD0iMzYiIGhlaWdodD0iMTA4IiByeD0iNCIgZmlsbD0iI0ZGQ0M4MCIgb3BhY2l0eT0iLjQ2Ii8+CiAgPHJlY3QgeD0iMTk5IiB5PSIzMTgiIHdpZHRoPSIzNiIgaGVpZ2h0PSI5MiIgcng9IjQiIGZpbGw9IiNGRkNDODAiIG9wYWNpdHk9Ii4zOCIvPgogIDxyZWN0IHg9IjI1MSIgeT0iMjcwIiB3aWR0aD0iMzYiIGhlaWdodD0iMTQwIiByeD0iNCIgZmlsbD0iI0ZGQ0M4MCIgb3BhY2l0eT0iLjYyIi8+CiAgPHJlY3QgeD0iMzAzIiB5PSIyOTAiIHdpZHRoPSIzNiIgaGVpZ2h0PSIxMjAiIHJ4PSI0IiBmaWxsPSIjRkZDQzgwIiBvcGFjaXR5PSIuNTIiLz4KICA8IS0tIENvdXJiZSBkZSB0ZW5kYW5jZSAtLT4KICA8cG9seWxpbmUgcG9pbnRzPSIxMTMsMzQyIDE2NSwzMDIgMjE3LDMxOCAyNjksMjcwIDMyMSwyOTAiCiAgICBmaWxsPSJub25lIiBzdHJva2U9IiNGRkNDODAiIHN0cm9rZS13aWR0aD0iMi41IiBzdHJva2UtZGFzaGFycmF5PSI2LDQiIG9wYWNpdHk9Ii43Ii8+CiAgPCEtLSBQb2ludHMgc3VyIGNvdXJiZSAtLT4KICA8Y2lyY2xlIGN4PSIxMTMiIGN5PSIzNDIiIHI9IjUiIGZpbGw9IiNGRkNDODAiIG9wYWNpdHk9Ii45Ii8+CiAgPGNpcmNsZSBjeD0iMTY1IiBjeT0iMzAyIiByPSI1IiBmaWxsPSIjRkZDQzgwIiBvcGFjaXR5PSIuOSIvPgogIDxjaXJjbGUgY3g9IjIxNyIgY3k9IjMxOCIgcj0iNSIgZmlsbD0iI0ZGQ0M4MCIgb3BhY2l0eT0iLjkiLz4KICA8Y2lyY2xlIGN4PSIyNjkiIGN5PSIyNzAiIHI9IjUiIGZpbGw9IiNGRkNDODAiIG9wYWNpdHk9Ii45Ii8+CiAgPGNpcmNsZSBjeD0iMzIxIiBjeT0iMjkwIiByPSI1IiBmaWxsPSIjRkZDQzgwIiBvcGFjaXR5PSIuOSIvPgo8L3N2Zz4=" alt="gestion" loading="lazy"/>
+      <div class="matiere-card-body">
+        <span class="matiere-cat cat-gestion">Gestion du Magasin</span>
+        <h3 class="matiere-name">Gestion</h3>
+        <p class="matiere-desc">Gestion d'un point de vente optique — comptabilité, stocks, rentabilité.</p>
+        <ul class="matiere-includes">
+          <li>Comptabilité et analyse financière</li>
+          <li>Gestion des stocks et des commandes</li>
+          <li>Indicateurs de performance magasin</li>
+          <li>QCM 50 questions corrigés</li>
+        </ul>
+        <div class="matiere-footer">
+          <span class="matiere-format">Cours + QCM</span>
+          <span class="matiere-price">7,90€</span>
+          <a href="https://fichesol.lemonsqueezy.com/checkout/buy/544f0c66-eed1-47ee-ba84-c1074ec8f5ff" class="matiere-buy">Acheter →</a>
+        </div>
+      </div></div>
+
+      <!-- Marketing -->
+      <div class="matiere-card" data-cat="gestion">
+      <img class="matiere-cover" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MDAiIGhlaWdodD0iNTIwIiB2aWV3Qm94PSIwIDAgNDAwIDUyMCI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImciIHgxPSIwIiB5MT0iMCIgeDI9Ii4zIiB5Mj0iMSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiM4ODBFNEYiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjQUQxNDU3Ii8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPGNsaXBQYXRoIGlkPSJjcCI+PHJlY3Qgd2lkdGg9IjQwMCIgaGVpZ2h0PSI1MjAiIHJ4PSIxNiIvPjwvY2xpcFBhdGg+CiAgPC9kZWZzPgogIDxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iNTIwIiBmaWxsPSJ1cmwoI2cpIiByeD0iMTYiLz4KICA8IS0tIENlcmNsZXMgZm9uZCAtLT4KICA8Y2lyY2xlIGN4PSIzNDAiIGN5PSI1MCIgIHI9IjE3MCIgZmlsbD0iI0Y0OEZCMSIgb3BhY2l0eT0iLjA1IiBjbGlwLXBhdGg9InVybCgjY3ApIi8+CiAgPGNpcmNsZSBjeD0iNTAiICBjeT0iNDkwIiByPSIxMzAiIGZpbGw9IiNGNDhGQjEiIG9wYWNpdHk9Ii4wNSIgY2xpcC1wYXRoPSJ1cmwoI2NwKSIvPgogIDwhLS0gQm9yZHVyZSBmaW5lIC0tPgogIDxyZWN0IHg9IjEiIHk9IjEiIHdpZHRoPSIzOTgiIGhlaWdodD0iNTE4IiByeD0iMTUiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMSIgb3BhY2l0eT0iLjEiLz4KICA8IS0tIFRhZyAtLT4KICA8cmVjdCB4PSIyMiIgeT0iMjIiIHdpZHRoPSIxNjAiIGhlaWdodD0iMjYiIHJ4PSI2IiBmaWxsPSJ3aGl0ZSIgb3BhY2l0eT0iLjEiLz4KICA8dGV4dCB4PSIzNCIgeT0iMzkiIGZvbnQtZmFtaWx5PSInSGVsdmV0aWNhIE5ldWUnLEFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtd2VpZ2h0PSI3MDAiIGZvbnQtc2l6ZT0iMTAiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIuODIiIGxldHRlci1zcGFjaW5nPSIuMDllbSI+VTMgwrcgR0VTVElPTjwvdGV4dD4KICA8IS0tIExvZ28gLS0+CiAgPHRleHQgeD0iMzc4IiB5PSIzOSIgdGV4dC1hbmNob3I9ImVuZCIgZm9udC1mYW1pbHk9IidIZWx2ZXRpY2EgTmV1ZScsQXJpYWwsc2Fucy1zZXJpZiIgZm9udC13ZWlnaHQ9IjgwMCIgZm9udC1zaXplPSIxMSIgZmlsbD0id2hpdGUiIG9wYWNpdHk9Ii4zNSI+ZmljaGVzT0w8L3RleHQ+CiAgPCEtLSBUaXRyZSAtLT4KICA8dGV4dCB4PSIyOCIgeT0iMTIwIiBmb250LWZhbWlseT0iJ0hlbHZldGljYSBOZXVlJyxBcmlhbCxzYW5zLXNlcmlmIiBmb250LXdlaWdodD0iODAwIiBmb250LXNpemU9IjYwIiBmaWxsPSJ3aGl0ZSIgb3BhY2l0eT0iLjk3IiBsZXR0ZXItc3BhY2luZz0iLS4wMzVlbSI+TWFya2V0aW5nPC90ZXh0PgogIAogIDwhLS0gVHJhaXQgLS0+CiAgPHJlY3QgeD0iMjgiIHk9IjEzNCIgd2lkdGg9IjU2IiBoZWlnaHQ9IjQiIHJ4PSIyIiBmaWxsPSIjRjQ4RkIxIiBvcGFjaXR5PSIuODUiLz4KICA8IS0tIFNjaMOpbWEgLS0+CiAgCiAgICAgIDxjaXJjbGUgY3g9IjIwMCIgY3k9IjI5MCIgcj0iNzAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI0Y0OEZCMSIgc3Ryb2tlLXdpZHRoPSIxLjUiIG9wYWNpdHk9Ii4yIi8+CiAgICAgIDxjaXJjbGUgY3g9IjIwMCIgY3k9IjI5MCIgcj0iNDgiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI0Y0OEZCMSIgc3Ryb2tlLXdpZHRoPSIxLjUiIG9wYWNpdHk9Ii4zIi8+CiAgICAgIDxjaXJjbGUgY3g9IjIwMCIgY3k9IjI5MCIgcj0iMjgiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI0Y0OEZCMSIgc3Ryb2tlLXdpZHRoPSIyLjIiIG9wYWNpdHk9Ii40OCIvPgogICAgICA8Y2lyY2xlIGN4PSIyMDAiIGN5PSIyOTAiIHI9IjEwIiBmaWxsPSIjRjQ4RkIxIiBvcGFjaXR5PSIuNzUiLz4KICAgICAgPGxpbmUgeDE9IjI2MiIgeTE9IjIyOCIgeDI9IjIxMiIgeTI9IjI3OCIgc3Ryb2tlPSIjRjQ4RkIxIiBzdHJva2Utd2lkdGg9IjIuNSIgb3BhY2l0eT0iLjY4Ii8+CiAgICAgIDxwb2x5Z29uIHBvaW50cz0iMjEyLDI3OCAyMjYsMjY0IDIyNCwyODAiIGZpbGw9IiNGNDhGQjEiIG9wYWNpdHk9Ii43MiIvPgogICAgCjwvc3ZnPg==" alt="marketing" loading="lazy"/>
+      <div class="matiere-card-body">
+        <span class="matiere-cat cat-gestion">Gestion du Magasin</span>
+        <h3 class="matiere-name">Marketing</h3>
+        <p class="matiere-desc">Stratégie commerciale et relation client en magasin d'optique.</p>
+        <ul class="matiere-includes">
+          <li>Stratégie marketing et mix produit</li>
+          <li>Relation client et techniques de vente</li>
+          <li>Communication et merchandising</li>
+          <li>QCM 50 questions corrigés</li>
+        </ul>
+        <div class="matiere-footer">
+          <span class="matiere-format">Cours + QCM</span>
+          <span class="matiere-price">7,90€</span>
+          <a href="https://fichesol.lemonsqueezy.com/checkout/buy/c71649ec-cfd9-4578-a7dc-4654aa5120a5" class="matiere-buy">Acheter →</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- QUI SUIS-JE -->
+<section class="who-section" id="qui">
+  <div class="who-inner reveal">
+    <div class="who-initial">T</div>
+    <div>
+      <p class="who-label">Qui suis-je ?</p>
+      <h2 class="who-name">Théo</h2>
+      <p class="who-role">Opticien diplômé · Responsable de magasin · Sud de la France</p>
+      <p class="who-text">
+        J'ai passé le BTS OL comme toi. Je sais exactement ce que le jury regarde, ce qui compte vraiment en pratique derrière le réfracteur, et où les étudiants perdent des points bêtement.<br><br>
+        Aujourd'hui je suis responsable de magasin depuis 5 ans. Chaque jour je vois la différence entre ceux qui ont appris des formules par cœur et ceux qui comprennent vraiment ce qu'ils font.<br><br>
+        <em>Ces fiches, je les ai créées parce qu'elles n'existaient pas sous cette forme.</em> Pas des résumés copiés-collés — des outils réels, avec les vrais schémas, les vraies méthodes et les pièges que j'aurais voulu avoir à l'époque.
+      </p>
+      <div class="who-stats">
+        <div class="who-stat">
+          <div class="who-stat-n">5 ans</div>
+          <div class="who-stat-l">d'expérience terrain</div>
+        </div>
+        <div class="who-stat">
+          <div class="who-stat-n">12</div>
+          <div class="who-stat-l">matières couvertes</div>
+        </div>
+        <div class="who-stat">
+          <div class="who-stat-n">50+</div>
+          <div class="who-stat-l">fiches PDF</div>
+        </div>
+        <div class="who-stat">
+          <div class="who-stat-n">2026</div>
+          <div class="who-stat-l">référentiel à jour</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- POURQUOI -->
+<section class="why-section">
+  <p class="section-label reveal" style="text-align:center;">Pourquoi ces fiches ?</p>
+  <h2 class="section-title reveal" style="text-align:center;">Pas un cours de plus.<br>Un outil qui remplace tout.</h2>
+  <div class="why-grid">
+    <div class="why-card reveal">
+      <div class="why-icon">📐</div>
+      <h3 class="why-title">Schémas optiques vrais</h3>
+      <p class="why-desc">Chaque concept est illustré d'un schéma précis — réfracteur, CCR, Maddox, lentilles, brouillard. Pas des images copiées : des schémas faits pour l'examen.</p>
+    </div>
+    <div class="why-card reveal">
+      <div class="why-icon">🎯</div>
+      <h3 class="why-title">Méthodes pas-à-pas</h3>
+      <p class="why-desc">SACS, brouillard, équilibre R/V, calcul d'addition, Maddox : chaque protocole est détaillé dans le bon ordre, avec les actions exactes à faire.</p>
+    </div>
+    <div class="why-card reveal">
+      <div class="why-icon">⚠️</div>
+      <h3 class="why-title">Pièges du jury listés</h3>
+      <p class="why-desc">Chaque fiche liste les erreurs fréquentes à l'examen et les points que le jury attend à l'oral. Ce que je vois moi-même tous les jours en magasin.</p>
+    </div>
+    <div class="why-card reveal">
+      <div class="why-icon">📋</div>
+      <h3 class="why-title">Référentiel 2026</h3>
+      <p class="why-desc">Aligné sur les arrêtés modificatifs de juillet et novembre 2024. Applicable dès la session 2026 — tu révises ce qui sera réellement évalué.</p>
+    </div>
+    <div class="why-card reveal">
+      <div class="why-icon">📱</div>
+      <h3 class="why-title">PDF lisible partout</h3>
+      <p class="why-desc">Format A4 optimisé tablette et impression. Téléchargement immédiat dès le paiement, accès à vie, mises à jour incluses.</p>
+    </div>
+    <div class="why-card reveal">
+      <div class="why-icon">👁️</div>
+      <h3 class="why-title">Du terrain, pas un cours</h3>
+      <p class="why-desc">Rédigé par quelqu'un qui fait des examens de vue tous les jours. La différence entre la théorie du cours et ce que le client demande vraiment.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section">
+  <p class="section-label reveal" style="text-align:center;">FAQ</p>
+  <h2 class="section-title reveal" style="text-align:center;margin-bottom:2.5rem;">Questions fréquentes</h2>
+
+  <div class="faq-item reveal">
+    <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Comment je reçois les fiches après l'achat ?</div>
+    <div class="faq-a">Immédiatement après le paiement, tu reçois un e-mail avec le lien de téléchargement. Tout est automatique, pas besoin de créer un compte. Les fichiers sont disponibles à vie depuis ton lien.</div>
+  </div>
+  <div class="faq-item reveal">
+    <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Puis-je acheter plusieurs matières séparément ?</div>
+    <div class="faq-a">Oui, chaque matière est disponible à l'unité à 7,90€. Si tu as déjà certains cours, inutile de payer pour ce que tu as — achète exactement ce dont tu as besoin.</div>
+  </div>
+  <div class="faq-item reveal">
+    <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Les fiches sont calées sur le référentiel 2026 ?</div>
+    <div class="faq-a">Oui. Le contenu est aligné sur les arrêtés modificatifs de juillet et novembre 2024, applicables dès la session 2026. Les fiches Examen de Vue couvrent l'épreuve U61 telle qu'elle est définie dans le nouveau référentiel.</div>
+  </div>
+  <div class="faq-item reveal">
+    <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Est-ce que ça couvre les annales ?</div>
+    <div class="faq-a">Les fiches sont construites en croisant le référentiel officiel avec les thèmes récurrents des annales 2001–2025. Chaque fiche liste les pièges fréquents que j'ai moi-même identifiés à l'examen et en magasin.</div>
+  </div>
+  <div class="faq-item reveal">
+    <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Puis-je les imprimer ?</div>
+    <div class="faq-a">Oui, les PDF sont optimisés pour l'impression A4. En couleur c'est recommandé pour bien lire les schémas, mais le noir et blanc fonctionne aussi.</div>
+  </div>
+  <div class="faq-item reveal">
+    <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">J'ai une question sur le contenu, comment te contacter ?</div>
+    <div class="faq-a">Par e-mail à l'adresse indiquée dans le PDF de livraison. Je réponds sous 48h.</div>
+  </div></div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="cta-final">
+  <h2>Prêt à passer ton BTS OL ?</h2>
+  <p>Télécharge les fiches maintenant et commence à réviser aujourd'hui.</p>
+  <a href="#packs" class="btn-cta-white">Voir les packs →</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <span>© 2025 FichesOL · Tous droits réservés</span>
+  <span>Créé par un opticien diplômé · Sud de la France</span>
+  <a href="mailto:contact@fichesol.fr">contact@fichesol.fr</a>
+</footer>
+
+<script>
+// Reveal animation
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
+},{threshold:.08,rootMargin:'0px 0px -30px 0px'});
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+// Filtre matières
+function filterMatieres(cat, btn) {
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.matiere-card').forEach(card => {
+    const show = cat === 'all' || card.dataset.cat === cat;
+    card.style.display = show ? '' : 'none';
+    card.style.opacity = show ? '1' : '0';
+  });
+}
+</script>
+</body>
+</html>
